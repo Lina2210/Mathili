@@ -11,6 +11,6 @@
     <h4>Instrucciones:</h4>
     <p></p>
     <img src="public/chica-riendo-feliz-chaqueta-mezclilla-billetes-voladores-alrededor.jpg" style="max-width: 300px;">
-    <button onclick="startQuestions()">JUGAR</button>
+    <a href="game.php">JUGAR</a>
 </body>
 </html>
