@@ -9,14 +9,12 @@
 </head>
 <body>
     <div class="loseMessage">
-        <h1>!HAS PERDIDO!</h1>
+        <h1>! HAS PERDIDO !</h1>
+        <img src="public/triste-deprimido-fallido-papel-perforado.jpg">
     </div>
     <div class="loseButtons">
         <a href="index.php">INICIO</a>
         <a href="">GUARDAR STATS</a>
     </div>
-    <audio autoplay loop>
-        <source src="Sounds/loseMusic.mp3" type="audio/mp3">
-    </audio>
 </body>
 </html>

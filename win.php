@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="winMessage">
-        <h1>!HAS RESPONDIDO CORRECTAMENTE TODAS LAS PREGUNTAS!</h1>
+        <h1>! HAS RESPONDIDO CORRECTAMENTE TODAS LAS PREGUNTAS !</h1>
         <img src="public/silueta-personas-felices.jpg">
     </div>
     <div class="winButtons">
