@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>VICTORIA</title>
+    <title>DERROTA</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
-    <div class="winMessage">
-        <h1>!HAS RESPONDIDO CORRECTAMENTE TODAS LAS PREGUNTAS!</h1>
-        <img src="public/silueta-personas-felices.jpg">
+    <div class="loseMessage">
+        <h1>!HAS PERDIDO!</h1>
     </div>
-    <div class="winButtons">
+    <div class="loseButtons">
         <a href="index.php">INICIO</a>
         <a href="">GUARDAR STATS</a>
     </div>
+    <audio autoplay loop>
+        <source src="Sounds/loseMusic.mp3" type="audio/mp3">
+    </audio>
 </body>
 </html>

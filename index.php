@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Quien Quiere Ser Millonario?</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
-    <h1>Quien Quiere Ser Millonario?</h1>
-    <h4>Instrucciones:</h4>
-    <ul>
-        <li></li>
-    </ul>
-    <p></p>
-    <img src="public/chica-riendo-feliz-chaqueta-mezclilla-billetes-voladores-alrededor.jpg" style="max-width: 300px;">
-    <a href="game.php">JUGAR</a>
+    <div class="lengButton">
+        <p>Lenguaje: </p>
+        <button id="espanol" name="espanol">Español</button>
+        <button id="english" name="english">English</button>
+        <button id="catalan" name="catalan">Catalan</button>
+    </div>
+    <h1 class="titIndex">QUIEN QUIERE SER MILLONARIO?</h1>
+    <div class="brief">
+        <div class="instructions">
+            <h4>Instrucciones:</h4>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="briefImage">
+            <img src="public/chica-riendo-feliz-chaqueta-mezclilla-billetes-voladores-alrededor.jpg">
+        </div>
+    </div>
+    <div class="gameIndex">
+        <a href="game.php">JUGAR</a>
+    </div>
 </body>
 </html>
