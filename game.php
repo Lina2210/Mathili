@@ -20,60 +20,86 @@
         <source src="Sounds/qacer.mp3" type="audio/mpeg">
     </audio>
     <?php
-        $language="catalan";
-        $level=1;
+    session_start();
+        $language = $_SESSION['language'];
+        $level = $_SESSION['level'];
         $arrayOfQuestionsAndAnswers = choose3RandomQuestionsandAnswers($level,$language);
-        writeHtml($arrayOfQuestionsAndAnswers,$language);
+        writeHtml($arrayOfQuestionsAndAnswers,$language,$level);
+        $_SESSION['level']=++$level;
+        
+        
 
-
-
-        function writeHtml($arrayOfQuestionsAndAnswers, $language){
+        function writeHtml($arrayOfQuestionsAndAnswers, $language,$level){
             $numberOfQuestion = 0;
+            $correctmessage=correctmessage($language);
+            $wrongmessage=wrongmessage($language);
             foreach($arrayOfQuestionsAndAnswers as $lineOfInformation){
                 if(substr($lineOfInformation,0,1)=="*"){
+                    echo "<h2 id=correct$numberOfQuestion style=\"display: none;\">$correctmessage</h2>";
+                    echo "<h2 id=wrong$numberOfQuestion style=\"display: none;\">$wrongmessage</h2>";
                     $numberOfQuestion++;
                     echo "</div>";
                     $question= substr($lineOfInformation,1,strlen($lineOfInformation));
                     echo "<h3 id=question$numberOfQuestion style=\"display: none;\"> $question</h3>";
-                    echo "<div id=$numberOfQuestion style=\"display: none;\">";
+                    echo "<div id=answers$numberOfQuestion style=\"display: none;\">";
                 }
                 if(substr($lineOfInformation,0,1)=="-"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
-                    echo "<button onclick='bad()' class='grid-item' id='answerBad'>$answer</button>";
+                    echo "<form action='lose.php' method='POST'>";
+                        echo "<input type='hidden' name='language' value=$language>";
+                        echo "<button onclick='bad($numberOfQuestion)' class='grid-item' id='answerBad'>$answer</button>";
+                    echo "</form>";
                 }
                 if(substr($lineOfInformation,0,1)=="+"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
-                    echo "<button onclick='good()' class='grid-item' id='answerGood'>$answer</button>";
+                    echo "<button onclick='good($numberOfQuestion)' class='grid-item' id='answerGood'>$answer</button>";
                 }
                 
             }
+            echo "<h2 id=correct$numberOfQuestion style=\"display: none;\">$correctmessage</h2>";
+            echo "<h2 id=wrong$numberOfQuestion style=\"display: none;\">$wrongmessage</h2>";
             echo "</div>";
             echo"<div id=buttons style=\"display: none;\">";
-            if($language=="catalan"){
-                echo "<button>Següents preguntes</button>";
-                echo "<button>Tornar a l'inici</button>";
+        
+            if($level==6){
+                if($language=="catalan"){
+                    echo "<form action='win.php' method='POST'>";
+                        echo "<input type='hidden' name='language' value=$language>";
+                        echo "<button>Finalitzar Partida</button>";
+                    echo "</form>";
             }
             elseif($language=="english"){
-                echo "<button>Next questions</button>";
-                echo "<button>Return home</button>";
+                    echo "<form action='win.php' method='POST'>";
+                        echo "<input type='hidden' name='language' value=$language>";
+                        echo "<button>End Game</button>";
+                    echo "</form>";
             }
             elseif($language=="spanish"){
-                echo "<button>Siguientes preguntas</button>";
-                echo "<button>Volver al inicio</button>";
+                    echo "<form action='win.php' method='POST'>";
+                        echo "<input type='hidden' name='language' value=$language>";
+                        echo "<button>Finalizar Partida</button>";
+                    echo "</form>";
+            }
+
+            }else{
+                if($language=="catalan"){
+                    echo "<form action='game.php' method='POST'>";
+                        echo "<button>Següents Preguntes</button>";
+                    echo "</form>";
+                }
+                elseif($language=="english"){
+                        echo "<form action='game.php' method='POST'>";
+                            echo "<button>Next Question</button>";
+                        echo "</form>";
+                }
+                elseif($language=="spanish"){
+                        echo "<form action='game.php' method='POST'>";
+                            echo "<button>Siguientes Preguntas</button>";
+                        echo "</form>";
+                }
             }
             echo"</div>";
-            if($language=="catalan"){
-                echo "<h2 id=correct style=\"display: none;\">CORRECTE</h2>";
-                echo "<h2 id=wrong style=\"display: none;\">INCORRECTE</h2>";
-            }
-            elseif($language=="english"){
-                echo "<h2 id=correct style=\"display: none;\">CORRECT</h2>";
-                echo "<h2 id=wrong style=\"display: none;\">WRONG</h2>";
-            }
-            elseif($language=="spanish"){
-                echo "<h2 id=correct style=\"display: none;\">CORRECTO</h2>";
-                echo "<h2 id=wrong style=\"display: none;\">INCORRECTO</h2>";
-            }
+            
         }
         
         
@@ -104,7 +130,7 @@
                 $numberOfQuestion2=rand(0,count($arrayOfQuestions));
                 $numberOfQuestion3=rand(0,count($arrayOfQuestions));
             }
-
+            echo $numberOfQuestion1,$numberOfQuestion2,$numberOfQuestion3;
             array_push($arrayOf3RandomQuestionsandAnswers,$arrayOfLines[array_search($arrayOfQuestions[$numberOfQuestion1],$arrayOfLines)]);           
             array_push($arrayOf3RandomQuestionsandAnswers,$arrayOfLines[array_search($arrayOfQuestions[$numberOfQuestion1],$arrayOfLines)+1]);
             array_push($arrayOf3RandomQuestionsandAnswers,$arrayOfLines[array_search($arrayOfQuestions[$numberOfQuestion1],$arrayOfLines)+2]);
@@ -143,6 +169,28 @@
         function structureFile($file){
             cleanNewlinesInFile($file);
             removeInitialSpaces($file);
+        }
+        function correctmessage($language){
+            if($language=="catalan"){
+                return "CORRECTE";
+            }
+            elseif($language=="english"){
+                return "CORRECT";
+            }
+            elseif($language=="spanish"){
+                return "CORRECTO";
+            }
+        }
+        function wrongmessage($language){
+            if($language=="catalan"){
+                return "INCORRECTE";
+            }
+            elseif($language=="english"){
+                return "WRONG";
+            }
+            elseif($language=="spanish"){
+                return "INCORRECTO";
+            }
         }
     ?>
 </body>

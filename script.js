@@ -4,17 +4,23 @@ window.onload = function() {
 };
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
-    document.getElementById('1').style.display = 'block';
+    document.getElementById('answers1').style.display = 'block';
 }
-function good(){
-    document.getElementById('correct').style.display = 'block';
+function good(numberOfQuestion){
+    document.getElementById('correct'+numberOfQuestion).style.display = 'block';
     let element = elementSound("soundAcert")
-    document.getElementById('1').style.pointerEvents = 'none';
     playSound(element)
+    document.getElementById('answers'+numberOfQuestion).style.pointerEvents = 'none';
+    if(numberOfQuestion==3){
+        console.log("HOLA");
+        document.getElementById('buttons').style.display = 'block';
+    }else{
+    showQuestion(numberOfQuestion+1);
+    }
 }
 
-function bad(){
-    document.getElementById('wrong').style.display = 'block';
+function bad(numberOfQuestion){
+    document.getElementById('wrong'+numberOfQuestion).style.display = 'block';
     let element = elementSound("soundLose")
     playSound(element)
 }
@@ -35,4 +41,11 @@ function acertSound(){
     let element = elementSound("soundAcert")
     return playSound(element)
 }
-
+function showQuestion(numberOfQuestion){
+    document.getElementById('question'+numberOfQuestion).style.display = 'block';
+    document.getElementById('answers'+numberOfQuestion).style.display = 'block';
+}
+function winSound(){
+    let element = elementSound("soundWin")
+    return playSound(element)
+}
