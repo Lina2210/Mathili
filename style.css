@@ -13,13 +13,39 @@ body {
 }
 
 .lengButton button {
-    padding: 4px 8px;
+    padding: 4px 10px;
+    display: inline-block;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px 5px;
+    text-decoration: none;
+}
+
+#espanol img {
+    width: 30px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#english img {
+    width: 30px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+#catalan img {
+    width: 30px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 .titIndex {
     text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 75px;
+    color: #FFD700;
+    margin-bottom: 20px;
     margin-top: 25px;
 }
 
@@ -29,36 +55,53 @@ body {
     align-items: center;
     max-width: 60%;
     margin: auto;
-    margin-bottom: 55px;
+    margin-bottom: 10px;
 }
 
 .instructions {
-    margin: 2% 5%;
+    margin: 2% 3%;
     width: 50%;
     height: 70%;
     color: #FFFFFF;
 }
 
+.instructions h3 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 1.5em;
+}
+
+.instructions ul {
+    border: 1px solid #FFD700;
+    padding: 10px 30px;
+}
+
+.instructions li {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+
 .briefImage {
     width: 50%;
     height: auto;
-    margin: auto 5%;
+    margin: auto 3%;
 }
 
 .brief img {
     width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
-.gameIndex {
+.buttonsIndex {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
-    margin: 75px auto;
+    margin: 5px auto;
 }
 
-.gameIndex a {
+.buttonsIndex a {
     color: black;
     font-size: larger;
     text-decoration: none;
@@ -69,8 +112,82 @@ body {
     border-radius: 5px;
 }
 
-.gameIndex a:hover {
+.buttonsIndex a:hover {
     background-color: #FFD700;
+}
+
+/* game.php */
+#question1 {
+    margin: 30px auto;
+    text-align: center;
+    color: #FFD700;
+    font-size: 3em;
+}
+
+#answers1 {
+    /* #1 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-item {
+    background-color: #143d82;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item:active {
+    background-color: #FFD700;
+}
+
+#correct1 {
+    text-align: center;
+    color: #4CAF50;
+    margin: 15px auto;
+}
+
+#wrong1 {
+    text-align: center;
+    color: #D32F2F;
+    margin: 15px auto;
+}
+
+#question2 {
+    margin: 30px auto;
+    text-align: center;
+    color: #FFD700;
+    font-size: 3em;
+}
+
+#correct2 {
+    text-align: center;
+    color: #4CAF50;
+    margin: 15px auto;
+}
+
+#wrong2 {
+    text-align: center;
+    color: #D32F2F;
+    margin: 15px auto;
+}
+
+#question3 {
+    margin: 30px auto;
+    text-align: center;
+    color: #FFD700;
+    font-size: 3em;
+}
+
+#correct3 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+#wrong3 {
+    text-align: center;
+    color: #D32F2F;
 }
 
 /* win.php */
