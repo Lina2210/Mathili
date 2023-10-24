@@ -1,14 +1,13 @@
-
 * What Did Gandhi Do For The World? 
--Nothing
+- Nothing
 + Peace
 - Revolution
 - Racism
 * Where Is Gandhi From?
- - Morocco
- - England
- + India
- - Peru
+- Morocco
+- England
++ India
+- Peru
 * Ghandi Died For A ...
 - Accident
 - Heart Attack
@@ -25,15 +24,15 @@
 - Brasil
 + England
 * The Ball Used To Be...
-  - With Plastic
-  + With Leaves
-  - With Boxes
-  - With Clothes
+- With Plastic
++ With Leaves
+- With Boxes
+- With Clothes
 * Who Were The Ones Who Used The Word "Alborigen"?
 - Arabs
 - Asians
 - Spanish
-+ Italians - Greeks
++ Italians / Greeks
 * In Ancient Times, The Humans Used To Lived In...
 + Australia
 - Barcelona
