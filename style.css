@@ -296,18 +296,18 @@ body {
     margin: auto;
 }
 
-.winButtons a {
+.winButtons form button {
     color: black;
     font-size: larger;
+    padding: 12px 24px;
     text-decoration: none;
     border: 1px solid #FFFFFF;
-    padding: 12px 24px;
     background-color: antiquewhite;
     transition: background-color 0.5s ease;
     border-radius: 5px;
 }
 
-.winButtons a:hover {
+.winButtons form button:hover {
     background-color: #948b73;
 }
 
@@ -354,4 +354,15 @@ body {
 
 .loseButtons a:hover {
     background-color: #948b73;
+}
+
+/* publish.php */ 
+.formPublish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #143d82;
+    width: 200px;
+    height: auto;
+    margin: 35px auto;
 }
