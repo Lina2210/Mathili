@@ -1,6 +1,0 @@
-
-1,Lina,15
-2,Marti,13
-3,Tianle,18
-4,Jose,5
-5,Thiago,18
