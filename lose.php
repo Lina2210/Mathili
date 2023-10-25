@@ -37,7 +37,7 @@
     echo "</div>";
     echo "<div class='loseButtons'>";
         echo "<a href='index.php'>$messageHome</a>";
-        echo "<a href=''>$messagePublish</a>";
+        echo "<a href='publish.php'>$messagePublish</a>";
     echo "</div>";
 ?>
 
