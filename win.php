@@ -10,6 +10,7 @@
 <body>
     <?php
         session_start();
+        $_SESSION['points']=18;
         if(isset($_POST['language'])){
             $language = $_POST['language'];
             
@@ -19,17 +20,17 @@
         if($language=="catalan"){
             $messageCorrect= "¡ HAS RESPOST CORRECTAMENT TOTES LES PREGUNTES  !";
             $messageHome= "INICI";
-            $messagePublish= "GUARDAR ESTADISTIQUES";
+            $messagePublish= "PUBLICAR";
         }
         elseif($language=="spanish"){
             $messageCorrect= "¡ HAS RESPONDIDO CORRECTAMENTE TODAS LAS PREGUNTAS  !";
             $messageHome= "INICIO";
-            $messagePublish= "GUARDAR ESTADISTICAS";
+            $messagePublish= "PUBLICAR";
         }
         elseif($language=="english"){
             $messageCorrect= "¡ YOU ANSWERED ALL THE QUESTIONS CORRECTLY  !";
             $messageHome= "HOME";
-            $messagePublish= "SAVE STATS";
+            $messagePublish= "PUBLISH";
         }
         echo "<audio id='soundWin'>";
         echo "<source src='Sounds/winMusic.mp3' type='audio/mpeg'>";
@@ -39,8 +40,14 @@
         echo "<img src='public/silueta-personas-felices.jpg'>";
         echo "</div>";
         echo "<div class='winButtons'>";
-        echo "<a href='index.php'>$messageHome</a>";
-        echo "<a href=''>$messagePublish</a>";
+        echo "<form action='index.php' method='POST'>";
+            echo "<input type='hidden' name='language' value=$language>";
+            echo "<button>$messageHome</button>";
+        echo "</form>";
+        echo "<form action='publish.php' method='POST'>";
+            echo "<input type='hidden' name='language' value=$language>";
+            echo "<button>$messagePublish</button>";
+        echo "</form>";
         echo "</div>";
     ?>
     <script src="script.js"></script>

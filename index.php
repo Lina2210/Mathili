@@ -48,7 +48,9 @@
             echo "<form action='game.php' method='POST'>";
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
-            echo "<a href=''>Hall of Fame</a>";
+            echo "<form action='ranking.php' method='POST'>";
+            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "</form>";
             echo "</div>";
         }
         elseif($language=="catalan"){
@@ -73,7 +75,9 @@
             echo "<form action='game.php' method='POST'>";
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
-            echo "<a href=''>Hall of Fame</a>";
+            echo "<form action='ranking.php' method='POST'>";
+            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "</form>";
             echo "</div>";
         }
         elseif($language=="english"){
@@ -98,7 +102,9 @@
             echo "<form action='game.php' method='POST'>";
             echo "<a href='game.php'>PLAY</a>";
             echo "</form>";
-            echo "<a href=''>Hall of Fame</a>";
+            echo "<form action='ranking.php' method='POST'>";
+            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "</form>";
             echo "</div>";
         }
  

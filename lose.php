@@ -9,6 +9,13 @@
 </head>
 <body>
 <?php
+    session_start();
+    $level=$_SESSION['level'];
+    if(isset($_POST['question'])){
+        $question = $_POST['question'];
+        $points = (($level-2)*3)+($question-1);
+    }
+    $_SESSION['points']=$points;
     if(isset($_POST['language'])){
         $language = $_POST['language'];
         
@@ -18,17 +25,17 @@
     if($language=="catalan"){
         $messageLose= "¡ HAS PERDUT !";
         $messageHome= "INICI";
-        $messagePublish= "GUARDAR ESTADISTIQUES";
+        $messagePublish= "PUBLICAR";
     }
     elseif($language=="spanish"){
         $messageLose= "¡ HAS PERDIDO !";
         $messageHome= "INICIO";
-        $messagePublish= "GUARDAR ESTADISTICAS";
+        $messagePublish= "PUBLICAR";
     }
     elseif($language=="english"){
         $messageLose= "¡ YOU LOSE !";
         $messageHome= "HOME";
-        $messagePublish= "SAVE STATS";
+        $messagePublish= "PUBLISH";
     }
 
     echo "<div class='loseMessage'>";
@@ -36,10 +43,24 @@
         echo "<img src='public/triste-deprimido-fallido-papel-perforado.jpg'>";
     echo "</div>";
     echo "<div class='loseButtons'>";
-        echo "<a href='index.php'>$messageHome</a>";
-        echo "<a href=''>$messagePublish</a>";
+    echo "<form action='index.php' method='POST'>";
+        echo "<input type='hidden' name='language' value=$language>";
+        echo "<button>$messageHome</button>";
+    echo "</form>";
+        echo "<form action='publish.php' method='POST'>";
+            echo "<input type='hidden' name='language' value=$language>";
+            echo "<button>$messagePublish</button>";
+        echo "</form>";
     echo "</div>";
 ?>
+<audio id="soundLose">
+        <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3"     type="audio/mp3">
+    </audio>
+
+<script src="script.js"></script>
+    <script>
+        loseSound();
+    </script>
 
 </body>
 </html>

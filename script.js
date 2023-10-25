@@ -4,7 +4,7 @@ window.onload = function() {
 };
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
-    document.getElementById('answers1').style.display = 'block';
+    document.getElementById('answers1').style.display = 'grid';
 }
 function good(numberOfQuestion){
     document.getElementById('correct'+numberOfQuestion).style.display = 'block';
@@ -43,9 +43,22 @@ function acertSound(){
 }
 function showQuestion(numberOfQuestion){
     document.getElementById('question'+numberOfQuestion).style.display = 'block';
-    document.getElementById('answers'+numberOfQuestion).style.display = 'block';
+    document.getElementById('answers'+numberOfQuestion).style.display = 'grid';
 }
 function winSound(){
     let element = elementSound("soundWin")
     return playSound(element)
+}
+function displayBlock(id){
+    let question = document.getElementById(id);
+    if (question.style.display === "none"){
+        question.style.display = "block"
+    }
+
+}
+
+function loseSound(){
+    let element = elementSound("soundLose")
+    playSound(element)
+    
 }
