@@ -45,6 +45,8 @@ function showQuestion(numberOfQuestion){
     document.getElementById('question'+numberOfQuestion).style.display = 'block';
     document.getElementById('answers'+numberOfQuestion).style.display = 'grid';
 }
+
+
 function winSound(){
     let element = elementSound("soundWin")
     return playSound(element)

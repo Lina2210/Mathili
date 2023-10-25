@@ -8,9 +8,6 @@
     <title>Play</title>
 </head>
 <body>
-<audio id="soundWin">
-        <source src="Sounds/win.mp3" type="audio/mpeg">
-    </audio>
 
     <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">

@@ -8,6 +8,7 @@
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
+
     <?php
         session_start();
         $_SESSION['points']=18;
@@ -32,9 +33,6 @@
             $messageHome= "HOME";
             $messagePublish= "PUBLISH";
         }
-        echo "<audio id='soundWin'>";
-        echo "<source src='Sounds/winMusic.mp3' type='audio/mpeg'>";
-        echo "</audio>";
         echo "<div class='winMessage'>";
         echo "<h1>$messageCorrect</h1>";
         echo "<img src='public/silueta-personas-felices.jpg'>";
@@ -50,9 +48,16 @@
         echo "</form>";
         echo "</div>";
     ?>
+
+
+    <audio id="soundWin">
+        <source src="Sounds/winMusic.mp3" type="audio/mpeg">
+    </audio>
     <script src="script.js"></script>
     <script>
         winSound()
     </script>
+
+
 </body>
 </html>
