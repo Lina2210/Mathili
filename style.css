@@ -122,10 +122,10 @@ body {
 
 /* game.php */
 #question1 {
-    margin: 30px auto;
+    margin: 30px 75px;
     text-align: center;
     color: #FFD700;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 #answers1 {
@@ -341,15 +341,19 @@ body {
     margin: auto;
 }
 
-.loseButtons a {
+.loseButtons form button {
     color: black;
     font-size: larger;
+    padding: 12px 24px;
     text-decoration: none;
     border: 1px solid #FFFFFF;
-    padding: 12px 24px;
     background-color: antiquewhite;
     transition: background-color 0.5s ease;
     border-radius: 5px;
+}
+
+.loseButtons form button:hover {
+    background-color: #948b73;
 }
 
 .loseButtons a:hover {
