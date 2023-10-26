@@ -1,4 +1,3 @@
-Quien Quiere Ser Millonario?
 This project by Lina, Martí and Tianle is based on the famous Spanish TV show "¿Quien Quiere Ser Millonario?" but in web page format, executed on the server.
 The game is about answering different questions at different levels and earning money, in our case just for fun, there is no reward. 
 In order to play the game 
