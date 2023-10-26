@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Publish</title>
+    <title>PUBLISH</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
@@ -20,18 +20,21 @@
                 $accept="Accept";
                 $send="Send";
                 $name="Name:";
+                $messageDirectAccess= "Access denied. You cannot enter directly";
             }
             elseif($language=="catalan"){
                 $saveData="Dades guardades correctament!";
                 $accept="Acceptar";
                 $send="Enviar";
                 $name="Nom:";
+                $messageDirectAccess= "Accés denegat. No pots entrar directament";
             }
             elseif($language=="spanish"){
                 $saveData="Datos guardados correctamente!";
                 $accept="Aceptar";
                 $send="Enviar";
                 $name="Nombre:";
+                $messageDirectAccess= "Acceso denegado. No puedes entrar directamente";
             }
             if(isset($_POST["user"])){
                 $filename = "records.txt";  
@@ -52,7 +55,7 @@
                     fwrite($file, $data);
                 }
                 fclose($file);
-                echo "<div class='formPublish'>";
+                echo "<div class='formPublish'>"; 
                 echo "<form action='index.php' method='POST'>";
                     echo "<input type='hidden' name='language' value=$language>";
                     echo "<label for='user'> $saveData</label>";
@@ -74,7 +77,12 @@
         
             
         }else{
-            echo "error";
+            header('HTTP/1.0 403 Forbidden');
+            echo "<div class='accessDenied'>";
+            echo "<p>Access Denied</p>";
+            echo "<a href='index.php'>HOME</a>";
+            echo "</div>";
+            exit;
         }
         
     

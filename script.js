@@ -2,6 +2,22 @@
 window.onload = function() {
     showFirstQuestion(); 
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+    var mensajeJS = document.getElementById('mensaje-js');
+    mensajeJS.style.display = 'block';
+
+    if (!document.body.hasAttribute('data-js-enabled')) {
+        mensajeJS.style.display = 'block';
+        modalOverlay.style.display = 'flex';
+    }
+});
+
+function cerrarModal() {
+    var modalOverlay = document.getElementById('modal-overlay');
+    modalOverlay.style.display = 'none';
+}
+
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
     document.getElementById('answers1').style.display = 'grid';
@@ -44,8 +60,24 @@ function acertSound(){
 function showQuestion(numberOfQuestion){
     document.getElementById('question'+numberOfQuestion).style.display = 'block';
     document.getElementById('answers'+numberOfQuestion).style.display = 'grid';
+    document.getElementById('question'+numberOfQuestion).scrollIntoView({behavior:'smooth'})
 }
+
+
 function winSound(){
     let element = elementSound("soundWin")
     return playSound(element)
+}
+function displayBlock(id){
+    let question = document.getElementById(id);
+    if (question.style.display === "none"){
+        question.style.display = "block"
+    }
+
+}
+
+function loseSound(){
+    let element = elementSound("soundLose")
+    playSound(element)
+    
 }

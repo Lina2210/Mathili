@@ -8,9 +8,6 @@
     <title>Play</title>
 </head>
 <body>
-<audio id="soundWin">
-        <source src="Sounds/win.mp3" type="audio/mpeg">
-    </audio>
 
     <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">
@@ -21,6 +18,11 @@
     </audio>
     <?php
     session_start();
+        /*if(isset($_SESSION['points'])){
+            $points=$_SESSION['points'];
+        }else{
+            $_SESSION['points']=0;
+        }*/
         $language = $_SESSION['language'];
         $level = $_SESSION['level'];
         $arrayOfQuestionsAndAnswers = choose3RandomQuestionsandAnswers($level,$language);
@@ -46,6 +48,7 @@
                 if(substr($lineOfInformation,0,1)=="-"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
                     echo "<form action='lose.php' method='POST'>";
+                        echo "<input type='hidden' name='question' value=$numberOfQuestion>";
                         echo "<input type='hidden' name='language' value=$language>";
                         echo "<button onclick='bad($numberOfQuestion)' class='grid-item' id='answerBad'>$answer</button>";
                     echo "</form>";
@@ -122,14 +125,15 @@
                 }
                 array_push($arrayOfLines,$line);
             }
-            $numberOfQuestion1=rand(0,count($arrayOfQuestions));
-            $numberOfQuestion2=rand(0,count($arrayOfQuestions));
-            $numberOfQuestion3=rand(0,count($arrayOfQuestions));
+            $numberOfQuestion1=rand(0,count($arrayOfQuestions)-1);
+            $numberOfQuestion2=rand(0,count($arrayOfQuestions)-1);
+            $numberOfQuestion3=rand(0,count($arrayOfQuestions)-1);
             while($numberOfQuestion1 == $numberOfQuestion2 || $numberOfQuestion1 == $numberOfQuestion3 || $numberOfQuestion2 == $numberOfQuestion3){
-                $numberOfQuestion1=rand(0,count($arrayOfQuestions));
-                $numberOfQuestion2=rand(0,count($arrayOfQuestions));
-                $numberOfQuestion3=rand(0,count($arrayOfQuestions));
+                $numberOfQuestion1=rand(0,count($arrayOfQuestions)-1);
+                $numberOfQuestion2=rand(0,count($arrayOfQuestions)-1);
+                $numberOfQuestion3=rand(0,count($arrayOfQuestions)-1);
             }
+
             array_push($arrayOf3RandomQuestionsandAnswers,$arrayOfLines[array_search($arrayOfQuestions[$numberOfQuestion1],$arrayOfLines)]);           
             array_push($arrayOf3RandomQuestionsandAnswers,$arrayOfLines[array_search($arrayOfQuestions[$numberOfQuestion1],$arrayOfLines)+1]);
             array_push($arrayOf3RandomQuestionsandAnswers,$arrayOfLines[array_search($arrayOfQuestions[$numberOfQuestion1],$arrayOfLines)+2]);

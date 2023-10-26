@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/74ec47558a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Records</title>
+    <title>RANKING</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
     <?php
+        session_start();
         $filename = "records.txt";
 
 $lines = file($filename, FILE_IGNORE_NEW_LINES);
@@ -30,8 +31,37 @@ function compareLines($a, $b) {
 
 usort($lines, 'compareLines');
 
+if (isset($_SESSION['language'])) {
+    $language = $_SESSION['language'];
+} else {
+    $language = 'english';
+}
+
+if ($language=='spanish') {
+    $username = ' USUARIO ';
+    $points = ' PUNTOS ';
+    $home = ' INICIO ';
+}
+if ($language=='catalan') {
+    $username = ' USUARI ';
+    $points = ' PUNTS ';
+    $home = ' INICI ';
+}
+if ($language=='english') {
+    $username = ' USER ';
+    $points = ' POINTS ';
+    $home = ' HOME ';
+}
+
 echo "<div class='ranking'>";
 echo "<table>";
+echo "<thead>";
+echo "<tr>";
+echo "<th> ID </th>";
+echo "<th> $username </th>";
+echo "<th> $points </th>";
+echo "</tr>";
+echo "</thead>";
 foreach ($lines as $line) {
     if (!empty($line) && count(explode(',', $line)) >= 3){
     $partial = explode(",", $line); 
@@ -43,6 +73,10 @@ foreach ($lines as $line) {
 }
 }
 echo "</table>";
+echo "</div>";
+
+echo "<div class='rankingButton'>";
+echo "<a href='index.php'>$home</a>";
 echo "</div>";
     ?>
 </body>
