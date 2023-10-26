@@ -47,6 +47,7 @@
             echo "<button>$messagePublish</button>";
         echo "</form>";
         echo "</div>";
+    
     ?>
 
 

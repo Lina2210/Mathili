@@ -35,6 +35,9 @@
             $numberOfQuestion = 0;
             $correctmessage=correctmessage($language);
             $wrongmessage=wrongmessage($language);
+            echo "<div class='cronoGame'>";
+                 echo "<p id='cronometro'>00:00:00</p>";
+            echo "</div>";
             foreach($arrayOfQuestionsAndAnswers as $lineOfInformation){
                 if(substr($lineOfInformation,0,1)=="*"){
                     echo "<h2 id=correct$numberOfQuestion style=\"display: none;\">$correctmessage</h2>";

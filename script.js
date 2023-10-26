@@ -1,6 +1,8 @@
 
 window.onload = function() {
-    showFirstQuestion(); 
+    showFirstQuestion();
+    iniciarCronometro();
+    mostrarTiempo();
 };
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
@@ -44,6 +46,7 @@ function acertSound(){
 function showQuestion(numberOfQuestion){
     document.getElementById('question'+numberOfQuestion).style.display = 'block';
     document.getElementById('answers'+numberOfQuestion).style.display = 'grid';
+    document.getElementById('question'+numberOfQuestion).scrollIntoView({behavior:'smooth'});
 }
 
 
@@ -64,3 +67,34 @@ function loseSound(){
     playSound(element)
     
 }
+let tiempo = localStorage.getItem('tiempo') || 0;
+let intervalo;
+
+function iniciarCronometro() {
+    intervalo = setInterval(function() {
+        tiempo++;
+        mostrarTiempo();
+    }, 1000);
+}
+
+function detenerCronometro() {
+    clearInterval(intervalo);
+}
+
+function resetearCronometro() {
+    tiempo = 0;
+    mostrarTiempo();
+}
+
+function mostrarTiempo() {
+    let horas = Math.floor(tiempo / 3600);
+    let minutos = Math.floor((tiempo % 3600) / 60);
+    let segundos = tiempo % 60;
+
+    document.getElementById("cronometro").textContent = `${String(horas).padStart(2, "0")}:${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}`;
+    localStorage.setItem('tiempo', tiempo);
+}
+
+//document.getElementById("iniciar").addEventListener("click", iniciarCronometro);
+//document.getElementById("detener").addEventListener("click", detenerCronometro);
+//document.getElementById("resetear").addEventListener("click", resetearCronometro);

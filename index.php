@@ -18,15 +18,15 @@
         session_start();
         $_SESSION['language'] = $language;
         $_SESSION['level'] = 1;
-        echo "<div class='lengButton'>";
-        echo "<p>Lenguaje: </p>";
-        echo "<form action='index.php' method='POST'>";
-            echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
-            echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
-            echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
-        echo "</form>";
-        echo "</div>";
         if($language=="spanish"){
+            echo "<div class='lengButton'>";
+            echo "<p>Lenguaje: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
             echo "<h1 class='titIndex'>QUIEN QUIERE SER MILLONARIO?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -54,6 +54,14 @@
             echo "</div>";
         }
         elseif($language=="catalan"){
+            echo "<div class='lengButton'>";
+            echo "<p>Llenguatge: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
             echo "<h1 class='titIndex'>QUI VOL SER MILLONARI?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -81,6 +89,14 @@
             echo "</div>";
         }
         elseif($language=="english"){
+            echo "<div class='lengButton'>";
+            echo "<p>Language: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
             echo "<h1 class='titIndex'>WHO WANTS TO BE A MILLIONAIRE?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
