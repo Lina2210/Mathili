@@ -74,7 +74,12 @@
         
             
         }else{
-            echo "error";
+            header('HTTP/1.0 403 Forbidden');
+            echo "<div class='accessDenied'>";
+            echo "<p>Access Denied</p>";
+            echo "<a href='index.php'>HOME</a>";
+            echo "</div>";
+            exit;
         }
         
     

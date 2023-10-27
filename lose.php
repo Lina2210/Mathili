@@ -26,32 +26,42 @@
         $messageLose= "¡ HAS PERDUT !";
         $messageHome= "INICI";
         $messagePublish= "PUBLICAR";
+        $messageDirectAccess= "Accés denegat. No pots entrar directament";
     }
     elseif($language=="spanish"){
         $messageLose= "¡ HAS PERDIDO !";
         $messageHome= "INICIO";
         $messagePublish= "PUBLICAR";
+        $messageDirectAccess= "Acceso denegado. No puedes entrar directamente";
     }
     elseif($language=="english"){
         $messageLose= "¡ YOU LOSE !";
         $messageHome= "HOME";
         $messagePublish= "PUBLISH";
+        $messageDirectAccess= "Access denied. You cannot enter directly";
     }
-
-    echo "<div class='loseMessage'>";
-        echo "<h1>$messageLose</h1>";
-        echo "<img src='public/triste-deprimido-fallido-papel-perforado.jpg'>";
-    echo "</div>";
-    echo "<div class='loseButtons'>";
-    echo "<form action='index.php' method='POST'>";
-        echo "<input type='hidden' name='language' value=$language>";
-        echo "<button>$messageHome</button>";
-    echo "</form>";
-        echo "<form action='publish.php' method='POST'>";
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+        header('HTTP/1.0 403 Forbidden');
+        echo "<div class='accessDenied'>";
+        echo "<p>$messageDirectAccess</p>";
+        echo "<a href='index.php'>$messageHome</a>";
+        echo "</div>";
+    } else {
+        echo "<div class='loseMessage'>";
+            echo "<h1>$messageLose</h1>";
+            echo "<img src='public/triste-deprimido-fallido-papel-perforado.jpg'>";
+        echo "</div>";
+        echo "<div class='loseButtons'>";
+        echo "<form action='index.php' method='POST'>";
             echo "<input type='hidden' name='language' value=$language>";
-            echo "<button>$messagePublish</button>";
+            echo "<button>$messageHome</button>";
         echo "</form>";
-    echo "</div>";
+            echo "<form action='publish.php' method='POST'>";
+                echo "<input type='hidden' name='language' value=$language>";
+                echo "<button>$messagePublish</button>";
+            echo "</form>";
+        echo "</div>";
+    }
 ?>
 <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3"     type="audio/mp3">

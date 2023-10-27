@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Quien Quiere Ser Millonario?</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
+
 </head>
 <body>
     
@@ -125,5 +126,6 @@
         }
  
         ?>
+        <script src="script.js"></script>
 </body>
 </html>

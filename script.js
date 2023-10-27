@@ -1,8 +1,19 @@
 
 window.onload = function() {
-    showFirstQuestion();
-    iniciarCronometro();
-    mostrarTiempo();
+    const currentURL = window.location.href;
+    const currentPage = currentURL.substring(currentURL.lastIndexOf('/') + 1);
+    if(currentPage=="game.php"){
+        showFirstQuestion();
+        iniciarCronometro();
+        mostrarTiempo(); 
+    }
+    if(currentPage=="index.php" || currentPage==""){
+        resetearCronometro();
+    }
+    if(currentPage=="win.php"){
+        console.log("entra1");
+        sendValue(tiempo);
+    }
 };
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
@@ -83,7 +94,7 @@ function detenerCronometro() {
 
 function resetearCronometro() {
     tiempo = 0;
-    mostrarTiempo();
+    localStorage.setItem('tiempo', tiempo);
 }
 
 function mostrarTiempo() {
@@ -95,6 +106,17 @@ function mostrarTiempo() {
     localStorage.setItem('tiempo', tiempo);
 }
 
-//document.getElementById("iniciar").addEventListener("click", iniciarCronometro);
-//document.getElementById("detener").addEventListener("click", detenerCronometro);
-//document.getElementById("resetear").addEventListener("click", resetearCronometro);
+function sendValue(tiempo) {
+    console.log("entra al post");
+    fetch('win.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'time=' + tiempo,
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+    });
+}
