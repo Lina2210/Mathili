@@ -8,7 +8,6 @@
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
-
     <?php
         session_start();
         $_SESSION['points']=18;
@@ -59,8 +58,6 @@
             echo "</div>";
         }
     ?>
-
-
     <audio id="soundWin">
         <source src="Sounds/winMusic.mp3" type="audio/mpeg">
     </audio>
@@ -68,7 +65,5 @@
     <script>
         winSound()
     </script>
-
-
 </body>
 </html>

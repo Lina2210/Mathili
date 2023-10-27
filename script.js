@@ -3,21 +3,6 @@ window.onload = function() {
     showFirstQuestion(); 
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-    var mensajeJS = document.getElementById('mensaje-js');
-    mensajeJS.style.display = 'block';
-
-    if (!document.body.hasAttribute('data-js-enabled')) {
-        mensajeJS.style.display = 'block';
-        modalOverlay.style.display = 'flex';
-    }
-});
-
-function cerrarModal() {
-    var modalOverlay = document.getElementById('modal-overlay');
-    modalOverlay.style.display = 'none';
-}
-
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
     document.getElementById('answers1').style.display = 'grid';
@@ -28,8 +13,8 @@ function good(numberOfQuestion){
     playSound(element)
     document.getElementById('answers'+numberOfQuestion).style.pointerEvents = 'none';
     if(numberOfQuestion==3){
-        console.log("HOLA");
         document.getElementById('buttons').style.display = 'block';
+        document.getElementById('buttons').scrollIntoView({behavior:'smooth'})
     }else{
     showQuestion(numberOfQuestion+1);
     }

@@ -8,7 +8,6 @@
     <title>Play</title>
 </head>
 <body>
-
     <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">
     </audio>
@@ -25,6 +24,21 @@
         }*/
         $language = $_SESSION['language'];
         $level = $_SESSION['level'];
+        if ($language=="spanish") {
+            $extraTime = "TIEMPO EXTRA";
+            $audience = "PÚBLICO";
+        } elseif ($language=="catalan") {
+            $extraTime = "TEMPS EXTRA";
+            $audience = "PÚBLIC";
+        } elseif ($language=="english") {
+            $extraTime = "EXTRA TIME";
+            $audience = "AUDIENCE";
+        }
+        echo "<div class='wildcardsGame'>";
+        echo "<button onclick='clickfifty'>50%</button>";
+        echo "<button onclick=''>$extraTime</button>";
+        echo "<button onclick=''>$audience</button>";
+        echo "</div>";
         $arrayOfQuestionsAndAnswers = choose3RandomQuestionsandAnswers($level,$language);
         writeHtml($arrayOfQuestionsAndAnswers,$language,$level);
         $_SESSION['level']=++$level;
