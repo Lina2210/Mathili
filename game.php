@@ -8,7 +8,9 @@
     <title>Play</title>
 </head>
 <body>
-
+    <div id="wildCard">
+        <button>50/50</button>
+    </div>
     <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">
     </audio>
