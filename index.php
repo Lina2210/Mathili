@@ -16,6 +16,7 @@
         }else{
             $language= "spanish";
         }
+        session_destroy();
         session_start();
         $_SESSION['language'] = $language;
         $_SESSION['level'] = 1;

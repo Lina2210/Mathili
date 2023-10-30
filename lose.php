@@ -6,16 +6,21 @@
     <link rel="stylesheet" href="style.css">
     <title>LOSE</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
+    <script src="script.js"></script>
 </head>
 <body>
+    <script>
+        inicializeEndLose()
+    </script>
 <?php
     session_start();
     $level=$_SESSION['level'];
     if(isset($_POST['question'])){
         $question = $_POST['question'];
         $points = (($level-2)*3)+($question-1);
+        $_SESSION['points']=$points;
     }
-    $_SESSION['points']=$points;
+    $_SESSION['time'] = isset($_POST['time']) ? $_POST['time'] : null;
     if(isset($_POST['language'])){
         $language = $_POST['language'];
         

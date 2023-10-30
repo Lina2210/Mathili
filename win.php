@@ -9,9 +9,12 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <script>
+        inicializeEndWin()
+    </script>
     <?php
         session_start();
-        
+
         if ($_SERVER['REQUEST_METHOD'] != 'POST') {
             header('HTTP/1.0 403 Forbidden');
             echo "<div class='accessDenied'>";
@@ -19,8 +22,7 @@
             echo "<a href='index.php'>$messageHome</a>";
             echo "</div>";
         }else{
-            $_SESSION['timee'] = isset($_POST['timee']) ? $_POST['timee'] : null;
-            echo $_SESSION['timee'];
+            $_SESSION['time'] = isset($_POST['time']) ? $_POST['time'] : null;
             $_SESSION['points']=18;
             if(isset($_POST['language'])){
                 $language = $_POST['language'];
