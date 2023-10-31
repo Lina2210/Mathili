@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="style.css">
-    <script src="script.js"></script>
     <title>Play</title>
 </head>
 <body>
     <div id="wildCard">
-        <button>50/50</button>
+        <button id="fifty" onclick="clickFifty()">50/50</button>
     </div>
     <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">
@@ -52,8 +51,9 @@
                     echo "<form action='lose.php' method='POST'>";
                         echo "<input type='hidden' name='question' value=$numberOfQuestion>";
                         echo "<input type='hidden' name='language' value=$language>";
-                        echo "<button onclick='bad($numberOfQuestion)' class='grid-item' id='answerBad'>$answer</button>";
-                    echo "</form>";
+                        echo "<button onclick='bad($numberOfQuestion)' class='grid-item answer-button' id='answerBad'>$answer</button>";
+                        echo "</form>";
+
                 }
                 if(substr($lineOfInformation,0,1)=="+"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
@@ -198,5 +198,6 @@
             }
         }
     ?>
+    <script src="script.js"></script>
 </body>
 </html>

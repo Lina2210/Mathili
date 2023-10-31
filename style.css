@@ -410,3 +410,15 @@ body {
 .ranking table td h2 i {
     margin: auto 10px;
 }
+
+/*wildCard*/
+#wildCard #fifty{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffcc00;
+    font-size: 2em;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
+}
