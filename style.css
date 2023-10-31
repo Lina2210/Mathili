@@ -1,4 +1,5 @@
 body {
+    margin-top: 0px;
     background-color: #001F3F;
 }
 
@@ -46,10 +47,21 @@ body {
     vertical-align: middle;
 }
 
+#mensaje-js {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 5px 10px;
+    border: 2px solid red;
+    border-radius: 4px;
+    text-align: center;
+    margin: 20px auto;
+    width: 720px;
+}
+
 .titIndex {
     text-align: center;
     color: #FFD700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 25px;
 }
 
@@ -102,7 +114,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
-    margin: 5px auto;
+    margin: 15px auto;
 }
 
 .buttonsIndex a {
@@ -121,11 +133,58 @@ body {
 }
 
 /* game.php */
+.wildcardsGame {
+    position: sticky;
+    top: 20px;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    z-index: 100;
+    margin-right: 20px;
+}
+
+.wildcardsGame button {
+    width: 95px;
+    height: 95px;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 0.7em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffcc00;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
+}
+
+.wildcardsGame button:hover {
+    background-color: #cca60c;
+}
+
 #question1 {
-    margin: 30px 75px;
+    margin-top: 0;
+    margin-bottom: 35px;
+    margin-left: 75px;
+    margin-right: 75px;
     text-align: center;
     color: #FFD700;
     font-size: 2.5em;
+}
+
+#introQuestion1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#introQuestion1 img {
+    max-width: 350px;
+    height: auto;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 #answers1 {
@@ -134,9 +193,33 @@ body {
     grid-gap: 20px;
     margin: auto 25%;
 }
+ 
+#answers1 button {
+    transition: background-color 0.5s ease;
+}
 
 #answers1 form {
     display: grid;
+}
+
+#answers1 button:hover {
+    background-color: #96720e;
+}
+
+#answers1 form button:hover {
+    background-color: #96720e;
+}
+
+#introQuestion2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#introQuestion2 img {
+    max-width: 350px;
+    height: auto;
+    display: inline-block;
+    border-radius: 5px;
 }
 
 #answers2 {
@@ -146,8 +229,32 @@ body {
     margin: auto 25%;
 }
 
+#answers2 button {
+    transition: background-color 0.5s ease;
+}
+
 #answers2 form {
     display: grid;
+}
+
+#answers2 button:hover {
+    background-color: #96720e;
+}
+
+#answers2 form button:hover {
+    background-color: #96720e;
+}
+
+#introQuestion3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#introQuestion3 img {
+    max-width: 350px;
+    height: auto;
+    display: inline-block;
+    border-radius: 5px
 }
 
 #answers3 {
@@ -157,8 +264,20 @@ body {
     margin: auto 25%;
 }
 
+#answers3 button {
+    transition: background-color 0.5s ease;
+}
+
 #answers3 form {
     display: grid;
+}
+
+#answers3 button:hover {
+    background-color: #96720e;
+}
+
+#answers3 form button:hover {
+    background-color: #96720e;
 }
 
 .grid-item {
@@ -391,6 +510,13 @@ body {
     margin-bottom: 20px;
 }
 
+.ranking table th {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
 .ranking table tr:nth-child(even) {
     background-color: white;
 }
@@ -411,14 +537,65 @@ body {
     margin: auto 10px;
 }
 
-/*wildCard*/
-#wildCard #fifty{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #ffcc00;
-    font-size: 2em;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
-    text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
+.rankingButton {
+    width: 400px;
+    height: 50px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rankingButton a {
+    padding: 15px 30px;
+    color: black;
+    border-radius: 5px;
+    font-size: larger;
+    text-decoration: none;
+    background-color: antiquewhite;
+    transition: background-color 0.5s ease;
+}
+
+.rankingButton a:hover {
+    background-color: #948b73;
+}
+
+/* AccessDenied win.php, lose.php, publish.php */
+.accessDenied {
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #143d82;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+.accessDenied p {
+    color: #D32F2F;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    margin-top: 5px;
+}
+
+.accessDenied a {
+    padding: 15px 30px;
+    color: black;
+    border-radius: 5px;
+    font-size: larger;
+    text-decoration: none;
+    background-color: antiquewhite;
+    transition: background-color 0.5s ease;
+}
+
+.accessDenied a:hover {
+    background-color: #948b73;
 }
