@@ -7,9 +7,15 @@
     <title>Play</title>
 </head>
 <body>
-    <div id="wildCard">
-        <button id="fifty" onclick="clickFifty()">50/50</button>
-    </div>
+    <!-- comodin publico inicio--> 
+    <audio id="soundPublic">
+        <source src="Sounds/analog-timer-60-sec-2-startof-171599.mp3" type="audio/mpeg">
+    </audio>
+    
+    <audio id="soundStatistics">
+        <source src="Sounds/game-bonus-144751.mp3" type="audio/mpeg">
+    </audio>
+    <!-- comodin publico fin--> 
     <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">
     </audio>
@@ -24,8 +30,27 @@
         }else{
             $_SESSION['points']=0;
         }*/
+        /*comodin public inicio*/
+        include 'bars.php';
+        /* comodin publico fin*/
+
         $language = $_SESSION['language'];
         $level = $_SESSION['level'];
+        if ($language=="spanish") {
+            $extraTime = "TIEMPO EXTRA";
+            $audience = "PÚBLICO";
+        } elseif ($language=="catalan") {
+            $extraTime = "TEMPS EXTRA";
+            $audience = "PÚBLIC";
+        } elseif ($language=="english") {
+            $extraTime = "EXTRA TIME";
+            $audience = "AUDIENCE";
+        }
+        echo "<div class='wildcardsGame'>";
+        echo "<button id='fifty' onclick='clickFifty()'>50%</button>";
+        echo "<button onclick=''>$extraTime</button>";
+        echo "<button id='public' onclick='clickPublic()' onclick='comodinPublic()'>$audience</button>";
+        echo "</div>";
         $arrayOfQuestionsAndAnswers = choose3RandomQuestionsandAnswers($level,$language);
         writeHtml($arrayOfQuestionsAndAnswers,$language,$level);
         $_SESSION['level']=++$level;
@@ -43,21 +68,74 @@
                     $numberOfQuestion++;
                     echo "</div>";
                     $question= substr($lineOfInformation,1,strlen($lineOfInformation));
+                    echo "<div id='introQuestion$numberOfQuestion' style=\"display:none;\">";
                     echo "<h3 id=question$numberOfQuestion style=\"display: none;\"> $question</h3>";
+                    /* level1 */
+                    if(trim(substr($lineOfInformation,2))=="¿En qué siglo se creó el fútbol?" || trim(substr($lineOfInformation,2))=="En quin segle es va crear el futbol?" || trim(substr($lineOfInformation,2))=="In What Century Was Soccer Created?") {
+                        echo "<img src='public/fotos preguntas/1/In What Century Was Soccer Created.jpg' alt='In What Century Was Soccer Created'>";
+                    } elseif(trim(substr($lineOfInformation,2))=="¿Qué hizo Gandhi por el mundo?" || trim(substr($lineOfInformation,2))=="Què va fer Gandhi pel món?" || trim(substr($lineOfInformation,2))=="What Did Gandhi Do For The World?") {
+                        echo "<img src='public/fotos preguntas/1/What Did Gandhi Do For The World.PNG' alt='What Did Gandhi Do For The World'>";
+                    } elseif(trim(substr($lineOfInformation,2))=='¿Quiénes fueron los que utilizaron la palabra “alborigen”?' || trim(substr($lineOfInformation,2))=='Qui van ser els que van utilitzar la paraula "alborigen"?' || trim(substr($lineOfInformation,2))=='Who Were The Ones Who Used The Word "Alborigen"?') {
+                        echo "<img src='public/fotos preguntas/1/Who Were The Ones Who Used The Word  Alborigen .webp' alt='Who Were The Ones Who Used The Word  Alborigen'>";
+                    }
+                    /* level2 */
+                    if(trim(substr($lineOfInformation,2))=="¿Cuánto duró aproximadamente la guerra entre Palestina e Israel?" || trim(substr($lineOfInformation,2))=="Quant de temps va durar aproximadament la guerra entre Palestina i Israel?" || trim(substr($lineOfInformation,2))=="Approximately How Long Did The War Between Palestine And Israel Last?") {
+                        echo "<img src='public/fotos preguntas/2/Approximately How Long Did The War Between Palestine And Israel Last.jpg' alt='Approximately How Long Did The War Between Palestine And Israel Last>";
+                    } elseif(trim(substr($lineOfInformation,2))=="¿Cuántos territorios conquistó el Imperio Británico?" || trim(substr($lineOfInformation,2))=="Quants territoris va conquerir l'Imperi Britànic?" || trim(substr($lineOfInformation,2))=="How Many Territories Did The British Empire Conquer?") {
+                        echo "<img src='public/fotos preguntas/2/How Many Territories Did The British Empire Conquer.jpg' alt='How Many Territories Did The British Empire Conquer'>";
+                    } elseif(trim(substr($lineOfInformation,2))=='¿Qué come habitualmente el Reino Unido?' || trim(substr($lineOfInformation,2))=='Què menja normalment el Regne Unit?' || trim(substr($lineOfInformation,2))=='What Do The Uk Usually Eat?') {
+                        echo "<img src='public/fotos preguntas/2/What Do The Uk Usually Eat.jpg' alt='What Do The Uk Usually Eat'>";
+                    }
+                    /* level3 */
+                    if(trim(substr($lineOfInformation,2))=="¿Mejor sistema educativo?" || trim(substr($lineOfInformation,2))=="Millor sistema educatiu?" || trim(substr($lineOfInformation,2))=="Better Education System?") {
+                        echo "<img src='public/fotos preguntas/3/Better Education System.jpg' alt='Better Education System'>";
+                    } elseif(trim(substr($lineOfInformation,2))=="¿Más horas trabajando?" || trim(substr($lineOfInformation,2))=="Més hores de treball?" || trim(substr($lineOfInformation,2))=="More Hours Working?") {
+                        echo "<img src='public/fotos preguntas/3/More Hours Working.jpg' alt='More Hours Working'>";
+                    } elseif(trim(substr($lineOfInformation,2))=='¿Más población?' || trim(substr($lineOfInformation,2))=='Més població?' || trim(substr($lineOfInformation,2))=='More Population?') {
+                        echo "<img src='public/fotos preguntas/3/More Population.jpeg' alt='More Population'>";
+                    }
+                    /* level4 */
+                    if(trim(substr($lineOfInformation,2))=="Cuantas copas del mundo ha ganado Inglaterra?" || trim(substr($lineOfInformation,2))=="Quantes Copes del Món ha guanyat Anglaterra?" || trim(substr($lineOfInformation,2))=="How many world cups has England win?") {
+                        echo "<img src='public/fotos preguntas/4/How many world cups has England win.jpeg' alt='How many world cups has England win'>";
+                    } elseif(trim(substr($lineOfInformation,2))=="Que pais consume mas te anualmente?" || trim(substr($lineOfInformation,2))=="Quin país consumeix més te anualment?" || trim(substr($lineOfInformation,2))=="Which country consumes more tea annually?") {
+                        echo "<img src='public/fotos preguntas/4/Which country consumes more tea annually.webp' alt='Which country consumes more tea annually'>";
+                    } elseif(trim(substr($lineOfInformation,2))=='En que direccion conducen los ingleses?' || trim(substr($lineOfInformation,2))=='En quin costat condueixen les persones angleses?' || trim(substr($lineOfInformation,2))=='Which way do the English people drive?') {
+                        echo "<img src='public/fotos preguntas/4/Which way do the English people drive.jpg' alt='Which way do the English people drive'>";
+                    }
+                    /* level5 */
+                    if(trim(substr($lineOfInformation,2))=="¿Son los británicos puntuales?" || trim(substr($lineOfInformation,2))=="Són els britànics puntuals?" || trim(substr($lineOfInformation,2))=="Are the British punctual?") {
+                        echo "<img src='public/fotos preguntas/5/Are the British punctual.webp' alt='Are the British punctual'>";
+                    } elseif(trim(substr($lineOfInformation,2))=="¿De qué se trata la tradición del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="De què tracta la tradició del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="What is the Rolling Cheese tradition about?") {
+                        echo "<img src='public/fotos preguntas/5/What is the Rolling Cheese tradition about.png' alt='What is the Rolling Cheese tradition about'>";
+                    } elseif(trim(substr($lineOfInformation,2))=='¿Qué jugador australiano tiene el salario más alto?' || trim(substr($lineOfInformation,2))=='Quin jugador australià té el salari més alt?' || trim(substr($lineOfInformation,2))=='Which Australian player has the highest salary?') {
+                        echo "<img src='public/fotos preguntas/5/Which Australian player has the highest salary.jpg'> alt='Which Australian player has the highest salary'";
+                    }
+                    /* level6 */
+                    if(trim(substr($lineOfInformation,2))=="¿Qué territorio africano fue conquistado en el siglo XIX por Inglaterra?" || trim(substr($lineOfInformation,2))=="Quin territori africà va conquistar Anglaterra al segle XIX?" || trim(substr($lineOfInformation,2))=="What African territory did England conquer in the 19th century?") {
+                        echo "<img src='public/fotos preguntas/6/What African territory did England conquer in the 19th century.jpeg' alt='What African territory did England conquer in the 19th century'>";
+                    } elseif(trim(substr($lineOfInformation,2))=="¿Dónde se encuentra el palacio de Buckingham?" || trim(substr($lineOfInformation,2))=="A on es localitza el palau de Buckingham?" || trim(substr($lineOfInformation,2))=="Where is Buckingham Palace located?") {
+                        echo "<img src='public/fotos preguntas/6/Where is Buckingham Palace located.jpg' alt='Where is the big ben located'>";
+                    } elseif(trim(substr($lineOfInformation,2))=='¿Dónde está localizado el Big Ben?' || trim(substr($lineOfInformation,2))=='A on es troba el Big Ben?' || trim(substr($lineOfInformation,2))=='Where is the big ben located?') {
+                        echo "<img src='public/fotos preguntas/6/Where is the big ben located.jpg'> alt='Where is the big ben located'";
+                    }
+                    echo "</div>";
                     echo "<div id=answers$numberOfQuestion style=\"display: none;\">";
                 }
+                
                 if(substr($lineOfInformation,0,1)=="-"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
                     echo "<form action='lose.php' method='POST'>";
                         echo "<input type='hidden' name='question' value=$numberOfQuestion>";
                         echo "<input type='hidden' name='language' value=$language>";
                         echo "<button onclick='bad($numberOfQuestion)' class='grid-item answer-button' id='answerBad'>$answer</button>";
-                        echo "</form>";
-
+                    echo "</form>";
                 }
+                
                 if(substr($lineOfInformation,0,1)=="+"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
-                    echo "<button onclick='good($numberOfQuestion)' class='grid-item' id='answerGood'>$answer</button>";
+                    /* comodin publico inicio*/
+                    echo "<button onclick='good($numberOfQuestion)' class='grid-item answer-good' id='answerGood'>$answer</button>";
+                    /* comodin publico fin*/
                 }
                 
             }
@@ -105,11 +183,7 @@
             }
             echo"</div>";
             
-        }
-        
-        
-        
-        
+        }       
         
         function choose3RandomQuestionsandAnswers($level,$language){
             $cuantityOfQuestions=0;
@@ -175,6 +249,7 @@
             cleanNewlinesInFile($file);
             removeInitialSpaces($file);
         }
+        
         function correctmessage($language){
             if($language=="catalan"){
                 return "CORRECTE";

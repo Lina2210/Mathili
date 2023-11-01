@@ -8,8 +8,7 @@
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
-    
-        <?php
+    <?php
         if(isset($_POST['language'])){
             $language= $_POST['language'];
         }else{
@@ -18,15 +17,20 @@
         session_start();
         $_SESSION['language'] = $language;
         $_SESSION['level'] = 1;
-        echo "<div class='lengButton'>";
-        echo "<p>Lenguaje: </p>";
-        echo "<form action='index.php' method='POST'>";
-            echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
-            echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
-            echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
-        echo "</form>";
-        echo "</div>";
         if($language=="spanish"){
+            echo "<div class='lengButton'>";
+            echo "<p>Lenguaje: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
+            echo "<noscript>";
+            echo "<div id='mensaje-js'>";
+            echo "<p>¡JavaScript está deshabilitado en su navegador! Habilite JavaScript para jugar al Juego.</p>";
+            echo "</div>";
+            echo "</noscript>";
             echo "<h1 class='titIndex'>QUIEN QUIERE SER MILLONARIO?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -54,6 +58,19 @@
             echo "</div>";
         }
         elseif($language=="catalan"){
+            echo "<div class='lengButton'>";
+            echo "<p>Llenguatge: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
+            echo "<noscript>";
+            echo "<div id='mensaje-js'>";
+            echo "<p>JavaScript està deshabilitat al vostre navegador! Habiliteu JavaScript per jugar al Joc.</p>";
+            echo "</div>";
+            echo "</noscript>";
             echo "<h1 class='titIndex'>QUI VOL SER MILLONARI?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -81,6 +98,19 @@
             echo "</div>";
         }
         elseif($language=="english"){
+            echo "<div class='lengButton'>";
+            echo "<p>Language: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
+            echo "<noscript>";
+            echo "<div id='mensaje-js'>";
+            echo "<p>Javascript is disabled on your browser! Please enable JavaScript to play the Game.</p>";
+            echo "</div>";
+            echo "</noscript>";
             echo "<h1 class='titIndex'>WHO WANTS TO BE A MILLIONAIRE?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -107,7 +137,6 @@
             echo "</form>";
             echo "</div>";
         }
- 
-        ?>
+    ?>
 </body>
 </html>

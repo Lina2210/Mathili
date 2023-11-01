@@ -3,6 +3,3 @@
 3,Lina,18
 4,Tianle,18
 
-1,tklaksldas,1
-2,dasdsadsa,4
-3,tianle,18
