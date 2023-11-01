@@ -518,12 +518,24 @@ body {
     background-color: #143d82;
     width: 550px;
     height: 100px;
-    margin: 150px auto;
+    margin: 100px auto;
     border: 1px solid black;
 }
 
 .formPublish input {
     margin: 10px;
+}
+
+.statsUser {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3498db;
+    border: 1px solid black;
+}
+
+.statsUser h3 {
+    text-align: center;
 }
 
 /* ranking.php */
