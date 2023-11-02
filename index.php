@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="style.css">
     <title>Quien Quiere Ser Millonario?</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
+
 </head>
 <body>
-    <?php
+    
+        <?php
         if(isset($_POST['language'])){
             $language= $_POST['language'];
         }else{
             $language= "spanish";
         }
+        session_destroy();
         session_start();
         $_SESSION['language'] = $language;
         $_SESSION['level'] = 1;
@@ -26,11 +29,6 @@
                 echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
             echo "</form>";
             echo "</div>";
-            echo "<noscript>";
-            echo "<div id='mensaje-js'>";
-            echo "<p>¡JavaScript está deshabilitado en su navegador! Habilite JavaScript para jugar al Juego.</p>";
-            echo "</div>";
-            echo "</noscript>";
             echo "<h1 class='titIndex'>QUIEN QUIERE SER MILLONARIO?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -66,11 +64,6 @@
                 echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
             echo "</form>";
             echo "</div>";
-            echo "<noscript>";
-            echo "<div id='mensaje-js'>";
-            echo "<p>JavaScript està deshabilitat al vostre navegador! Habiliteu JavaScript per jugar al Joc.</p>";
-            echo "</div>";
-            echo "</noscript>";
             echo "<h1 class='titIndex'>QUI VOL SER MILLONARI?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -106,11 +99,6 @@
                 echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
             echo "</form>";
             echo "</div>";
-            echo "<noscript>";
-            echo "<div id='mensaje-js'>";
-            echo "<p>Javascript is disabled on your browser! Please enable JavaScript to play the Game.</p>";
-            echo "</div>";
-            echo "</noscript>";
             echo "<h1 class='titIndex'>WHO WANTS TO BE A MILLIONAIRE?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -137,6 +125,8 @@
             echo "</form>";
             echo "</div>";
         }
-    ?>
+ 
+        ?>
+        <script src="script.js"></script>
 </body>
 </html>
