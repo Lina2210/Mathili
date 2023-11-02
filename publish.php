@@ -12,46 +12,53 @@
     
         <?php
         session_start();
-        if(isset($_SESSION["points"]) && isset($_POST["language"])){
+        if(isset($_SESSION["points"]) && isset($_POST["language"]) && isset($_SESSION["time"])){
+            $time= $_SESSION["time"]/100;
             $points=$_SESSION["points"];
+            $pointsToSend= round($points/$time);
             $language=$_POST["language"];
             if($language=="english"){
                 $saveData="Stats saved correctly!";
                 $accept="Accept";
                 $send="Send";
                 $name="Name:";
-                $messageDirectAccess= "Access denied. You cannot enter directly";
+                $numbAnsw="Questions answered correctly";
+                $numbTime="Time of game";
+                $numbPoint="Points to send";
             }
             elseif($language=="catalan"){
                 $saveData="Dades guardades correctament!";
                 $accept="Acceptar";
                 $send="Enviar";
                 $name="Nom:";
-                $messageDirectAccess= "Accés denegat. No pots entrar directament";
+                $numbAnsw="Preguntes contestades correctament";
+                $numbTime="Temps de joc";
+                $numbPoint="Punts a enviar";
             }
             elseif($language=="spanish"){
                 $saveData="Datos guardados correctamente!";
                 $accept="Aceptar";
                 $send="Enviar";
                 $name="Nombre:";
-                $messageDirectAccess= "Acceso denegado. No puedes entrar directamente";
+                $numbAnsw="Preguntas contestadas correctamente";
+                $numbTime="Tiempo de juego";
+                $numbPoint="Puntos a enviar";
             }
             if(isset($_POST["user"])){
                 $filename = "records.txt";  
                 $file = fopen($filename, "a");
                 $user = $_POST["user"];
-                $points = $_POST["points"];
                 $fileExists = file_exists($filename) && filesize($filename) > 0;
                   
                 if ($fileExists) {
                     $lastLine = readLastLine($filename);
                     $session = explode(',', $lastLine);
                     $id = intval($session[0]) + 1; 
-                    $data = $id . "," . $user . "," . $points . "\n";
+                    $data = $id . "," . $user . "," . $pointsToSend . "\n";
                     fwrite($file, $data);
                 }else {
                     $id = 1;
-                    $data = $id . "," . $user . "," . $points . "\n";
+                    $data = $id . "," . $user . "," . $pointsToSend . "\n";
                     fwrite($file, $data);
                 }
                 fclose($file);
@@ -63,6 +70,12 @@
                 echo "</form>";
                 echo "</div>";
             }else{
+                $timeToPrint=$time*100;
+                echo "<div class= 'statsUser'>";
+                echo "<h3>$numbAnsw = $points</h3>";
+                echo "<h3>$numbTime = $timeToPrint seg</h3>";
+                echo "<h3>$numbPoint = $pointsToSend points</h3>";
+                echo "</div>";
                 echo "<div class='formPublish'>";
                 echo "<form action='publish.php' method='POST'>";
                     echo "<label for='user'>$name </label>";

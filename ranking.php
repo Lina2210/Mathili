@@ -34,7 +34,7 @@ usort($lines, 'compareLines');
 if (isset($_SESSION['language'])) {
     $language = $_SESSION['language'];
 } else {
-    $language = 'english';
+    $language = 'spanish';
 }
 
 if ($language=='spanish') {
