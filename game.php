@@ -183,7 +183,7 @@
             } elseif(trim(substr($lineOfInformation,2))=="¿De qué se trata la tradición del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="De què tracta la tradició del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="What is the Rolling Cheese tradition about?") {
                 echo "<img src='public/fotos preguntas/5/What is the Rolling Cheese tradition about.png' alt='What is the Rolling Cheese tradition about'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Qué jugador australiano tiene el salario más alto?' || trim(substr($lineOfInformation,2))=='Quin jugador australià té el salari més alt?' || trim(substr($lineOfInformation,2))=='Which Australian player has the highest salary?') {
-                echo "<img src='public/fotos preguntas/5/Which Australian player has the highest salary.jpg'> alt='Which Australian player has the highest salary'";
+                echo "<img src='public/fotos preguntas/5/Which Australian player has the highest salary.jpg' alt='Which Australian player has the highest salary'>";
             }
             /* level6 */
             if(trim(substr($lineOfInformation,2))=="¿Qué territorio africano fue conquistado en el siglo XIX por Inglaterra?" || trim(substr($lineOfInformation,2))=="Quin territori africà va conquistar Anglaterra al segle XIX?" || trim(substr($lineOfInformation,2))=="What African territory did England conquer in the 19th century?") {
@@ -191,7 +191,7 @@
             } elseif(trim(substr($lineOfInformation,2))=="¿Dónde se encuentra el palacio de Buckingham?" || trim(substr($lineOfInformation,2))=="A on es localitza el palau de Buckingham?" || trim(substr($lineOfInformation,2))=="Where is Buckingham Palace located?") {
                 echo "<img src='public/fotos preguntas/6/Where is Buckingham Palace located.jpg' alt='Where is the big ben located'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Dónde está localizado el Big Ben?' || trim(substr($lineOfInformation,2))=='A on es troba el Big Ben?' || trim(substr($lineOfInformation,2))=='Where is the big ben located?') {
-                echo "<img src='public/fotos preguntas/6/Where is the big ben located.jpg'> alt='Where is the big ben located'";
+                echo "<img src='public/fotos preguntas/6/Where is the big ben located.jpg' alt='Where is the big ben located'>";
             }
         }
         
