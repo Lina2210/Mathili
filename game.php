@@ -40,17 +40,21 @@
             if ($language=="spanish") {
                 $extraTime = "TIEMPO EXTRA";
                 $audience = "PÚBLICO";
+                $call = "LLAMADA";
             } elseif ($language=="catalan") {
                 $extraTime = "TEMPS EXTRA";
                 $audience = "PÚBLIC";
+                $call = "TRUCADA";
             } elseif ($language=="english") {
                 $extraTime = "EXTRA TIME";
                 $audience = "AUDIENCE";
+                $call = "CALL";
             }
             echo "<div class='wildcardsGame'>";
             echo "<button id='fifty' onclick='clickFifty()'>50%</button>";
             if($level>1){echo "<button id='extra' onclick='extraTime()'>$extraTime</button>";}
             echo "<button id='public' onclick='clickPublic()' onclick='comodinPublic()'>$audience</button>";
+            echo "<button id='call' onclick='clickCall()'>$call</button>";
             echo "</div>";
             echo "<div class='cronoGame' onclick='easterEgg()'>";
                  echo "<p id='cronometro'>00:00:00</p>";

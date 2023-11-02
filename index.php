@@ -56,7 +56,7 @@
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
             echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
-            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
             echo "</div>";
         }
@@ -96,7 +96,7 @@
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
             echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
-            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
             echo "</div>";
         }
@@ -136,7 +136,7 @@
             echo "<a href='game.php'>PLAY</a>";
             echo "</form>";
             echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
-            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
             echo "</div>";
         }
