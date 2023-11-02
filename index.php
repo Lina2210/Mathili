@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Quien Quiere Ser Millonario?</title>
     <link rel="icon" href="public/dolar.png" type="image/png">
+
 </head>
 <body>
     
@@ -15,18 +16,19 @@
         }else{
             $language= "spanish";
         }
+        session_destroy();
         session_start();
         $_SESSION['language'] = $language;
         $_SESSION['level'] = 1;
-        echo "<div class='lengButton'>";
-        echo "<p>Lenguaje: </p>";
-        echo "<form action='index.php' method='POST'>";
-            echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
-            echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
-            echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
-        echo "</form>";
-        echo "</div>";
         if($language=="spanish"){
+            echo "<div class='lengButton'>";
+            echo "<p>Lenguaje: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
             echo "<h1 class='titIndex'>QUIEN QUIERE SER MILLONARIO?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -48,10 +50,20 @@
             echo "<form action='game.php' method='POST'>";
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
-            echo "<a href=''>Hall of Fame</a>";
+            echo "<form action='ranking.php' method='POST'>";
+            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "</form>";
             echo "</div>";
         }
         elseif($language=="catalan"){
+            echo "<div class='lengButton'>";
+            echo "<p>Llenguatge: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
             echo "<h1 class='titIndex'>QUI VOL SER MILLONARI?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -73,10 +85,20 @@
             echo "<form action='game.php' method='POST'>";
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
-            echo "<a href=''>Hall of Fame</a>";
+            echo "<form action='ranking.php' method='POST'>";
+            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "</form>";
             echo "</div>";
         }
         elseif($language=="english"){
+            echo "<div class='lengButton'>";
+            echo "<p>Language: </p>";
+            echo "<form action='index.php' method='POST'>";
+                echo "<button id='espanol' name='language' value='spanish'><img src='public/spanishFlag.png'></button>";
+                echo "<button id='english' name='language' value='english'><img src='public/englishFlag.jpg'></button>";
+                echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
+            echo "</form>";
+            echo "</div>";
             echo "<h1 class='titIndex'>WHO WANTS TO BE A MILLIONAIRE?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -98,10 +120,13 @@
             echo "<form action='game.php' method='POST'>";
             echo "<a href='game.php'>PLAY</a>";
             echo "</form>";
-            echo "<a href=''>Hall of Fame</a>";
+            echo "<form action='ranking.php' method='POST'>";
+            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "</form>";
             echo "</div>";
         }
  
         ?>
+        <script src="script.js"></script>
 </body>
 </html>
