@@ -11,7 +11,7 @@
 * Ghandi murió por un...
 - Accidente
 - Infarto de miocardio
-- enfermedad
+- Enfermedad
 + Asesinado
 * ¿En qué siglo se creó el fútbol?
 + Siglo XIX
@@ -21,7 +21,7 @@
 * ¿En qué parte del mundo se creó el fútbol?
 - Porcelana
 - México
--Brasil
+- Brasil
 + Inglaterra
 * La pelota solía ser...
 - Con Plástico
@@ -29,14 +29,14 @@
 - Con Cajas
 - Con ropa
 * ¿Quiénes fueron los que utilizaron la palabra “alborigen”?
-- árabes
-- asiáticos
+- Árabes
+- Asiáticos
 - Español
 + Italianos 
 * En la antigüedad, los humanos vivían en...
-+Australia
++ Australia
 - Barcelona
--Singapur
+- Singapur
 - Argentina
 * ¿Cuántos años vivieron los aborígenes?
 - 12.000 Años

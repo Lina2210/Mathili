@@ -1,13 +1,13 @@
 * ¿Cómo es la bandera del Reino Unido?
-- Rosa, azul y rojo
-+ Azul Blanco Y Rojo
-- Azul, Negro, Rojo
-- Amarillo Rojo Azul
+- Rosa, Azul y Rojo
++ Azul, Blanco y Rojo
+- Azul, Negro y Rojo
+- Amarillo, Rojo y Azul
 * ¿Qué come habitualmente el Reino Unido?
-- gofres
+- Gofres
 - Sopa
 - Tocino
-+ Patatas Y Pescado
++ Patatas y Pescado
 * ¿Quién es el presidente del Reino Unido?
 - Donald Trump
 - Pedro Sánchez

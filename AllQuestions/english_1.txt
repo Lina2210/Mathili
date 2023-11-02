@@ -14,8 +14,8 @@
 - Ilness
 + Murdered
 * In What Century Was Soccer Created?
-+ Century Xix
-- Century Xx
++ Century XIX
+- Century XX
 - Century I
 - Now
 * Where In The World Was Football Created?
@@ -42,4 +42,4 @@
 - 12.000 Years
 + 40,000 Years
 - 25,000 Years
-- 60,000 Years
+- 60,000 Year

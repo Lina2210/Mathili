@@ -1,13 +1,13 @@
 * Com és la bandera del Regne Unit?
-- Rosa, blau i vermell
-+ Blau Blanc I Vermell
-- Blau, Negre, Vermell
-- Groc Vermell Blau
+- Rosa, Blau i Vermell
++ Blau Blanc i Vermell
+- Blau, Negre i Vermell
+- Groc, Vermell i Blau
 * Què menja normalment el Regne Unit?
 - Gofres
 - Sopa
 - Cansalada
-+ Patates I Peix
++ Patates i Peix
 * Qui és el president del Regne Unit?
 - Donald Trump
 - Pedro Sánchez

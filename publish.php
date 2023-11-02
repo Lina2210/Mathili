@@ -8,8 +8,6 @@
     <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
-    
-    
         <?php
         session_start();
         if(isset($_SESSION["points"]) && isset($_POST["language"]) && isset($_SESSION["time"])){
@@ -77,12 +75,15 @@
                 echo "<h3>$numbPoint = $pointsToSend points</h3>";
                 echo "</div>";
                 echo "<div class='formPublish'>";
-                echo "<form action='publish.php' method='POST'>";
+                echo "<form action='publish.php' id='formUserName' method='POST'>";
                     echo "<label for='user'>$name </label>";
-                    echo "<input type='text' name='user' required>";
+                    echo "<input type='text' id='username' name='user' required>";
                     echo "<input type='hidden' name='language' value=$language>";
                     echo "<input type='hidden' name='points' value=$points>";
-                    echo "<input type='submit' value=$send>";
+                    echo "<script>";
+                    echo "var language = '" . $language . "';";
+                    echo "</script>";
+                    echo "<input type='submit' value=$send onclick='validateName()'>";
                 echo "</form>";
                 echo "</div>";
             }

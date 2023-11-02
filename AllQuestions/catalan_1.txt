@@ -4,7 +4,7 @@
 - Revolució
 - El racisme
 * D'on és Gandhi?
-- El Marroc
+- Marroc
 - Anglaterra
 + Índia
 - Perú
@@ -14,7 +14,7 @@
 - Malaltia
 + Assassinat
 * En quin segle es va crear el futbol?
-+ Segle Xix
++ Segle XIX
 - Segle XX
 - Segle I
 - Ara
@@ -32,7 +32,7 @@
 - Àrabs
 - Asiàtics
 - Castellà
-+ italians 
++ Italians 
 * En l'antiguitat, els humans solien viure a...
 + Austràlia
 - Barcelona

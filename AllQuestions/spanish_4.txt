@@ -3,17 +3,17 @@
 + 1
 - 2
 - Nunca ha ido
-* En que direccion conducen los ingleses?
+* En que dirección conducen los ingleses?
 + Conducen por la izquierda y el conductor esta en la derecha
 - Conducen por la derecha y el conductor esta en la izquierda
 - Como todos
 - Al reves
-* Que país de la commonwealth crees que tiene la mejor situacion economica?
+* Que país de la commonwealth crees que tiene la mejor situación economica?
 + India 
 - Canada
 - Pakistan
 - Reino Unido
-* Cual es el pais que tiene el mayor numero de colonias del mundo?
+* Cual es el país que tiene el mayor numero de colonias del mundo?
 - Rusia
 + Francia
 - Dinamarca
