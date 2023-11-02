@@ -14,6 +14,7 @@
     </script>
 <?php
     session_start();
+
     $level=$_SESSION['level'];
     if(isset($_POST['question'])){
         $question = $_POST['question'];
