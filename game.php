@@ -37,25 +37,9 @@
             $numberOfQuestion = 0;
             $correctmessage=correctmessage($language);
             $wrongmessage=wrongmessage($language);
-            if ($language=="spanish") {
-                $extraTime = "TIEMPO EXTRA";
-                $audience = "PÚBLICO";
-            } elseif ($language=="catalan") {
-                $extraTime = "TEMPS EXTRA";
-                $audience = "PÚBLIC";
-            } elseif ($language=="english") {
-                $extraTime = "EXTRA TIME";
-                $audience = "AUDIENCE";
-            }
-            echo "<div class='wildcardsGame'>";
-            echo "<button id='fifty' onclick='clickFifty()'>50%</button>";
-            if($level>1){echo "<button id='extra' onclick='extraTime()'>$extraTime</button>";}
-            echo "<button id='public' onclick='clickPublic()' onclick='comodinPublic()'>$audience</button>";
-            echo "</div>";
             echo "<div class='cronoGame' onclick='easterEgg()'>";
-                 echo "<p id='cronometro'>00:00:00</p>";
+                echo "<p id='cronometro'>00:00:00</p>";
             echo "</div>";
-            $uniqid=0;
             foreach($arrayOfQuestionsAndAnswers as $lineOfInformation){
                 $uniqid++;
                 if(substr($lineOfInformation,0,1)=="*"){
