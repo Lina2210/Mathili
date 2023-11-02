@@ -40,6 +40,7 @@
             echo "<div class='cronoGame' onclick='easterEgg()'>";
                 echo "<p id='cronometro'>00:00:00</p>";
             echo "</div>";
+            $uniqid=0;
             foreach($arrayOfQuestionsAndAnswers as $lineOfInformation){
                 $uniqid++;
                 if(substr($lineOfInformation,0,1)=="*"){

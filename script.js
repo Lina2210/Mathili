@@ -28,7 +28,6 @@ window.onload = function() {
         iniciarCuentaRegresiva();
 
 
-    }
     if(currentPage=="index.php" || currentPage==""){
         resetearCronometro();
         resetButtons();
@@ -37,7 +36,7 @@ window.onload = function() {
         console.log("entra1");
         sendValue(tiempo);
     }*/
-};
+;
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
     document.getElementById('answers1').style.display = 'grid';
