@@ -30,7 +30,6 @@ window.onload = function() {
         sendValue(tiempo);
     }*/
 };
-
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
     document.getElementById('answers1').style.display = 'grid';
@@ -42,12 +41,9 @@ function good(numberOfQuestion){
     let element = elementSound("soundAcert")
     playSound(element)
     document.getElementById('answers'+numberOfQuestion).style.pointerEvents = 'none';
-    closeModal()
-
     if(numberOfQuestion==3){
         detenerCuentaRegresiva();
         document.getElementById('buttons').style.display = 'block';
-        document.getElementById('buttons').scrollIntoView({behavior:'smooth'})
     }else{
     showQuestion(numberOfQuestion+1);
     }
@@ -75,7 +71,6 @@ function playSound(element){
 function loseSound(){
     let element = elementSound("soundLose")
     return playSound(element)
-
 }
 
 function acertSound(){

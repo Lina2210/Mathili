@@ -14,11 +14,7 @@
     <audio id="soundStatistics">
         <source src="Sounds/game-bonus-144751.mp3" type="audio/mpeg">
     </audio>
-    
-    <audio id="soundStatistics">
-        <source src="Sounds/game-bonus-144751.mp3" type="audio/mpeg">
-    </audio>
-    <!-- comodin publico fin--> 
+
     <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">
     </audio>
@@ -31,21 +27,6 @@
         include 'bars.php';
         $language = $_SESSION['language'];
         $level = $_SESSION['level'];
-        if ($language=="spanish") {
-            $extraTime = "TIEMPO EXTRA";
-            $audience = "PÚBLICO";
-        } elseif ($language=="catalan") {
-            $extraTime = "TEMPS EXTRA";
-            $audience = "PÚBLIC";
-        } elseif ($language=="english") {
-            $extraTime = "EXTRA TIME";
-            $audience = "AUDIENCE";
-        }
-        echo "<div class='wildcardsGame'>";
-        echo "<button id='fifty' onclick='clickFifty()'>50%</button>";
-        echo "<button onclick=''>$extraTime</button>";
-        echo "<button id='public' onclick='clickPublic()' onclick='comodinPublic()'>$audience</button>";
-        echo "</div>";
         $arrayOfQuestionsAndAnswers = choose3RandomQuestionsandAnswers($level,$language);
         writeHtml($arrayOfQuestionsAndAnswers,$language,$level);
         $_SESSION['level']=++$level;
@@ -90,7 +71,6 @@
                     echo "</div>";
                     echo "<div id=answers$numberOfQuestion style=\"display: none;\">";
                 }
-                
                 if(substr($lineOfInformation,0,1)=="-"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
                     echo "<form action='lose.php' method='POST'>";
@@ -99,7 +79,6 @@
                         echo "<button onclick='bad($numberOfQuestion)' class='grid-item answer-button' id='answerBad$uniqid'>$answer</button>";
                     echo "</form>";
                 }
-                
                 if(substr($lineOfInformation,0,1)=="+"){
                     $answer= substr($lineOfInformation,1,strlen($lineOfInformation));
                     echo "<button onclick='good($numberOfQuestion)' class='grid-item answer-good' id='answerGood'>$answer</button>";
@@ -204,7 +183,7 @@
             } elseif(trim(substr($lineOfInformation,2))=="¿De qué se trata la tradición del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="De què tracta la tradició del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="What is the Rolling Cheese tradition about?") {
                 echo "<img src='public/fotos preguntas/5/What is the Rolling Cheese tradition about.png' alt='What is the Rolling Cheese tradition about'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Qué jugador australiano tiene el salario más alto?' || trim(substr($lineOfInformation,2))=='Quin jugador australià té el salari més alt?' || trim(substr($lineOfInformation,2))=='Which Australian player has the highest salary?') {
-                echo "<img src='public/fotos preguntas/5/Which Australian player has the highest salary.jpg' alt='Which Australian player has the highest salary'>";
+                echo "<img src='public/fotos preguntas/5/Which Australian player has the highest salary.jpg'> alt='Which Australian player has the highest salary'";
             }
             /* level6 */
             if(trim(substr($lineOfInformation,2))=="¿Qué territorio africano fue conquistado en el siglo XIX por Inglaterra?" || trim(substr($lineOfInformation,2))=="Quin territori africà va conquistar Anglaterra al segle XIX?" || trim(substr($lineOfInformation,2))=="What African territory did England conquer in the 19th century?") {
@@ -212,7 +191,7 @@
             } elseif(trim(substr($lineOfInformation,2))=="¿Dónde se encuentra el palacio de Buckingham?" || trim(substr($lineOfInformation,2))=="A on es localitza el palau de Buckingham?" || trim(substr($lineOfInformation,2))=="Where is Buckingham Palace located?") {
                 echo "<img src='public/fotos preguntas/6/Where is Buckingham Palace located.jpg' alt='Where is the big ben located'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Dónde está localizado el Big Ben?' || trim(substr($lineOfInformation,2))=='A on es troba el Big Ben?' || trim(substr($lineOfInformation,2))=='Where is the big ben located?') {
-                echo "<img src='public/fotos preguntas/6/Where is the big ben located.jpg' alt='Where is the big ben located'>";
+                echo "<img src='public/fotos preguntas/6/Where is the big ben located.jpg'> alt='Where is the big ben located'";
             }
         }
         
@@ -280,7 +259,6 @@
             cleanNewlinesInFile($file);
             removeInitialSpaces($file);
         }
-        
         function correctmessage($language){
             if($language=="catalan"){
                 return "CORRECTE";
