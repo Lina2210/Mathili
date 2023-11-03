@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="style.css">
     <title>Play</title>
+    <link rel="icon" href="public/dolar.png" type="image/png">
 </head>
 <body>
     <audio id="soundPublic">
@@ -152,7 +153,8 @@
                 echo "<img src='public/fotos preguntas/1/What Did Gandhi Do For The World.PNG' alt='What Did Gandhi Do For The World'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Quiénes fueron los que utilizaron la palabra “alborigen”?' || trim(substr($lineOfInformation,2))=='Qui van ser els que van utilitzar la paraula "alborigen"?' || trim(substr($lineOfInformation,2))=='Who Were The Ones Who Used The Word "Alborigen"?') {
                 echo "<img src='public/fotos preguntas/1/Who Were The Ones Who Used The Word  Alborigen .webp' alt='Who Were The Ones Who Used The Word  Alborigen'>";
-            }
+            } elseif (trim(substr($lineOfInformation,2))=="Cuantas copas del mundo ha ganado Inglaterra?" || trim(substr($lineOfInformation,2))=="Quantes Copes del Món ha guanyat Anglaterra?" || trim(substr($lineOfInformation,2))=="How many world cups has England win?") {
+                echo "<img src='public/fotos preguntas/1/How many world cups has England win.jpeg' alt='How many world cups has England win'>";
             /* level2 */
             if(trim(substr($lineOfInformation,2))=="¿Cuánto duró aproximadamente la guerra entre Palestina e Israel?" || trim(substr($lineOfInformation,2))=="Quant de temps va durar aproximadament la guerra entre Palestina i Israel?" || trim(substr($lineOfInformation,2))=="Approximately How Long Did The War Between Palestine And Israel Last?") {
                 echo "<img src='public/fotos preguntas/2/Approximately How Long Did The War Between Palestine And Israel Last.jpg' alt='Approximately How Long Did The War Between Palestine And Israel Last'>";
@@ -162,16 +164,16 @@
                 echo "<img src='public/fotos preguntas/2/What Do The Uk Usually Eat.jpg' alt='What Do The Uk Usually Eat'>";
             }
             /* level3 */
-            if(trim(substr($lineOfInformation,2))=="¿Mejor sistema educativo?" || trim(substr($lineOfInformation,2))=="Millor sistema educatiu?" || trim(substr($lineOfInformation,2))=="Better Education System?") {
-                echo "<img src='public/fotos preguntas/3/Better Education System.jpg' alt='Better Education System'>";
-            } elseif(trim(substr($lineOfInformation,2))=="¿Más horas trabajando?" || trim(substr($lineOfInformation,2))=="Més hores de treball?" || trim(substr($lineOfInformation,2))=="More Hours Working?") {
+            if(trim(substr($lineOfInformation,2))=="¿Más horas trabajando?" || trim(substr($lineOfInformation,2))=="Més hores de treball?" || trim(substr($lineOfInformation,2))=="More Hours Working?") {
                 echo "<img src='public/fotos preguntas/3/More Hours Working.jpg' alt='More Hours Working'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Más población?' || trim(substr($lineOfInformation,2))=='Més població?' || trim(substr($lineOfInformation,2))=='More Population?') {
                 echo "<img src='public/fotos preguntas/3/More Population.jpeg' alt='More Population'>";
+            } elseif(trim(substr($lineOfInformation,2))=='¿Qué jugador australiano tiene el salario más alto?' || trim(substr($lineOfInformation,2))=='Quin jugador australià té el salari més alt?' || trim(substr($lineOfInformation,2))=='Which Australian player has the highest salary?') {
+                echo "<img src='public/fotos preguntas/3/Which Australian player has the highest salary.jpg' alt='Which Australian player has the highest salary'>";
             }
             /* level4 */
-            if(trim(substr($lineOfInformation,2))=="Cuantas copas del mundo ha ganado Inglaterra?" || trim(substr($lineOfInformation,2))=="Quantes Copes del Món ha guanyat Anglaterra?" || trim(substr($lineOfInformation,2))=="How many world cups has England win?") {
-                echo "<img src='public/fotos preguntas/4/How many world cups has England win.jpeg' alt='How many world cups has England win'>";
+            if (trim(substr($lineOfInformation,2))=="¿Mejor sistema educativo?" || trim(substr($lineOfInformation,2))=="Millor sistema educatiu?" || trim(substr($lineOfInformation,2))=="Better Education System?") {
+                echo "<img src='public/fotos preguntas/4/Better Education System.jpg' alt='Better Education System'>";
             } elseif(trim(substr($lineOfInformation,2))=="Que pais consume mas te anualmente?" || trim(substr($lineOfInformation,2))=="Quin país consumeix més te anualment?" || trim(substr($lineOfInformation,2))=="Which country consumes more tea annually?") {
                 echo "<img src='public/fotos preguntas/4/Which country consumes more tea annually.webp' alt='Which country consumes more tea annually'>";
             } elseif(trim(substr($lineOfInformation,2))=='En que direccion conducen los ingleses?' || trim(substr($lineOfInformation,2))=='En quin costat condueixen les persones angleses?' || trim(substr($lineOfInformation,2))=='Which way do the English people drive?') {
@@ -182,9 +184,9 @@
                 echo "<img src='public/fotos preguntas/5/Are the British punctual.webp' alt='Are the British punctual'>";
             } elseif(trim(substr($lineOfInformation,2))=="¿De qué se trata la tradición del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="De què tracta la tradició del Rolling Cheese?" || trim(substr($lineOfInformation,2))=="What is the Rolling Cheese tradition about?") {
                 echo "<img src='public/fotos preguntas/5/What is the Rolling Cheese tradition about.png' alt='What is the Rolling Cheese tradition about'>";
-            } elseif(trim(substr($lineOfInformation,2))=='¿Qué jugador australiano tiene el salario más alto?' || trim(substr($lineOfInformation,2))=='Quin jugador australià té el salari més alt?' || trim(substr($lineOfInformation,2))=='Which Australian player has the highest salary?') {
-                echo "<img src='public/fotos preguntas/5/Which Australian player has the highest salary.jpg' alt='Which Australian player has the highest salary'>";
-            }
+            } elseif(trim(substr($lineOfInformation,2))=="¿Cuál es el componente principal del aire que respiramos?" || trim(substr($lineOfInformation,2))=="Quin és el component principal de l'aire que respirem?" || trim(substr($lineOfInformation,2))=="What is the main component of the air we breathe?") {
+                echo "<img src='public/fotos preguntas/5/What is the main component of the air we breathe.jpeg' alt='What is the main component of the Air we breathe'>";
+            } 
             /* level6 */
             if(trim(substr($lineOfInformation,2))=="¿Qué territorio africano fue conquistado en el siglo XIX por Inglaterra?" || trim(substr($lineOfInformation,2))=="Quin territori africà va conquistar Anglaterra al segle XIX?" || trim(substr($lineOfInformation,2))=="What African territory did England conquer in the 19th century?") {
                 echo "<img src='public/fotos preguntas/6/What African territory did England conquer in the 19th century.jpeg' alt='What African territory did England conquer in the 19th century'>";
@@ -194,7 +196,8 @@
                 echo "<img src='public/fotos preguntas/6/Where is the big ben located.jpg' alt='Where is the big ben located'>";
             }
         }
-        
+        }
+       
         function choose3RandomQuestionsandAnswers($level,$language){
             $cuantityOfQuestions=0;
             $arrayOfLines=[];

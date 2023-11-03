@@ -54,6 +54,7 @@ if ($language=='english') {
 }
 
 echo "<div class='ranking'>";
+echo "<h2 id='titRanking'>RANKING</h2>";
 echo "<table>";
 echo "<thead>";
 echo "<tr>";
