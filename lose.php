@@ -13,12 +13,19 @@
         inicializeEndLose()
     </script>
 <?php
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    header('HTTP/1.0 403 Forbidden');
+    echo "<div class='accessDenied'>";
+    echo "<p>Access denied. You cannot enter directly</p>";
+    echo "<a href='index.php'>Home</a>";
+    echo "</div>";
+} else{
     session_start();
 
     $level=$_SESSION['level'];
     if(isset($_POST['question'])){
         $question = $_POST['question'];
-        $points = (($level-2)*3)+($question-1);
+        $points = (($level-1)*3)+($question-1);
         $_SESSION['points']=$points;
     }
     $_SESSION['time'] = isset($_POST['time']) ? $_POST['time'] : null;
@@ -32,19 +39,16 @@
         $messageLose= "¡ HAS PERDUT !";
         $messageHome= "INICI";
         $messagePublish= "PUBLICAR";
-        $messageDirectAccess= "Accés denegat. No pots entrar directament";
     }
     elseif($language=="spanish"){
         $messageLose= "¡ HAS PERDIDO !";
         $messageHome= "INICIO";
         $messagePublish= "PUBLICAR";
-        $messageDirectAccess= "Acceso denegado. No puedes entrar directamente";
     }
     elseif($language=="english"){
         $messageLose= "¡ YOU LOSE !";
         $messageHome= "HOME";
         $messagePublish= "PUBLISH";
-        $messageDirectAccess= "Access denied. You cannot enter directly";
     }
     if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         header('HTTP/1.0 403 Forbidden');
@@ -52,7 +56,7 @@
         echo "<p>$messageDirectAccess</p>";
         echo "<a href='index.php'>$messageHome</a>";
         echo "</div>";
-    } else {
+    }
         echo "<div class='loseMessage'>";
             echo "<h1>$messageLose</h1>";
             echo "<img src='public/triste-deprimido-fallido-papel-perforado.jpg'>";
@@ -67,7 +71,8 @@
                 echo "<button>$messagePublish</button>";
             echo "</form>";
         echo "</div>";
-    }
+}
+    
 ?>
 <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3"     type="audio/mp3">

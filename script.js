@@ -7,13 +7,16 @@ window.onload = function() {
 
     if (localStorage.getItem('fiftyClicked')=='true') {
         disableButton('fifty');
-    }//else{inicializeButton('fifty');}
+    }
     if (localStorage.getItem('publicClicked')=='true') {
         disableButton('public');
-    }//else{inicializeButton('public');}
+    }
     if (localStorage.getItem('extraClicked')=='true') {
         disableButton('extra');
-    }//else{inicializeButton('extra');}
+    }
+    if (localStorage.getItem('callClicked')=='true'){
+        disableButton('call');
+    }
         showFirstQuestion();
         iniciarCronometro();
         mostrarTiempo(); 
@@ -121,6 +124,7 @@ function resetButtons(){
     localStorage.setItem('fiftyClicked', 'false');
     localStorage.setItem('publicClicked', 'false');
     localStorage.setItem('extraClicked', 'false');
+    localStorage.setItem('callClicked', 'false');
 
 }
 
@@ -195,7 +199,72 @@ function detenerCuentaRegresiva() {
     form.submit();
     
 }
+function clickCall(language){
+    boton = document.getElementById("call")
+    boton.style.pointerEvents='none';
+    boton.style.backgroundColor= "#fff";
+    localStorage.setItem('callClicked', 'true');
+    let numRandom = Math.floor(Math.random() * 10) + 1;
+    showPhone(language);
+    console.log(numRandom);
+    setTimeout(function() {
+        reproduceRing(numRandom);
+    }, 2000);
+    setTimeout(function() {
+        document.getElementById("formPhone").style.display = 'block';
+    }, 2000);
+    
+}
 
+function reproduceRing(numVeces){
+    let contador = 0;
+    
+    function playNextRing() {
+        doAnimation();
+        console.log("contador: ",contador);
+        console.log("veces: ", numVeces);
+        if (contador < numVeces) {
+            let element = elementSound("soundPhone");
+            playSound(element);
+            contador++;
+            setTimeout(playNextRing, 5000); // Espera 1 segundo antes de reproducir el siguiente sonido
+        }
+    }
+    
+    playNextRing();
+}
+function showPhone(language){
+    if(language=="spanish"){
+        document.getElementById("headPhone").innerText="¿Cuantas veces suena el teléfono?";
+    }
+    else if(language=="english"){
+        document.getElementById("headPhone").innerText="How many times does the phone ring?";
+    }
+    else if(language=="catalan"){
+        document.getElementById("headPhone").innerText="Cuantes vegades sona el telèfon?";
+    }
+    document.getElementById('callPage').style.display = 'block';
+}
+function doAnimation(){
+    let animacion = [
+        { transform: 'translate3d(-1px, 0, 0)' },
+        { transform: 'translate3d(2px, 0, 0)' },
+        { transform: 'translate3d(-4px, 0, 0)' },
+        { transform: 'translate3d(4px, 0, 0)' }
+    ];
+    
+    let elemento = document.getElementById("phonephoto"); // Asegúrate de tener un elemento con el id "miElemento"
+    
+    let animacionKeyframes = new KeyframeEffect(
+      elemento,
+      animacion,
+      { duration: 1000, iterations: 3, fill: "forwards" }
+    );
+    
+    let animacionGroup = new Animation(animacionKeyframes, document.timeline);
+    
+    animacionGroup.play();
+}
 function disableButton(buttonId) {
     const button = document.getElementById(buttonId);
     if (button) {

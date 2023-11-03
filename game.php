@@ -19,17 +19,28 @@
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3" type="audio/mpeg">
     </audio>
 
+    <audio id="soundPhone">
+        <source src="Sounds/ring-ring.mp3" type="audio/mpeg">
+    </audio>
+
     <audio id="soundAcert">
         <source src="Sounds/qacer.mp3" type="audio/mpeg">
     </audio>
     <?php
     session_start();
         include 'bars.php';
+        include 'call.php';
         $language = $_SESSION['language'];
-        $level = $_SESSION['level'];
+        if(isset($_POST['level'])){
+            $level= $_POST['level'];
+            print($level);
+        }else{
+            $level=1;
+        }
+        $_SESSION['level'] = $level;
         $arrayOfQuestionsAndAnswers = choose3RandomQuestionsandAnswers($level,$language);
         writeHtml($arrayOfQuestionsAndAnswers,$language,$level);
-        $_SESSION['level']=++$level;
+        //$_SESSION['level']=++$level;
         
         
 
@@ -54,7 +65,7 @@
             echo "<button id='fifty' onclick='clickFifty()'>50%</button>";
             if($level>1){echo "<button id='extra' onclick='extraTime()'>$extraTime</button>";}
             echo "<button id='public' onclick='clickPublic()' onclick='comodinPublic()'>$audience</button>";
-            echo "<button id='call' onclick='clickCall()'>$call</button>";
+            echo "<button id='call' onclick='clickCall(\"$language\")'>$call</button>";
             echo "</div>";
             echo "<div class='cronoGame' onclick='easterEgg()'>";
                  echo "<p id='cronometro'>00:00:00</p>";
@@ -119,18 +130,22 @@
             }
 
             }else{
+                $levelUp=$level+1;
                 if($language=="catalan"){
                     echo "<form action='game.php' method='POST'>";
+                        echo "<input type='hidden' name='level' value=$levelUp>";
                         echo "<button>Següents Preguntes</button>";
                     echo "</form>";
                 }
                 elseif($language=="english"){
                         echo "<form action='game.php' method='POST'>";
+                            echo "<input type='hidden' name='level' value=$levelUp>";
                             echo "<button>Next Question</button>";
                         echo "</form>";
                 }
                 elseif($language=="spanish"){
                         echo "<form action='game.php' method='POST'>";
+                            echo "<input type='hidden' name='level' value=$levelUp>";
                             echo "<button>Siguientes Preguntas</button>";
                         echo "</form>";
                 }
@@ -159,7 +174,7 @@
             }
             /* level2 */
             if(trim(substr($lineOfInformation,2))=="¿Cuánto duró aproximadamente la guerra entre Palestina e Israel?" || trim(substr($lineOfInformation,2))=="Quant de temps va durar aproximadament la guerra entre Palestina i Israel?" || trim(substr($lineOfInformation,2))=="Approximately How Long Did The War Between Palestine And Israel Last?") {
-                echo "<img src='public/fotos preguntas/2/Approximately How Long Did The War Between Palestine And Israel Last.jpg' alt='Approximately How Long Did The War Between Palestine And Israel Last>";
+                echo "<img src='public/fotos preguntas/2/Approximately How Long Did The War Between Palestine And Israel Last.jpg' alt='Approximately How Long Did The War Between Palestine And Israel Last'>";
             } elseif(trim(substr($lineOfInformation,2))=="¿Cuántos territorios conquistó el Imperio Británico?" || trim(substr($lineOfInformation,2))=="Quants territoris va conquerir l'Imperi Britànic?" || trim(substr($lineOfInformation,2))=="How Many Territories Did The British Empire Conquer?") {
                 echo "<img src='public/fotos preguntas/2/How Many Territories Did The British Empire Conquer.jpg' alt='How Many Territories Did The British Empire Conquer'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Qué come habitualmente el Reino Unido?' || trim(substr($lineOfInformation,2))=='Què menja normalment el Regne Unit?' || trim(substr($lineOfInformation,2))=='What Do The Uk Usually Eat?') {
