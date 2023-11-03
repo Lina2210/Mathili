@@ -1,35 +1,80 @@
-* Which Australian player has the highest salary?
-+ Mathew Ryan
-- Harry Souttar
-- Milos Degenejer
-- Leo Messi
 * Are the British punctual?
 + Always
-- Usually
-- Maybe
+- Generally
+- May be
 - Never
-* Which of these countries were not colonized by England?
-- Maldiva's Islands
-- Cayman Islands
-- Bermuda
-+ Belarus
-* In what century the cricket become a national sport?
-+ In the end of 18th century
-- In the beginning of 17th century
-- In the end of 15th century
-- At the beginning of the 19th century
-* In which English colony do they play cricket the least?
+* In which century did cricket become a national sport?
++ Late 18th century
+- Early 17th century
+- Late 15th century
+- Early 19th century
+* In which English colony is cricket least played?
 - India
 + Australia
-- Pakistán
+- Pakistan
 - South Africa
-* Which of these European countries is still a colony of the British Empire?
-+ Gibraltar
-- Cyprus
-- Channel islands
-- England
-* What is the Rolling Cheese tradition about?
-- Eat round cheese
-+ Throw round cheese off a hille
-- Making a round cheesecake
-- Buy a big round cheese
+* What is the Rolling Cheese tradition all about?
+- Eating round cheese
++ Throwing round cheese off a hill
+- Make a round cheese cake
+- Buy a large round cheese.
+* Population of the UK?
+- 1.216.000.000
+- 689.000.000
+- 1.356.000.000
++ 67.081.000
+* What is the main component of the air we breathe?
+- Carbon dioxide
++ Oxygen
+- Nitrogen
+- Hydrogen
+* What is the speed of light?
+- 100,000 km/s
++ 299,792 km/s
+- 150,000 km/s
+- 200,000 km/s
+* Who wrote "One Hundred Years of Solitude"?
++ Gabriel García Márquez
+- Julio Cortázar
+- Isabel Allende
+- Mario Vargas Llosa
+* In what year did the Russian Revolution take place?
+- 1905
++ 1917
+- 1923
+- 1931
+* How many continents are there in the world?
+- 4
+- 6
++ 7
+- 8
+* What is the smallest ocean in the world?
+- Atlantic Ocean
++ Arctic Ocean
+- Indian Ocean
+- Pacific Ocean
+* What is the capital city of Australia?
+- Auckland
+- Sydney
++ Canberra
+- Melbourne
+* Who was the first human being in space?
++ Yuri Gagarin
+- Neil Armstrong
+- Buzz Aldrin
+- Valentina Tereshkova
+* What is William Shakespeare's longest play?
+- Hamlet
+- Othello
+- Macbeth
++ Hamlet 
+* What is the chemical process in which milk becomes yoghurt?
++ Lactic fermentation
+- Distillation
+- Combustion
+- Oxidation
++ What is the densest metal?
+- Gold
++ Platinum
+- Lead
+- Mercury

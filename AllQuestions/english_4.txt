@@ -1,45 +1,80 @@
-* How many world cups has England win?
-- None
-+ 1 World Cup
-- 2 World Cup
-- Never gone
-* Which way do the English people drive?
-+ Driving in the left lane and the driver on the right.
-- Driving in the right lane and the driver on the left.
-- Like everyone.
-- To the other way
-* Which commonwealth country do you think has the best economic situation?
-+ India
+* In which direction do the English drive?
++ They drive on the left and the driver is on the right.
+- They drive on the right and the driver is on the left.
+- Like everyone else
+- The other way round
+* Which Commonwealth country do you think has the best economic situation?
+- India
 - Canada
-- Pakistan
-- United Kingdom
-* What is the country with the most colonies in the world?
+- Australia
++ United Kingdom
+* Which country has the largest number of colonies in the world?
 - Russia
 + France
 - Denmark
 - Portugal
-* In what time of the day do the British drink tea?
+* What time do the English have tea?
 - 2 P.M
 - 1 P.M
 - 5 P.M
 + 4 P.M
-* What was the first official team of football in the UK?
-- Notts County Football Club 
+* What was the first official football club in the UK?
+- Notts County Football Club
 + Sheffield
 - Hallam FC
 - Munich
-* What is the name of the party where the British dressed in green and pick flowers?
-- Easter day
+* What is the name of the holiday where the English wear green and pick flowers?
+- Easter Day
 + May day
-- San Patrick day
-- April Fool's day
-* Which country consumes more tea annually?
-- Portugal
-+ The UK
-- Spain
+- St. Patrick's Day
+- April Fool's Day
+* Which country consumes the most tea annually?
++ Turkey
+- United Kingdom
+- Ireland
 - France
-* Which colonial country has more world cups?
-- France
-- Spain
-+ Germany
-- Brazil
+* Which colonial country has the most world cups?
+- Argentina
+- Italy
+- Germany
++ Brazil
+* Best education system?
++ China
+- Singapore
+- Estonia
+- Finland
+* What is the largest ocean in the world?
+- Atlantic Ocean
+- Indian Ocean
++ Pacific Ocean (Correct answer)
+- Arctic Ocean
+* What is the most abundant metal in the earth's crust?
+- Gold
+- Silver
++ Iron
+- Aluminium
+* What is the fifth planet in the solar system?
+- Mars
+- Earth + Jupiter
++ Jupiter
+- Saturn
+* Who wrote "The Odyssey"?
+- Homer Simpson
++ Homer
+- Homer Aridjis
+- Homer Manzi
+* How many chemical elements are there in the periodic table?
+- 92
++ 118
+- 104
+- 130
+* In what year was the Universal Declaration of Human Rights established?
+- 1776
+- 1865
++ 1948
+- 1962
+* In which year was the first artificial satellite, Sputnik 1, launched?
+- 1952
++ 1957
+- 1965
+- 1970

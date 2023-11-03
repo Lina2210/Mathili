@@ -1,11 +1,11 @@
 * ¿Qué territorio africano fue conquistado en el siglo XIX por Inglaterra?
 + Uganda
-- Espanya
-- Francia
+- Tanzania
+- Kenia
 - Melilla
 * ¿Dónde está localizado el Big Ben?
 - París
-+ London
++ Londres
 - Andorra
 - Alemania
 * "La vida es como montar en bicicleta. Para mantener el balance, debes continuar en movimiento". ¿Quién dijo esta frase?
@@ -18,7 +18,7 @@
 - Escocia
 - Francia
 - Irlanda
-* ¿En que año tuvo el Museo Britanico más visitantes?
+* ¿En qué año tuvo el Museo Británico más visitantes?
 - 2017
 + 2015
 - 2020
@@ -31,15 +31,50 @@
 * ¿Quién era Ada Lovelace?
 - Política
 - Científica
-+ Matemática 
++ Matemática
 - Química
 * ¿Dónde se encuentra el palacio de Buckingham?
 - Francia
 + Inglaterra
 - Italia
-- Sudáfrica.
+- Irlanda
 * "¡Oh Romeo, Romeo! ¿Dónde te encuentras Romeo? Rechaza a tu padre y rechaza tu nombre; o, si te podrirás, te juro mi amor y así yo no seré una Capulet". ¿Quién escribió esto?
 + Shakespeare
 - Zorrilla
 - Quevedo
 - Cervantes
+* ¿En qué año se firmó la Declaración de Independencia de los Estados Unidos?
++ 1776
+- 1789
+- 1804
+- 1820
+* ¿Cuál es el número atómico del uranio?
++ 92
+- 88
+- 78
+- 106
+* ¿En qué año se llevó a cabo la Revolución Francesa?
+- 1700
+- 1776
++ 1789
+- 1820
+* ¿Cuál es el desierto más grande del mundo?
+- Sahara
++ Antártida
+- Atacama
+- Gobi
+* ¿Cuál es el número áureo?
+- 3.14
++ 1.618
+- 2.718
+- 0.618
+* ¿En qué año se inauguró la Torre Eiffel en París?
++ 1889
+- 1895
+- 1901
+- 1875
+* ¿En qué año se llevó a cabo la Revolución Cultural en China?
++ 1966
+- 1975
+- 1982
+- 1958

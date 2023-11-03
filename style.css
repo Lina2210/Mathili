@@ -643,3 +643,26 @@ body {
 .accessDenied a:hover {
     background-color: #948b73;
 }
+
+/* Mobile Responsive */
+@media only screen and (max-width:400px) {
+    body {
+        background-color: #721c24;
+    }
+    #question1 {
+        margin: 0 10px 10px;
+    }
+    .brief {
+        max-width: 100%;
+    }
+    .brief {
+        display: block;
+        margin: 0 0 20px;
+    }
+    .brief .instructions,
+    .brief .briefImage {
+        width: 100%;
+        margin: 0;
+    }
+
+}

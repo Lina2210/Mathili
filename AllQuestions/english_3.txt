@@ -3,88 +3,78 @@
 - France
 - Germany
 + England
-* More Wars Won?
+* Most wars won?
 - Australia
 - Canada
 + England
-- New Zeland
-* More PIB Annual?
+- New Zealand
+* More Annual GDP?
 + India
 - Canada
 - Australia
 - England
-* More Population?
-+ India
-- Bangladesh 
-- Australia
-- England
-* The Hottest Country?
+* Warmest country?
 - Australia
 - Cameroon
 + India
-- New Zeland
-* The Coldest Country?
-- England
-+ Canada
-- Ghana
-- Gamba
-* More Hours Working?
+- New Zealand
+* Longest working hours?
 + England
 - Cameroon
 - Ghana
-- Malasia
-* More Natural Reserves?
+- Malaysia
+* More Nature Reserves?
 - Nauru
-- Ruanda
+- Rwanda
 + Nigeria
 - England
-* The Best Economy?
+* Best economy?
 - Australia
-- Canada
-- New Zeland
+- Canada + New Zealand
+- New Zealand
 + England
-* Better Education System?
-+ Singapore
-- New Zeland
-- Ghana
-- England
-* The Most Athlete?
+* The most sporty?
 - Jamaica
 - Cameroon
 - Ghana
 + England
-* Population of UK?
-- 1.216.000.000
-- 689.000.000
-- 1.356.000.000
-+ 67.081.000
-* More Deaths?
-- New Zeland
+* Most deaths?
+- New Zealand
 - Cameroon
 - Ghana
 + England
-* Better Health?
+* Better health?
 + Singapore
-- New Zeland
+- New Zealand
 - Bahamas
 - England
-* More Beauty Awards?
-- New Zeland
+* More beauty awards?
+- New Zealand
 + India
 - Australia
 - England
-* More Nobel Awards?
-- Jamaica
-- New Zeland
-- Philippines
-+ England
-* More Culture?
-- Kenia
+* More culture?
+- Kenya
 - Namibia
 + India
 - England
-* More Fast Food?
+* More fast food?
 - Canada
 + India
 - Ghana
 - England
+* Which Australian player has the highest salary?
++ Mathew Ryan
+- Harry Soutar
+- Milos Degenek
+- Leo Messi
+* In which year did World War II start?
+- 1914
++ 1939
+- 1945
+- 1940
+* What is the smallest country in the world?
+- Monaco
+- Nauru
+- San Marino
++ Vatican City
