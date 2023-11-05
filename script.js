@@ -120,7 +120,6 @@ function statisticsPublic(){
     playSound(element)
 }
 function resetButtons(){
-    console.log("okkkkk");
     localStorage.setItem('fiftyClicked', 'false');
     localStorage.setItem('publicClicked', 'false');
     localStorage.setItem('extraClicked', 'false');
@@ -212,7 +211,7 @@ function clickCall(language){
     }, 2000);
     setTimeout(function() {
         document.getElementById("formPhone").style.display = 'block';
-    }, 2000);
+    }, 2000 +(5000*numRandom));
     
 }
 
@@ -220,14 +219,14 @@ function reproduceRing(numVeces){
     let contador = 0;
     
     function playNextRing() {
-        doAnimation();
         console.log("contador: ",contador);
         console.log("veces: ", numVeces);
         if (contador < numVeces) {
             let element = elementSound("soundPhone");
             playSound(element);
+            doAnimation();
             contador++;
-            setTimeout(playNextRing, 5000); // Espera 1 segundo antes de reproducir el siguiente sonido
+            setTimeout(playNextRing, 5000); 
         }
     }
     

@@ -30,16 +30,38 @@
     </style>
 </head>
 <body>
-    <div class="callPage" id="callPage">
-        <h3 id="headPhone"></h3>
-    <img src="public/phone.jpeg" id="phonephoto">
-    <div id="formPhone" style="display:none">
-    <form method="post" action="call.php">
-        <input type="number" name="Cantidad de rings" required>
-        <input type="submit" value="Enviar">
-    </form>
-    </div>
-    </div>
+    <?php
+        if(isset($_SESSION['language'])){
+            $language=$_SESSION['language'];
+        }else{
+            $language="english";
+        }
+        if($language=="spanish"){
+            $messageCorrect="Has acertado!";
+            $messageIncorrect="Incorrecto, la respuesta correcta era: ";
+            $messageSend="Enviar";
+        }
+        else if($language=="english"){
+            $messageCorrect="You're right!";
+            $messageIncorrect="Incorrect, the correct answer was: ";
+            $messageSend="Send";
+        }
+        else if($language=="catalan"){
+            $messageCorrect="Has acertat!";
+            $messageIncorrect="Incorrecte, la resposta correcta era: ";
+            $messageSend="Enviar";
+        }
+            echo "<div class='callPage' id='callPage'>";
+            echo "<h3 id='headPhone'></h3>";
+            echo "<img src='public/phone.jpeg' id='phonephoto'>";
+            echo "<div id='formPhone' style='display:none'>";
+            echo "<input type='number' name='rings' required>";
+            echo "<input type='submit' value='$messageSend'>";
+            echo "</div>";
+            echo "</div>";
+
+
+    ?>
    
     
     
