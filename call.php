@@ -40,23 +40,36 @@
             $messageCorrect="Has acertado!";
             $messageIncorrect="Incorrecto, la respuesta correcta era: ";
             $messageSend="Enviar";
+            $messageAccept="Aceptar";
         }
         else if($language=="english"){
             $messageCorrect="You're right!";
             $messageIncorrect="Incorrect, the correct answer was: ";
             $messageSend="Send";
+            $messageAccept="Accept";
         }
         else if($language=="catalan"){
             $messageCorrect="Has acertat!";
             $messageIncorrect="Incorrecte, la resposta correcta era: ";
             $messageSend="Enviar";
+            $messageAccept="Aceptar";
         }
             echo "<div class='callPage' id='callPage'>";
+            echo "<div id='startOfPhone'>";
             echo "<h3 id='headPhone'></h3>";
             echo "<img src='public/phone.jpeg' id='phonephoto'>";
             echo "<div id='formPhone' style='display:none'>";
-            echo "<input type='number' name='rings' required>";
-            echo "<input type='submit' value='$messageSend'>";
+            echo "<input id='inputRing' type='number' name='rings' required>";
+            echo "<button onclick='sendRings(\"$language\")'>$messageSend</button>";
+            echo "</div>";
+            echo "</div>";
+            echo "<div id='correctRing' style='display:none'>";
+            echo "<h3>$messageCorrect</h3>";
+            echo "<button onclick='closePhone()'>$messageAccept</button>";
+            echo "</div>";
+            echo "<div id='wrongRing' style='display:none'>";
+            echo "<h3 id='incorrectRingMessage'>$messageIncorrect</h3>";
+            echo "<button onclick='closePhone()'>$messageAccept</button>";
             echo "</div>";
             echo "</div>";
 

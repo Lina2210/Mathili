@@ -40,11 +40,8 @@ function showIndexButtons(){
 }
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
-    console.log(1);
     document.getElementById('answers1').style.display = 'grid';
-    console.log(2);
     document.getElementById('introQuestion1').style.display = 'block';
-    console.log(3);
 }
 function good(numberOfQuestion){
     countofGoods=numberOfQuestion;
@@ -198,12 +195,16 @@ function detenerCuentaRegresiva() {
     form.submit();
     
 }
+var numOfRings=0;
 function clickCall(language){
+    detenerCronometro();
+    detenerCuentaRegresiva();
     boton = document.getElementById("call")
     boton.style.pointerEvents='none';
     boton.style.backgroundColor= "#fff";
     localStorage.setItem('callClicked', 'true');
     let numRandom = Math.floor(Math.random() * 10) + 1;
+    numOfRings = numRandom;
     showPhone(language);
     console.log(numRandom);
     setTimeout(function() {
@@ -214,7 +215,32 @@ function clickCall(language){
     }, 2000 +(5000*numRandom));
     
 }
+function sendRings(language){
+    document.getElementById('startOfPhone').style.display = 'none';
+    var numInput = document.querySelector("#inputRing").value;
+    if (numInput == numOfRings) {
+        document.getElementById('correctRing').style.display = 'block';
+        good(countofGoods+1);
+    } else {
+        if(language=="catalan"){
+            document.getElementById("incorrectRingMessage").innerText="¡Incorrecte! La resposta correcta era: "+ numOfRings;
+        }
+        else if(language=="spanish"){
+            document.getElementById("incorrectRingMessage").innerText="¡Incorrecto! La respuesta correcta era: "+ numOfRings;
 
+        }
+        else if(language=="english"){
+            document.getElementById("incorrectRingMessage").innerText="Wrong! The correct answer was: "+ numOfRings;
+        }
+        document.getElementById('wrongRing').style.display = 'block';
+    }
+
+}
+function closePhone(){
+document.getElementById('callPage').style.display = 'none';
+iniciarCronometro();
+iniciarCuentaRegresiva();
+}
 function reproduceRing(numVeces){
     let contador = 0;
     
@@ -223,10 +249,10 @@ function reproduceRing(numVeces){
         console.log("veces: ", numVeces);
         if (contador < numVeces) {
             let element = elementSound("soundPhone");
-            playSound(element);
             doAnimation();
+            playSound(element);
             contador++;
-            setTimeout(playNextRing, 5000); 
+            setTimeout(playNextRing, 5500); 
         }
     }
     
