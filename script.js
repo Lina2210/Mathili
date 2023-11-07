@@ -1,5 +1,5 @@
-var countofGoods=0;
-var segundos = 30;
+let countofGoods=0;
+let segundos = 30;
 window.onload = function() {
     const currentURL = window.location.href;
     const currentPage = currentURL.substring(currentURL.lastIndexOf('/') + 1);
@@ -66,18 +66,25 @@ function elementSound(id){
 }
 
 function playSound(element){
-    return element.play();
+    if (element) {
+        element.play();
+    }
 }
 function loseSound(){
     let element = elementSound("soundLose")
-    return playSound(element)
+    if (loser){
+        playSound(element)
+    }
+    
 }
+
 
 function acertSound(){
     let element = elementSound("soundAcert")
     return playSound(element)
 }
 function showQuestion(numberOfQuestion){
+    console.log(numberOfQuestion)
     document.getElementById('question'+numberOfQuestion).style.display = 'block';
     document.getElementById('answers'+numberOfQuestion).style.display = 'grid';
     document.getElementById('introQuestion'+numberOfQuestion).style.display = 'block';
@@ -87,8 +94,15 @@ function showQuestion(numberOfQuestion){
 
 function winSound(){
     let element = elementSound("soundWin")
-    return playSound(element)
+    if (victoria){
+        playSound(element)
+    }
+    
 }
+
+
+
+
 function displayBlock(id){
     let question = document.getElementById(id);
     if (question.style.display === "none"){

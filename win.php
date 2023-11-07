@@ -11,19 +11,28 @@
 <body>
     <script>
         inicializeEndWin()
+
     </script>
     <?php
         session_start();
 
         if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+            
             header('HTTP/1.0 403 Forbidden');
+            echo '<body class="access-denied">';
             echo "<div class='accessDenied'>";
             echo "<p>Access denied. You cannot enter directly</p>";
             echo "<a href='index.php'>Home</a>";
             echo "</div>";
+            
         }else{
+            
             $_SESSION['time'] = isset($_POST['time']) ? $_POST['time'] : null;
             $_SESSION['points']=18;
+            echo "<script>";
+            echo "let victoria = true;";
+            echo "window.addEventListener('load', winSound)";
+            echo "</script>";
             if(isset($_POST['language'])){
                 $language = $_POST['language'];
                 
@@ -68,8 +77,5 @@
     <audio id="soundWin">
         <source src="Sounds/winMusic.mp3" type="audio/mpeg">
     </audio>
-    <script>
-        winSound()
-    </script>
 </body>
 </html>

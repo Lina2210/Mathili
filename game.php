@@ -90,7 +90,7 @@
             echo "</div>";
             if($level>=2){
                 echo "<div id='cronoGameQuestions'>";
-                        echo "<p id='cronometroAtras'></p>";
+                        echo "<p id='cronometroAtras'>00:30</p>";
                     echo "</div>";
             }
             echo"<div id=buttons style=\"display: none;\">";
@@ -155,7 +155,7 @@
             }
             /* level2 */
             if(trim(substr($lineOfInformation,2))=="¿Cuánto duró aproximadamente la guerra entre Palestina e Israel?" || trim(substr($lineOfInformation,2))=="Quant de temps va durar aproximadament la guerra entre Palestina i Israel?" || trim(substr($lineOfInformation,2))=="Approximately How Long Did The War Between Palestine And Israel Last?") {
-                echo "<img src='public/fotos preguntas/2/Approximately How Long Did The War Between Palestine And Israel Last.jpg' alt='Approximately How Long Did The War Between Palestine And Israel Last>";
+                echo "<img src='public/fotos preguntas/2/Approximately How Long Did The War Between Palestine And Israel Last.jpg' alt='Approximately How Long Did The War Between Palestine And Israel Last'>";
             } elseif(trim(substr($lineOfInformation,2))=="¿Cuántos territorios conquistó el Imperio Británico?" || trim(substr($lineOfInformation,2))=="Quants territoris va conquerir l'Imperi Britànic?" || trim(substr($lineOfInformation,2))=="How Many Territories Did The British Empire Conquer?") {
                 echo "<img src='public/fotos preguntas/2/How Many Territories Did The British Empire Conquer.jpg' alt='How Many Territories Did The British Empire Conquer'>";
             } elseif(trim(substr($lineOfInformation,2))=='¿Qué come habitualmente el Reino Unido?' || trim(substr($lineOfInformation,2))=='Què menja normalment el Regne Unit?' || trim(substr($lineOfInformation,2))=='What Do The Uk Usually Eat?') {

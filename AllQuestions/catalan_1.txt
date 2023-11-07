@@ -43,3 +43,9 @@
 + 40.000 anys
 - 25.000 anys
 - 60.000 anys
+
+*adg
+-agd
++ag
+-asg
+-asg
