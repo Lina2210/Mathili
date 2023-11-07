@@ -46,7 +46,7 @@
 * ¿Cuál es el océano más grande del mundo?
 - Océano Atlántico
 - Océano Índico
-+ Océano Pacífico (Respuesta correcta)
++ Océano Pacífico
 - Océano Ártico
 * ¿Cuál es el metal más abundante en la corteza terrestre?
 - Oro

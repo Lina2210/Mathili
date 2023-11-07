@@ -46,7 +46,7 @@
 * What is the largest ocean in the world?
 - Atlantic Ocean
 - Indian Ocean
-+ Pacific Ocean (Correct answer)
++ Pacific Ocean
 - Arctic Ocean
 * What is the most abundant metal in the earth's crust?
 - Gold
@@ -55,7 +55,7 @@
 - Aluminium
 * What is the fifth planet in the solar system?
 - Mars
-- Earth + Jupiter
+- Earth
 + Jupiter
 - Saturn
 * Who wrote "The Odyssey"?

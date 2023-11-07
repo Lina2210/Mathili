@@ -10,11 +10,11 @@
 - Alemanya
 * "La vida és com muntar amb bicicleta. Per a mantenir el balanç, has de continuar en moviment". Qui va dir aquesta frase?
 + Albert Einstein
-- *Forrest *Gump
-- *Will Smith
+- Forrest Gump
+- Will Smith
 - Barack Obama
-* On és típic menjar peix i patates (*fish *and xips)?
-+ el Regne Unit
+* On és típic menjar peix i patates (fish and xips)?
++ Regne Unit
 - Escòcia
 - França
 - Irlanda
@@ -28,12 +28,12 @@
 + 1952
 - 1954
 - 1960
-* Qui era Ada *Lovelace?
+* Qui era Ada Lovelace?
 - Política
 - Científica
 + Matemàtica
 - Química
-* On es troba el palau de *Buckingham?
+* On es troba el palau de Buckingham?
 - França
 + Anglaterra
 - Itàlia
@@ -61,8 +61,8 @@
 * Quin és el desert més gran del món?
 - Sàhara
 + Antàrtida
-- *Atacama
-- *Gobi
+- Atacama
+- Gobi
 * Quin és el número auri?
 - 3.14
 + 1.618

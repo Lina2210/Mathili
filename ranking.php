@@ -15,6 +15,10 @@
 
 $lines = file($filename, FILE_IGNORE_NEW_LINES);
 
+$lastLane = end($lines);
+
+$lastLanePartial = explode(",", $lastLane);
+
 function compareLines($a, $b) {
     
     $aData = explode(',', $a);
@@ -66,11 +70,19 @@ echo "</thead>";
 foreach ($lines as $line) {
     if (!empty($line) && count(explode(',', $line)) >= 3){
     $partial = explode(",", $line); 
-    echo "<tr>";
-    echo "\t<td><h2><i class='fa fa-solid fa-id-card'></i>" . $partial[0] . "</h2></td>\n";
-    echo "\t<td><h2><i class='fa fa-regular fa-user'></i>" . $partial[1] . "</h2></td>\n";
-    echo "\t<td><h2>" . $partial[2] . "<i class='fa fa-solid fa-coins'></i></h2></td>\n";
-    echo "</tr>"; 
+    if ($lastLanePartial[1]==$partial[1]) {
+        echo "<tr id='lastLane'>";
+        echo "\t<td><h2><i class='fa fa-solid fa-id-card'></i>" . $partial[0] . "</h2></td>\n";
+        echo "\t<td><h2><i class='fa fa-regular fa-user'></i>" . $partial[1] . "</h2></td>\n";
+        echo "\t<td><h2>" . $partial[2] . "<i class='fa fa-solid fa-coins'></i></h2></td>\n";
+        echo "</tr>"; 
+    } else {
+        echo "<tr>";
+        echo "\t<td><h2><i class='fa fa-solid fa-id-card'></i>" . $partial[0] . "</h2></td>\n";
+        echo "\t<td><h2><i class='fa fa-regular fa-user'></i>" . $partial[1] . "</h2></td>\n";
+        echo "\t<td><h2>" . $partial[2] . "<i class='fa fa-solid fa-coins'></i></h2></td>\n";
+        echo "</tr>"; 
+    }
 }
 }
 echo "</table>";

@@ -19,15 +19,15 @@
 - 5 P.M
 + 4 P.M
 * Quin va ser el primer club de futbol oficial al Regne Unit?
-- *Notts *County *Football Club
-+ *Sheffield
-- *Hallam FC
+- Notts County Football Club
++ Sheffield
+- Hallam FC
 - Munic
 * Quin és el nom de la festa on els anglesos es vesteixen de verd i recullen flors?
-- *Easter *Day
-+ *May *day
-- Sant Patrick *day
-- *April *Fool’s *Day
+- Easter Day
++ May Day
+- Sant Patrick Day
+- April Fool’s Day
 * Que país consumeix més te anualment?
 + Turquia
 - Regne Unit
@@ -46,7 +46,7 @@
 * Quin és l'oceà més gran del món?
 - Oceà Atlàntic
 - Oceà Índic
-+ Oceà Pacífic (Resposta correcta)
++ Oceà Pacífic
 - Oceà Àrtic
 * Quin és el metall més abundant en l'escorça terrestre?
 - Oro
@@ -61,8 +61,8 @@
 * Qui va escriure "L'Odissea"?
 - Homer Simpson
 + Homer
-- Homer *Aridjis
-- Homer *Manzi
+- Homer Aridjis
+- Homer Manzi
 * Quants elements químics existeixen en la taula periòdica?
 - 92
 + 118

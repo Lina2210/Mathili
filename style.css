@@ -590,6 +590,10 @@ body {
     margin: auto 10px;
 }
 
+.ranking table #lastLane {
+    background-color: #FFD700;
+}
+
 .rankingButton {
     width: 400px;
     height: 50px;
@@ -713,7 +717,7 @@ body {
 }
 
 /* Mobile Responsive */
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:450px) {
     /* index.php */
     .titIndex {
         margin-top: 15px;
@@ -735,6 +739,7 @@ body {
     }
     .buttonsIndex {
         width: 100%;
+        margin-bottom: 35px;
     }
     .buttonsIndex a {
         font-size: medium;
@@ -818,8 +823,30 @@ body {
     #cronoGameQuestions {
         margin-top: 5px;
         margin-bottom: 10px;
-        padding: 5px;
+        padding: 3px;
         width: 100px;
+        height: auto;
+    }
+    #cronometroAtras {
+        margin: 10px 0;
+    }
+    /* bars.php */
+    .modal {
+        width: 40%;
+        height: auto;
+        bottom: 5%;
+        left: 20%;
+        transform: none;
+        padding: 5px;
+        background-color: #001F3F;
+    }
+    .contenedor {
+        width: 100%;
+        height: 200px;
+    }
+    .contenedorLetters {
+        height: auto;
+        margin-top: 5px;
     }
     /* ranking.php */
     .ranking {
@@ -836,6 +863,18 @@ body {
     }
     .loseButtons {
         width: auto;
+    }
+    /* AccessDenied win.php, lose.php, publish.php */
+    .accessDenied {
+        width: 100%;
+        margin-top: 55px;
+    }
+    .accessDenied p {
+        font-size: 2em;
+    }
+    .accessDenied a {
+        padding: 10px 20px;
+        font-size: medium;
     }
     /* win.php */
 
