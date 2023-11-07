@@ -91,7 +91,6 @@ function showQuestion(numberOfQuestion){
     document.getElementById('question'+numberOfQuestion).scrollIntoView({behavior:'smooth'});
 }
 
-
 function winSound(){
     let element = elementSound("soundWin")
     if (victoria){
@@ -99,8 +98,6 @@ function winSound(){
     }
     
 }
-
-
 
 
 function displayBlock(id){
@@ -411,4 +408,19 @@ function public(){
         generateStatistics(data1, data2, data3, data4)
     }
     
+}
+
+
+function showMessage(event){
+    event.preventDefault();
+    let mensAddExit = document.getElementsByClassName("mensAddExit")
+    let mensErrorAdd = document.getElementsByClassName("mensErrorAdd")
+    let mensTypeFile = document.getElementsByClassName("mensTypeFile")
+    let mensNoImg = document.getElementsByClassName("mensNoImg")
+
+    mensAddExit[0].style.display = "block";
+    mensErrorAdd[0].style.display = "block";
+    mensTypeFile[0].style.display = "block";
+    mensNoImg[0].style.display = "block";
+
 }

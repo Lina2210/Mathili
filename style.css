@@ -642,3 +642,63 @@ body {
 .accessDenied a:hover {
     background-color: #948b73;
 }
+
+.create .form {
+    max-width: 400px;
+    margin: 50px auto 0; 
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.create h1{
+    color: #FFD700;
+    text-align: center; 
+    margin-top: 50px;
+    font-size: 2.5em;
+}
+
+.create .form label {
+    
+    display: block; 
+    margin-bottom: 5px; 
+    font-size: 1.3em;
+    
+}
+
+.create .form select,
+.create .form textarea,
+.create .form input {
+    width: 95%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1em;
+}
+
+.create .form button {
+    width: 100%; 
+    padding: 10px; 
+    background-color: #3498db;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 1.3em;
+}
+
+.create .form button:hover {
+    background-color: #143d82; 
+    
+}
+
+.mensTypeFile, 
+.mensAddExit,
+.mensErrorAdd,
+.mensNoImg {
+    max-width: 30%;
+    margin: 20px auto 50px;
+    color:white;
+    
+}

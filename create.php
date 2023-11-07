@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Question</title>
-    <style>
-        
-    </style>
+    <link rel="stylesheet"  href="style.css">
 </head>
 <body class="create">
+    
     <?php
         if(isset($_SESSION['language'])){
             $language= $_SESSION['language'];
@@ -23,6 +22,11 @@
             $correctAnswer= "Resposta Correcta: ";
             $incorrectAnswer= "Resposta Incorrecta ";
             $img = "Afegir imatge: ";
+            $title = "AFEGIR PREGUNTA";
+            $mensTypeFile = "Només s'admeten fitxers d'imatge (JPEG, PNG, GIF, JPG)";
+            $mensAddExit = "La imatge s'ha pujat amb èxit a:";
+            $mensErrorAdd = "Error en moure l'arxiu. Comprova els permisos i la ruta del directori.";
+            $mensNoImg ="No s'ha pujat cap imatge.";
 
 
         }else if($language == "spanish"){
@@ -32,6 +36,11 @@
             $correctAnswer= "Respuesta Correcta: ";
             $incorrectAnswer= "Respuesta Incorrecta ";
             $img = "Agregar imagen: ";
+            $title = "AGREGAR PREGUNTA";
+            $mensTypeFile = "Solo se permiten archivos de imagen (JPEG, PNG, GIF, JPG)";
+            $mensAddExit = "¡La imagen se subió con éxito a: ";
+            $mensErrorAdd = "Error al mover el archivo. Verifica los permisos y la ruta del directorio.";
+            $mensNoImg = 'No se ha subido ninguna imagen.';
 
         }else if($language == "english"){
             $difficulty = "Difficulty Level: ";
@@ -39,21 +48,27 @@
             $correctAnswer= "Correct Answer: ";
             $incorrectAnswer= "Incorrect Answer ";
             $img = "Add image: ";
+            $title = "ADD QUESTION";
+            $mensTypeFile = "Only image files are allowed (JPEG, PNG, GIF, JPG)";
+            $mensAddExit = "The image was successfully uploaded to:";
+            $mensErrorAdd = "Error moving the file. Check the permissions and the directory path.";
+            $mensNoImg = 'No image has been uploaded.';
         }
         echo '
+        <h1> '. $title . ' </h1>
         <div class="form">
-            <form method="post" enctype="multipart/form-data>
+            <form method="post" enctype="multipart/form-data">
                 <div>
-                    <label for="difficulty">'. $difficulty .' </label>
+                    <label for="difficulty">' . $difficulty . '</label>
                     <select id="difficulty" name="difficulty" required>';
                         for ($i = 1; $i <= 6; $i++) {
                             echo "<option value='$i'>$i</option>";
                         }
-                    echo '</select>
+        echo '      </select>
                 </div>
 
                 <div>
-                    <label for="language">'.$languageQuestion.'</label>
+                    <label for="language">' . $languageQuestion . '</label>
                     <select id="language" name="language" required>
                         <option value="catalan">Catala</option>
                         <option value="english">English</option>
@@ -62,33 +77,33 @@
                 </div>
 
                 <div>
-                    <label for="question">'.$question.'</label>
+                    <label for="question">' . $question . '</label>
                     <textarea id="question" name="question" rows="3" required></textarea>
                 </div>
 
                 <div>
-                    <label for="correctAnswer">'.$correctAnswer.'</label>
+                    <label for="correctAnswer">' . $correctAnswer . '</label>
                     <input type="text" id="correctAnswer" name="correctAnswer" required>
                 </div>
 
                 <div>
-                    <label for="incorrectAnswer1">'.$incorrectAnswer.' 1:</label>
+                    <label for="incorrectAnswer1">' . $incorrectAnswer . ' 1:</label>
                     <input type="text" id="incorrectAnswer1" name="incorrectAnswer1">
                 </div>
 
                 <div>
-                    <label for="incorrectAnswer2">'.$incorrectAnswer.' 2:</label>
+                    <label for="incorrectAnswer2">' . $incorrectAnswer . ' 2:</label>
                     <input type="text" id="incorrectAnswer2" name="incorrectAnswer2">
                 </div>
 
                 <div>
-                    <label for="incorrectAnswer3">'.$incorrectAnswer.' 3:</label>
+                    <label for="incorrectAnswer3">' . $incorrectAnswer . ' 3:</label>
                     <input type="text" id="incorrectAnswer3" name="incorrectAnswer3">
                 </div>
 
                 <div>
-                <label for="image">'.$img.':</label>
-                <input type="file" id="image" name="image" accept="image/*">
+                    <label for="image">' . $img . ':</label>
+                    <input type="file" id="image" name="image" accept="image/*">
                 </div>
 
                 <button type="submit">Enviar</button>
@@ -119,32 +134,55 @@
             $c = $respIncorrectAnsw[2];
             $d = $respIncorrectAnsw[3];
         
+            $fileName = "AllQuestions/" . $respLanguageQuest . "_" . $respDifficulty . ".txt";
+            
+            // Verificar si el archivo existe
+            if (file_exists($fileName)) {
+                $fileLines = file($fileName, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                $lastLine = end($fileLines);
+        
+                if ($lastLine === '') {
+                    array_pop($fileLines); // Eliminar la última línea vacía si existe
+                }
+        
+                $newContent = "*" . $respQuestion . "\n" . $a . "\n" . $b . "\n" . $c . "\n" . $d;
+        
+                file_put_contents($fileName, implode("\n", $fileLines) . "\n" . $newContent . "\n", LOCK_EX);
+            } else {
+                // Si hay un problema al abrir el archivo
+                echo "El archivo no existe";
+            }
         }
         
-        $fileName = "AllQuestions/" . $respLanguageQuest . "_" . $respDifficulty . ".txt";
-        echo $fileName;
-        
-        // Abrir el archivo en modo 'a+' para añadir contenido al final si existe
-        $file = fopen($fileName, 'a');
-        
-        if ($file) {
-            // Escribir la nueva pregunta y respuestas al final del archivo
-            $newContent = "*" . $respQuestion . "\n" . $a . "\n" . $b . "\n" . $c . "\n" . $d . "\n";
-            fwrite($file, $newContent);
-            fclose($file);
-        } else {
-            // Si hay un problema al abrir el archivo
-            echo "Error al abrir el archivo";
-        }
-        
-        $directorioImagenes = '/home/lina/Matili/public/fotospreguntas';
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $directorioImagenes . $_FILES['image']['name'])) {
-            echo 'Archivo movido con éxito a ' . $directorioImagenes;
-        } else {
-            echo 'Error al mover el archivo. Verifica los permisos y la ruta del directorio.';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        
+            $directorioImagenes = './public/fotospreguntas/' . $respDifficulty . '/';
+    
+            if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+                $fileType = $_FILES['image']['type'];
+                $fileName = $_FILES['image']['name'];
+                
+                $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+                
+                if (in_array($fileType, $allowedTypes)) {
+                    
+                    $newFileName = $respQuestion . '.' . pathinfo($fileName, PATHINFO_EXTENSION);
+                    $targetPath = $directorioImagenes . $newFileName;
+                                        
+                    if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
+                        echo '<div class="mensAddExit">' . $mensAddExit . $targetPath . '</div>';
+                    } else {
+                        echo '<div class="mensErrorAdd">' . $mensErrorAdd . '</div>';
+                    }
+                } else {
+                    echo '<div class="mensTypeFile">' . $mensTypeFile . '</div>';
+                }
+            } else {
+                echo '<div class="mensNoImg">' . $mensNoImg . '</div>';
+            }
         }
     ?>
     
-    
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
