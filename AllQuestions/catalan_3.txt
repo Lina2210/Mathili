@@ -1,15 +1,15 @@
-* Més Mundials?
+* Quin País té Més Mundials?
 - Jamaica
 - França
 - Alemanya
 + Anglaterra
-* Més guerres guanyades?
+* Quin País té Més guerres guanyades?
 - Austràlia
 - Canadà
 + Anglaterra
 - Nova Zelanda
-* Més PIB Anual?
-+ l'Índia
+* Quin País té Més PIB Anual?
++ Índia
 - Canadà
 - Austràlia
 - Anglaterra
@@ -18,55 +18,55 @@
 - Camerun
 + Índia
 - Nova Zelanda
-* Més hores treballant?
+* Quin País té Més hores treballant?
 + Anglaterra
 - Camerun
 - Ghana
 - Malàisia
-* Més Reserves Naturals?
+* Quin País té Més Reserves Naturals?
 - Nauru
 - Ruanda
 + Nigèria
 - Anglaterra
-* La millor economia?
+* Quin País té La millor economia?
 - Austràlia
 - Canadà
 - Nova Zelanda
 + Anglaterra
-* El més esportista?
+* Quin País és el Més esportista?
 - Jamaica
 - Camerun
 - Ghana
 + Anglaterra
-* Més morts?
+* Quin País té Més morts?
 - Nova Zelanda
 - Camerun
 - Ghana
 + Anglaterra
-* Millor salut?
+* Quin País té Millor salut?
 + Singapur
 - Nova Zelanda
 - Bahames
 - Anglaterra
-* Més premis de bellesa?
+* Quin País té Més premis de bellesa?
 - Nova Zelanda
 + Índia
 - Austràlia
 - Anglaterra
-* Més cultura?
+* Quin País té Més cultura?
 - Kenya
 - Namíbia
 + Índia
 - Anglaterra
-* Més menjar ràpid?
+* Quin País té Més menjar ràpid?
 - el Canadà
 + Índia
 - Ghana
 - Anglaterra
 * Quin jugador australià té el salari més alt?
-+ *Mathew Ryan
-- Harry *Soutar
-- *Milos *Degenek
++ Mathew Ryan
+- Harry Soutar
+- Milos Degenek
 - Leo Messi
 * En quin any va començar la Segona Guerra Mundial?
 - 1914

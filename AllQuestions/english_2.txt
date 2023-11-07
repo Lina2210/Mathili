@@ -38,7 +38,7 @@
 - 8 territories
 - 10 territories
 - 12 territories
-* More Nobel Prizes?
+* Which country has won the most Nobel Prizes?
 - Jamaica
 - New Zealand
 - New Zealand

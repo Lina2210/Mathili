@@ -1,14 +1,14 @@
-* ¿Más Mundiales?
+* ¿Qué País tiene Más Mundiales?
 - Jamaica
 - Francia
 - Alemania
 + Inglaterra
-* ¿Más guerras ganadas?
+* ¿Qué País tiene Más guerras ganadas?
 - Australia
 - Canadá
 + Inglaterra
 - Nueva Zelanda
-* ¿Más PIB Anual?
+* ¿Qué País tiene Más PIB Anual?
 + India
 - Canadá
 - Australia
@@ -18,47 +18,47 @@
 - Camerún
 + India
 - Nueva Zelanda
-* ¿Más horas trabajando?
+* ¿Qué País tiene Más horas trabajando?
 + Inglaterra
 - Camerún
 - Ghana
 - Malasia
-* ¿Más Reservas Naturales?
+* ¿Qué País tiene Más Reservas Naturales?
 - Nauru
 - Ruanda
 + Nigeria
 - Inglaterra
-* ¿La mejor economía?
+* ¿Qué País tiene La mejor economía?
 - Australia
 - Canadá
 - Nueva Zelanda
 + Inglaterra
-* ¿El más deportista?
+* ¿Qué País es el Más deportista?
 - Jamaica
 - Camerún
 - Ghana
 + Inglaterra
-* ¿Más muertes?
+* ¿Qué País tiene Más muertes?
 - Nueva Zelanda
 - Camerún
 - Ghana
 + Inglaterra
-* ¿Mejor salud?
+* ¿Qué País tiene Mejor salud?
 + Singapur
 - Nueva Zelanda
 - Bahamas
 - Inglaterra
-* ¿Más premios de belleza?
+* ¿Qué País tiene Más premios de belleza?
 - Nueva Zelanda
 + India
 - Australia
 - Inglaterra
-* ¿Más cultura?
+* ¿Qué País es Más cultura?
 - Kenia
 - Namibia
 + India
 - Inglaterra
-* ¿Más comida rápida?
+* ¿Qué País tiene Más comida rápida?
 - Canadá
 + India
 - Ghana

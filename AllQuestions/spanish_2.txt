@@ -38,7 +38,7 @@
 - 8 territorios
 - 10 territorios
 - 12 territorios
-* ¿Más premios Nobel?
+* ¿Qué País ha obtenido Más premios Nobel?
 - Jamaica
 - Nueva Zelanda
 - Filipinas

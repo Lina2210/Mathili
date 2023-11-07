@@ -8,7 +8,7 @@
 - Inglaterra
 + India
 - Perú
-* Ghandi murió por un...
+* ¿Cómo murió Ghandi?
 - Accidente
 - Infarto de miocardio
 - Enfermedad
@@ -48,7 +48,7 @@
 + Azul, Blanco y Rojo
 - Azul, Negro y Rojo
 - Amarillo, Rojo y Azul
-* ¿Más población?
+* ¿Qué País tiene más población?
 - India
 - Bangladesh
 - Australia

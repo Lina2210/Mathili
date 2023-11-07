@@ -1,64 +1,64 @@
-* More World Cups?
+* Which country has the most World Cups?
 - Jamaica
 - France
 - Germany
 + England
-* Most wars won?
+* Which country has won the most wars?
 - Australia
 - Canada
 + England
 - New Zealand
-* More Annual GDP?
+* Which country has the highest annual GDP?
 + India
 - Canada
 - Australia
 - England
-* Warmest country?
+* Hottest Country?
 - Australia
 - Cameroon
 + India
 - New Zealand
-* Longest working hours?
+* Which country has the longest working hours?
 + England
 - Cameroon
 - Ghana
 - Malaysia
-* More Nature Reserves?
+* Which Country has the Most Nature Reserves?
 - Nauru
 - Rwanda
 + Nigeria
 - England
-* Best economy?
+* Which country has the best economy?
 - Australia
 - Canada
 - New Zealand
 + England
-* The most sporty?
+* Which country is the most sporty?
 - Jamaica
 - Cameroon
 - Ghana
 + England
-* Most deaths?
+* Which country has the most deaths?
 - New Zealand
 - Cameroon
 - Ghana
 + England
-* Better health?
+* Which country has the best health?
 + Singapore
 - New Zealand
 - Bahamas
 - England
-* More beauty awards?
+* Which country has the most beauty awards?
 - New Zealand
 + India
 - Australia
 - England
-* More culture?
+* Which country has the most culture?
 - Kenya
 - Namibia
 + India
 - England
-* More fast food?
+* Which country has the most fast food?
 - Canada
 + India
 - Ghana

@@ -8,7 +8,7 @@
 - Anglaterra
 + Índia
 - Perú
-* Ghandi va morir per un...
+* Com va morir Ghandi?
 - Accident
 - Infart de miocardi
 - Malaltia
@@ -19,7 +19,7 @@
 - Segle I
 - Ara
 * En quina part del món es va crear el futbol?
-- França
+- France
 - Mèxic
 - Brasil
 + Anglaterra
@@ -46,9 +46,9 @@
 * Com és la bandera del Regne Unit?
 - Rosa, Blau i Vermell
 + Blau, Blanc i Vermell
-- Blau, Negre i Rojo
+- Blau, Negre i Vermell
 - Groc, Vermell i Blau
-* Més població?
+* Quin País té més població?
 - Índia
 - Bangladesh
 - Austràlia

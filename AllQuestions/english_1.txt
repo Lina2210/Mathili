@@ -8,11 +8,11 @@
 - England
 + India
 - Peru
-* Ghandi died of a...
+* How did Gandhi die?
 - Accident
 - Myocardial infarction
 - Disease
-+ Murdered
++ Assassinated
 * In which century was football created?
 + 19th century
 - 20th century
@@ -36,7 +36,7 @@
 * In ancient times, humans lived in...
 + Australia
 - Spain
-- Singapore
+- Singapore + Argentina
 - Argentina
 * How many years did the Aborigines live?
 - 12.000 Years
@@ -48,12 +48,12 @@
 + Blue, White and Red
 - Blue, Black and Red
 - Yellow, Red and Blue
-* More population?
+* Which country has the largest population?
 - India
 - Bangladesh
 - Australia
 + China
-* Coldest country?
+* The coldest country?
 - England
 + Canada
 - Ghana
