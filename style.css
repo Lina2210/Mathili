@@ -765,7 +765,7 @@ body {
     .cronoGame {
         width: 100px;
         padding: 2px;
-        top: 10px;
+        top: 30px;
         margin-left: 5px;
     }
     #introQuestion1 {
@@ -779,7 +779,9 @@ body {
         font-size: 1.5em;
     }
     #answers1 {
-        margin: 0;
+        margin: 0 8px;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 5px;
     }
     #introQuestion2 {
         margin-top: 8px;
@@ -792,7 +794,9 @@ body {
         font-size: 1.5em;
     }
     #answers2 {
-        margin: 0;
+        margin: 0 8px;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 5px;
     }
     #introQuestion3 {
         margin-top: 8px;
@@ -805,7 +809,9 @@ body {
         font-size: 1.5em;
     }
     #answers3 {
-        margin: 0;
+        margin: 0 8px;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 5px;
     }
     #buttons {
         width: auto;
