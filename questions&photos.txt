@@ -53,3 +53,6 @@ Where is Buckingham Palace located?,,public/fotos preguntas/6/Where is Buckingha
 A on es troba el Big Ben?,,public/fotos preguntas/6/Where is the big ben located.jpg
 Where is the big ben located?,,public/fotos preguntas/6/Where is the big ben located.jpg
 
+How many golden ballons does Lionel Messi have?,,public/fotos preguntas/1/How many golden ballons does Lionel Messi have%3F.jpeg
+Quan va començar la segona guerra mundial?,,public/fotos preguntas/1/Quan va començar la segona guerra mundial%3F.jpeg
+¿En que pais nació Napoleon Bonaparte?,,public/fotos preguntas/1/¿En que pais nació Napoleon Bonaparte%3F.jpeg

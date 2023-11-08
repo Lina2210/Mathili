@@ -77,7 +77,7 @@
                     <select id="language" name="language" required>
                         <option value="catalan">Catala</option>
                         <option value="english">English</option>
-                        <option value="español">Español</option>
+                        <option value="spanish">Español</option>
                     </select>
                 </div>
 
@@ -181,7 +181,7 @@
                     $targetPath = $directorioImagenes . $newFileName;
                     $introtoQuestion= $introtoQuestion.substr($targetPath, 2);
                     if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
-                        echo '<div class="mensAddExit">' . $mensAddExit . $targetPath . '</div>';
+                        echo '<div class="mensAddExit">' . $mensAddExit . '</div>';
                         writeToQuestionandPhoto($introtoQuestion);
                     } else {
                         echo '<div class="mensErrorAdd">' . $mensErrorAdd . '</div>';
@@ -203,7 +203,8 @@
 
         if ($manejador) {
             // Escribir la nueva línea
-            $nueva_linea = $stringofQuestionandphoto;
+            $stringWrite = $arraay[0].",,".str_replace("?", "%3F", $arraay[1]);
+            $nueva_linea = $stringWrite;
             fwrite($manejador, $nueva_linea . "\n");
 
             // Cerrar el archivo
