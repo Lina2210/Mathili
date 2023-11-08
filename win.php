@@ -23,6 +23,10 @@
             session_start();
             $_SESSION['time'] = isset($_POST['time']) ? $_POST['time'] : null;
             $_SESSION['points']=18;
+            echo "<script>";
+            echo "let victoria = true;";
+            echo "window.addEventListener('load', winSound)";
+            echo "</script>";
             if(isset($_POST['language'])){
                 $language = $_POST['language'];
                 
@@ -67,8 +71,5 @@
     <audio id="soundWin">
         <source src="Sounds/winMusic.mp3" type="audio/mpeg">
     </audio>
-    <script>
-        winSound()
-    </script>
 </body>
 </html>

@@ -175,6 +175,8 @@ body {
     margin-left: 85px;
     background-color: #ffcc00;
     border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); 
 }
 
 .cronoGame p {
@@ -548,6 +550,13 @@ body {
     margin-top: 35px;
 }
 
+#titRanking {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
 .ranking table {
     width: 100%;
     border-collapse: collapse;
@@ -579,6 +588,10 @@ body {
 
 .ranking table td h2 i {
     margin: auto 10px;
+}
+
+.ranking table #lastLane {
+    background-color: #FFD700;
 }
 
 .rankingButton {
@@ -642,4 +655,301 @@ body {
 
 .accessDenied a:hover {
     background-color: #948b73;
+}
+
+/* bars.php */
+.modal {
+    display: none; /* Por defecto, ocultar el modal */
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    bottom: 40%;
+    left: 10%;
+    transform: translate(-50%, 0);
+    width: 10%;
+    height: 35%;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modalClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+
+.contenedorLetters {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    color: white;
+}
+
+.barra{
+    flex: 0 0 10%;
+    background-color: #FFD700;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+}
+
+.barras {
+    display: flex;
+    flex-direction: column;
+}
+
+.etiqueta {
+    text-align: center;
+}
+
+/* create.php */
+.create .form {
+    max-width: 400px;
+    margin: 50px auto 0; 
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.create h1{
+    color: #FFD700;
+    text-align: center; 
+    margin-top: 50px;
+    font-size: 2.5em;
+}
+
+.create .form label {
+    
+    display: block; 
+    margin-bottom: 5px; 
+    font-size: 1.3em;
+    
+}
+
+.create .form select,
+.create .form textarea,
+.create .form input {
+    width: 95%; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 1em;
+}
+
+.create .form button {
+    width: 100%; 
+    padding: 10px; 
+    background-color: #3498db;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 1.3em;
+}
+
+.create .form button:hover {
+    background-color: #143d82; 
+    
+}
+
+.mensTypeFile, 
+.mensAddExit,
+.mensErrorAdd,
+.mensNoImg {
+    max-width: 30%;
+    margin: 20px auto 50px;
+    color:white;
+    
+}
+
+.back {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;}
+
+/* Mobile Responsive */
+@media only screen and (max-width:450px) {
+    /* index.php */
+    .titIndex {
+        margin-top: 15px;
+    }
+    .brief {
+        max-width: 100%;
+    }
+    .brief {
+        display: block;
+        margin: 0 0 30px;
+    }
+    .brief .instructions,
+    .brief .briefImage {
+        width: 100%;
+        margin: 0;
+    }
+    .brief .instructions h3 {
+        margin: 5px auto;
+    }
+    .buttonsIndex {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .buttonsIndex a {
+        font-size: medium;
+        padding: 12px 24px;
+    }
+
+    /* game.php */
+    .wildcardsGame {
+        top: 10px;
+        right: 0;
+        margin-right: 0;
+    }
+    .wildcardsGame button {
+        width: 70px;
+        height: 70px;
+        margin: 0 3px;
+        padding: 0;
+        font-size: 0.6em;
+    }
+    .wildcardsGame #fifty {
+        font-size: 0.8em;
+    }
+    .cronoGame {
+        width: 100px;
+        padding: 2px;
+        top: 10px;
+        margin-left: 5px;
+    }
+    #introQuestion1 {
+        margin-top: 8px;
+    }
+    #introQuestion1 img {
+        max-width: 150px;
+    }
+    #question1 {
+        margin: 0 10px 10px;
+        font-size: 1.5em;
+    }
+    #answers1 {
+        margin: 0;
+    }
+    #introQuestion2 {
+        margin-top: 8px;
+    }
+    #introQuestion2 img {
+        max-width: 150px;
+    }
+    #question2 {
+        margin: 0 10px 10px;
+        font-size: 1.5em;
+    }
+    #answers2 {
+        margin: 0;
+    }
+    #introQuestion3 {
+        margin-top: 8px;
+    }
+    #introQuestion3 img {
+        max-width: 150px;
+    }
+    #question3 {
+        margin: 0 10px 10px;
+        font-size: 1.5em;
+    }
+    #answers3 {
+        margin: 0;
+    }
+    #buttons {
+        width: auto;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    #buttons form {
+        width: 50%;
+    }
+    #buttons button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: smaller;
+    }
+    #cronoGameQuestions {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding: 3px;
+        width: 100px;
+        height: auto;
+    }
+    #cronometroAtras {
+        margin: 10px 0;
+    }
+    /* bars.php */
+    .modal {
+        width: 40%;
+        height: auto;
+        bottom: 5%;
+        left: 20%;
+        transform: none;
+        padding: 5px;
+        background-color: #001F3F;
+    }
+    .contenedor {
+        width: 100%;
+        height: 200px;
+    }
+    .contenedorLetters {
+        height: auto;
+        margin-top: 5px;
+    }
+    /* ranking.php */
+    .ranking {
+        width: 100%;
+    }
+    .ranking table td h2 {
+        margin-left: 5px;
+        font-size: 1em;
+    }
+    /* lose.php */
+    .loseMessage img {
+        width: auto;
+        max-width: 100%;
+    }
+    .loseButtons {
+        width: auto;
+    }
+    /* AccessDenied win.php, lose.php, publish.php */
+    .accessDenied {
+        width: 100%;
+        margin-top: 55px;
+    }
+    .accessDenied p {
+        font-size: 2em;
+    }
+    .accessDenied a {
+        padding: 10px 20px;
+        font-size: medium;
+    }
+    /* win.php */
+
+    /* publish.php */
+    .statsUser {
+        width: auto;
+        margin-top: 35px;
+    }
+    .formPublish {
+        width: auto;
+    }
 }

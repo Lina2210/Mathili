@@ -58,6 +58,7 @@
             echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
             echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
+            echo "<a href='login.php'>Zona Admin</a>";
             echo "</div>";
         }
         elseif($language=="catalan"){
@@ -98,6 +99,7 @@
             echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
             echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
+            echo "<a href='login.php'>Zona Admin</a>";
             echo "</div>";
         }
         elseif($language=="english"){
@@ -138,6 +140,7 @@
             echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
             echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
+            echo "<a href='login.php'>Admin Zone</a>";
             echo "</div>";
         }
  

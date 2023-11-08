@@ -1,35 +1,80 @@
-* Quin jugador australià té el salari més alt?
-+ Mathew Ryan
-- Harry Soutar
-- Milos Degenek
-- Leo Messi
 * Són els britànics puntuals?
 + Sempre
 - Generalment
-- Potser
+- Pot
 - Mai
-* Quins d'aquests països no van ser colonitzats per Anglaterra?
-- Illes Maldives
-- Illes Caiman
-- Illes Bermudes
-+ Bielorrusia
-* A quin segle el cricket es va convertir en l'esport nacional?
-+ A finals del segle XVIII
+* En quin segle el criquet es va convertir en esport nacional?
++ A la fi del segle XVIII
 - A principis del segle XVII
-- A finals del segle XV
+- A la fi del segle XV
 - A principis del segle XIX
-* A quina colonia anglesa es juga menys al cricket?
-- India
+* En quina colònia anglesa es juga menys al criquet?
+- l'Índia
 + Austràlia
-- Pakistán
-- Sudàfrica
-* Quin d'aquests països europeus segueix siguent una colonia de l'Imperi Britànic?
-+ Gibraltar
-- Chipre
-- Illes del Canal
-- Anglaterra
-* De què tracta la tradició del Rolling Cheese?
+- Pakistan
+- Sud-àfrica
+* De què es tracta la tradició del Rolling *Cheese?
 - Menjar formatge rodó
-+ Llençar formatge per un pujol
-- Fer una tarta de formatge rodona
-- Compra un formatge rodó gegant
++ Tirar formatge rodó des d'un pujol
+- Fer un pastís de formatge rodona
+- Compra un formatge rodó gran.
+* Població del Regne Unit?
+- 1.216.000.000
+- 689.000.000
+- 1.356.000.000
++ 67.081.000
+* Quin és el component principal de l'aire que respirem?
+- Diòxid de carboni
++ Oxigen
+- Nitrogen
+- Hidrogen
+* Quina és la velocitat de la llum?
+- 100,000 km/s
++ 299,792 km/s
+- 150,000 km/s
+- 200,000 km/s
+* Qui va escriure "Cent anys de solitud"?
++ Gabriel García Márquez
+- Julio Cortázar
+- Isabel Allende
+- Mario Vargas Llosa
+* En quin any es va dur a terme la Revolució Russa?
+- 1905
++ 1917
+- 1923
+- 1931
+* Quants continents hi ha en el món?
+- 4
+- 6
++ 7
+- 8
+* Quin és l'oceà més petit del món?
+- Oceà Atlàntic
++ Oceà Àrtic
+- Oceà Índic
+- Oceà Pacífic
+* Quina és la capital d'Austràlia?
+- Auckland
+- Sídney
++ Canberra
+- Melbourne
+* Qui va ser el primer ésser humà en l'espai?
++ Yuri Gagarin
+- Neil Armstrong
+- Buzz Aldrin
+- Valentina Tereshkova
+* Quina és l'obra més llarga de William Shakespeare?
+- Hamlet
+- Otelo
+- Macbeth
++ Hamlet 
+* Quin és el procés químic en el qual la llet es converteix en iogurt?
++ Fermentació làctica
+- Destil·lació
+- Combustió
+- Oxidació
++ Quin és el metall més dens?
+- Or
++ Platí
+- Plom
+- Mercuri

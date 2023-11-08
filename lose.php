@@ -50,13 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $messageHome= "HOME";
         $messagePublish= "PUBLISH";
     }
-    if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-        header('HTTP/1.0 403 Forbidden');
-        echo "<div class='accessDenied'>";
-        echo "<p>$messageDirectAccess</p>";
-        echo "<a href='index.php'>$messageHome</a>";
-        echo "</div>";
-    }
+    echo "<script>";
+    echo "let loser = true;";
+    echo "window.addEventListener('load', loseSound)";
+    echo "</script>";
         echo "<div class='loseMessage'>";
             echo "<h1>$messageLose</h1>";
             echo "<img src='public/triste-deprimido-fallido-papel-perforado.jpg'>";
@@ -78,10 +75,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3"     type="audio/mp3">
     </audio>
 
-<script src="script.js"></script>
-    <script>
-        loseSound();
-    </script>
 
 </body>
 </html>

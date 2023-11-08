@@ -63,8 +63,9 @@
                 }
                 fclose($file);
                 echo "<div class='formPublish'>"; 
-                echo "<form action='index.php' method='POST'>";
+                echo "<form action='ranking.php' method='POST'>";
                     echo "<input type='hidden' name='language' value=$language>";
+                    echo "<input type='hidden' name='publish' value='yes'>";
                     echo "<label for='user'> $saveData</label>";
                     echo "<input type='submit' value=$accept>";
                 echo "</form>";
@@ -77,12 +78,15 @@
                 echo "<h3>$numbPoint = $pointsToSend points</h3>";
                 echo "</div>";
                 echo "<div class='formPublish'>";
-                echo "<form action='publish.php' method='POST'>";
+                echo "<form id='formUserName' action='publish.php' method='POST'>";
                     echo "<label for='user'>$name </label>";
-                    echo "<input type='text' name='user' required>";
+                    echo "<input type='text' id='username' name='user' required>";
                     echo "<input type='hidden' name='language' value=$language>";
                     echo "<input type='hidden' name='points' value=$points>";
-                    echo "<input type='submit' value=$send>";
+                    echo "<script>";
+                    echo "var language = '" . $language . "';";
+                    echo "</script>";
+                    echo "<input type='submit' value=$send onclick='validateName()'>";
                 echo "</form>";
                 echo "</div>";
             }

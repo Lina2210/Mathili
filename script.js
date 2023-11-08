@@ -55,6 +55,8 @@ function good(numberOfQuestion){
         detenerCuentaRegresiva();
         document.getElementById('buttons').style.display = 'block';
         document.getElementById('buttons').scrollIntoView({behavior:'smooth'});
+        var wildcards = document.getElementsByClassName('wildcardsGame');
+        wildcards[0].style.pointerEvents='none';
     }else{
     showQuestion(numberOfQuestion+1);
     }
@@ -75,13 +77,17 @@ function elementSound(id){
     let element = document.getElementById(id);
     return element;
 }
-
 function playSound(element){
-    return element.play();
+    if (element) {
+        element.play();
+    }
 }
+
 function loseSound(){
     let element = elementSound("soundLose")
-    return playSound(element)
+    if (loser){
+        playSound(element)
+    }
 }
 
 function acertSound(){
@@ -98,7 +104,9 @@ function showQuestion(numberOfQuestion){
 
 function winSound(){
     let element = elementSound("soundWin")
-    return playSound(element)
+    if (victoria){
+        playSound(element)
+    }
 }
 function displayBlock(id){
     let question = document.getElementById(id);
@@ -355,7 +363,7 @@ function addVowelToAnswer(){
         }
     }
 }
-addVowelToAnswer()/*no borrar*/
+
 function clickPublic(){
     localStorage.setItem('publicClicked', 'true');
     detenerCuentaRegresiva();
@@ -409,7 +417,28 @@ function openModalWithDelay() {
         openModal();
     }, 5000);
 }
-
+function validateName() {
+    document.getElementById('formUserName').addEventListener('submit', function(event) {
+    var userName = document.getElementById('username').value;
+    var forbiddenWords = ["coño", "puta", "joder", "franco", "hitler", "polla", "pene", "vagina", "follar", "sexo", "calvo", "chupapollas", "hijo de puta", "hija de puta", "tetas", "teta"];
+    var minusName = userName.toLowerCase();
+    for (var i = 0; i < forbiddenWords.length; i++) {
+      if (minusName.includes(forbiddenWords[i])) {
+        if (language=="spanish") {
+            event.preventDefault();
+            alert("El Input contiene una palabra prohibida, escriba otro Nombre");
+        } else if (language=="catalan") {
+            event.preventDefault();
+            alert("L'Input conté una paraula prohibida, escriu un altre Nom");
+        } else if (language=="english") {
+            event.preventDefault();
+            alert("The Input contains a prohibited word, type another Name")
+        }
+        break;
+      }
+    }
+});
+}
 function openModal(){
     document.getElementById('modal').style.display = 'block';
     let element = elementSound("soundPublic")
@@ -435,71 +464,88 @@ function easterEgg(){
     }
 }
 
-function public(){
-    const answers = getElementClass("grid-item")
-    console.log(answers)
-    let answersArrayEmpty= []
-    let answersArray = arrayCurrentAnswer(answers, answersArrayEmpty)
-    console.log(answersArray)
-    let answerOk = getAnswerOk(answers, answersArray)
-    console.log(answerOk)
-    numRandom = Math.floor(Math.random() * 10) + 1
+function public() {
+    const answers = getElementClass("grid-item");
+    let answersArrayEmpty = [];
+    let answersArray = arrayCurrentAnswer(answers, answersArrayEmpty);
+    let answerOk = getAnswerOk(answers, answersArray);
+    numRandom = Math.floor(Math.random() * 10) + 1;
     let data1 = Math.floor(Math.random() * (70 - 50 + 1)) + 50;
-    console.log(data1)
     let data2 = Math.floor(Math.random() * (100 - data1));
-    console.log(data2)
     let data3 = Math.floor(Math.random() * (100 - data1 - data2));
-    console.log(data3)
     let data4 = 100 - (data1 + data2 + data3);
-    console.log(data4)
+
     let a, b, c, d;
-    
-    if (numRandom <= 8){
-        console.log("entro al if" + numRandom)
-        console.log(answerOk)
-        switch (answerOk) {
+
+    if (answersArray.length === 2) {
+        let barras = {
+            a: getElementClass("barra a"),
+            b: getElementClass("barra b"),
+            c: getElementClass("barra c"),
+            d: getElementClass("barra d")
+        };
+        const arrayLetters = ["a", "b", "c", "d"];
+        
+        answersArray.forEach(element => {
+            let barraName = "barra" + arrayLetters[element].toUpperCase();
+        
+            if (arrayLetters[element] === answerOk) {
+                barras[arrayLetters[element]][0].style.height = "80%";
+            } else {
+                barras[arrayLetters[element]][0].style.height = "20%";
+            }
+        });
+    } else {
+        
+        if (numRandom <= 8) {
+            switch (answerOk) {
+                case 'a':
+                    a = data1;
+                    b = data2;
+                    c = data3;
+                    d = data4;
+                    generateStatistics(data1, data2, data3, data4);
+                    break;
+                case 'b':
+                    a = data2;
+                    b = data1;
+                    c = data3;
+                    d = data4;
+                    generateStatistics(data2, data1, data3, data4);
+                    break;
+                case 'c':
+                    a = data3;
+                    b = data2;
+                    c = data1;
+                    d = data4;
+                    generateStatistics(data3, data2, data1, data4);
+                    break;
+                case 'd':
+                    a = data4;
+                    b = data2;
+                    c = data3;
+                    d = data1;
+                    generateStatistics(data4, data2, data3, data1);
+                    break;
+                default:
+                    console.log("no corresponde a ninguna letra");
+            }
             
-            case 'a':
-                console.log(data4)
-                a = data1;
-                b = data2;
-                c = data3;
-                d = data4;
-                generateStatistics(data1, data2, data3, data4)
-                break;
-            case 'b':
-                a = data2;
-                b = data1;
-                c = data3;
-                d = data4;
-                generateStatistics(data2, data1, data3, data4)
-                break;
-            case 'c':
-                a = data3;
-                b = data2;
-                c = data1;
-                d = data4;
-                generateStatistics(data3, data2, data1, data4)
-                break;
-            case 'd':
-                a = data4;
-                b = data2;
-                c = data3;
-                d = data1;
-                generateStatistics(data4, data2, data3, data1)
-                break;
         }
-        console.log("a =", a);
-        console.log("b =", b);
-        console.log("c =", c);
-        console.log("d =", d);
-    }else{
-        console.log("soy el else")
-        a = data1;
-        b = data2;
-        c = data3;
-        d = data4;
-        generateStatistics(data1, data2, data3, data4)
     }
-    
+}
+
+
+function showMessage(event){
+    event.preventDefault();
+    let mensAddExit = document.getElementsByClassName("mensAddExit")
+    let mensErrorAdd = document.getElementsByClassName("mensErrorAdd")
+    let mensTypeFile = document.getElementsByClassName("mensTypeFile")
+    let mensNoImg = document.getElementsByClassName("mensNoImg")
+
+    mensAddExit[0].style.display = "block";
+    mensErrorAdd[0].style.display = "block";
+    mensTypeFile[0].style.display = "block";
+    mensNoImg[0].style.display = "block";
+
 }

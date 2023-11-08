@@ -1,90 +1,80 @@
-* More World Cups?
+* Which country has the most World Cups?
 - Jamaica
 - France
 - Germany
 + England
-* More Wars Won?
+* Which country has won the most wars?
 - Australia
 - Canada
 + England
-- New Zeland
-* More PIB Annual?
+- New Zealand
+* Which country has the highest annual GDP?
 + India
 - Canada
 - Australia
 - England
-* More Population?
-+ India
-- Bangladesh 
-- Australia
-- England
-* The Hottest Country?
+* Hottest Country?
 - Australia
 - Cameroon
 + India
-- New Zeland
-* The Coldest Country?
-- England
-+ Canada
-- Ghana
-- Gamba
-* More Hours Working?
+- New Zealand
+* Which country has the longest working hours?
 + England
 - Cameroon
 - Ghana
-- Malasia
-* More Natural Reserves?
+- Malaysia
+* Which Country has the Most Nature Reserves?
 - Nauru
-- Ruanda
+- Rwanda
 + Nigeria
 - England
-* The Best Economy?
+* Which country has the best economy?
 - Australia
 - Canada
-- New Zeland
+- New Zealand
 + England
-* Better Education System?
-+ Singapore
-- New Zeland
-- Ghana
-- England
-* The Most Athlete?
+* Which country is the most sporty?
 - Jamaica
 - Cameroon
 - Ghana
 + England
-* Population of UK?
-- 1.216.000.000
-- 689.000.000
-- 1.356.000.000
-+ 67.081.000
-* More Deaths?
-- New Zeland
+* Which country has the most deaths?
+- New Zealand
 - Cameroon
 - Ghana
 + England
-* Better Health?
+* Which country has the best health?
 + Singapore
-- New Zeland
+- New Zealand
 - Bahamas
 - England
-* More Beauty Awards?
-- New Zeland
+* Which country has the most beauty awards?
+- New Zealand
 + India
 - Australia
 - England
-* More Nobel Awards?
-- Jamaica
-- New Zeland
-- Philippines
-+ England
-* More Culture?
-- Kenia
+* Which country has the most culture?
+- Kenya
 - Namibia
 + India
 - England
-* More Fast Food?
+* Which country has the most fast food?
 - Canada
 + India
 - Ghana
 - England
+* Which Australian player has the highest salary?
++ Mathew Ryan
+- Harry Soutar
+- Milos Degenek
+- Leo Messi
+* In which year did World War II start?
+- 1914
++ 1939
+- 1945
+- 1940
+* What is the smallest country in the world?
+- Monaco
+- Nauru
+- San Marino
++ Vatican City
