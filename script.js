@@ -18,8 +18,6 @@ window.onload = function() {
         iniciarCronometro();
         mostrarTiempo(); 
         iniciarCuentaRegresiva();
-
-
     }
     if(currentPage=="index.php" || currentPage==""){
         resetearCronometro();
