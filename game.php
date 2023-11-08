@@ -283,5 +283,10 @@
         }
     ?>
     <script src="script.js"></script>
+    <!--modificacion sprint3 inicio -->
+    <script>
+        addVowelToAnswer()
+    </script>
+    <!--modificacion sprint3 fin -->
 </body>
 </html>

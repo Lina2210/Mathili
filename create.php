@@ -27,6 +27,7 @@
             $mensAddExit = "La imatge s'ha pujat amb èxit a:";
             $mensErrorAdd = "Error en moure l'arxiu. Comprova els permisos i la ruta del directori.";
             $mensNoImg ="No s'ha pujat cap imatge.";
+            $index= "Inici";
 
 
         }else if($language == "spanish"){
@@ -41,6 +42,7 @@
             $mensAddExit = "¡La imagen se subió con éxito a: ";
             $mensErrorAdd = "Error al mover el archivo. Verifica los permisos y la ruta del directorio.";
             $mensNoImg = 'No se ha subido ninguna imagen.';
+            $index = "Inicio";
 
         }else if($language == "english"){
             $difficulty = "Difficulty Level: ";
@@ -53,6 +55,7 @@
             $mensAddExit = "The image was successfully uploaded to:";
             $mensErrorAdd = "Error moving the file. Check the permissions and the directory path.";
             $mensNoImg = 'No image has been uploaded.';
+            $index = "Start";
         }
         echo '
         <h1> '. $title . ' </h1>
@@ -108,7 +111,12 @@
 
                 <button type="submit">Enviar</button>
             </form>
-        </div>';
+            
+        </div>
+        <div class="back">
+            <a href="index.php" class="back" style="display: block; width: 20%; text-align: center; text-decoration: none; padding: 10px 20px; margin-top: 5px; background-color: #3498db; color: #fff; border-radius: 5px;"> '. $index .' </a>
+        </div>
+            ';
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Obtener respuestas
