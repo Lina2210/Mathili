@@ -767,17 +767,17 @@ body {
     
 }
 
-.mensTypeFile, 
-.mensAddExit,
-.mensErrorAdd,
-.mensNoImg {
+.create .mensTypeFile, 
+.create .mensAddExit,
+.create .mensErrorAdd,
+.create .mensNoImg {
     max-width: 30%;
     margin: 20px auto 50px;
     color:white;
     
 }
 
-.back {
+.create .back {
     display: flex; 
     justify-content: center; 
     align-items: center;}
@@ -805,11 +805,25 @@ body {
     }
     .buttonsIndex {
         width: 100%;
+        justify-content: center;
+        flex-direction: column;
         margin-bottom: 35px;
     }
     .buttonsIndex a {
         font-size: medium;
         padding: 12px 24px;
+    }
+
+    #buttonGame,
+    #buttonRank {
+        display: flex;
+        margin: 20px 0 30px 0;
+    }
+
+    #buttonGame,
+    #buttonRank {
+        display: flex;
+        margin: 20px 0 30px 0;
     }
 
     /* game.php */
@@ -818,6 +832,7 @@ body {
         right: 0;
         margin-right: 0;
     }
+
     .wildcardsGame button {
         width: 70px;
         height: 70px;
@@ -845,7 +860,9 @@ body {
         font-size: 1.5em;
     }
     #answers1 {
-        margin: 0;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 10px 0 10px;
+        
     }
     #introQuestion2 {
         margin-top: 8px;
@@ -858,7 +875,8 @@ body {
         font-size: 1.5em;
     }
     #answers2 {
-        margin: 0;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 10px 0 10px;
     }
     #introQuestion3 {
         margin-top: 8px;
@@ -871,7 +889,8 @@ body {
         font-size: 1.5em;
     }
     #answers3 {
-        margin: 0;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 10px 0 10px;
     }
     #buttons {
         width: auto;

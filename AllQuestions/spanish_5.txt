@@ -64,7 +64,7 @@
 - Buzz Aldrin
 - Valentina Tereshkova
 * ¿Cuál es la obra más larga de William Shakespeare?
-- Hamlet
+- Romeo y Julieta
 - Otelo
 - Macbeth
 + Hamlet 

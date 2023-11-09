@@ -3,7 +3,7 @@
 - Conducen por la derecha y el conductor está en la izquierda
 - Como todos
 - Al revés
-* Qué país de la Commonwealth crees que tiene la mejor situación económica?
+* Qué país de la Commonwealth tiene la mejor situación económica?
 - India
 - Canadá
 - Australia
@@ -38,7 +38,7 @@
 - Italia
 - Alemania
 + Brasil
-* ¿Mejor sistema educativo?
+* ¿ Que pais tiene mejor sistema educativo?
 + China
 - Singapur
 - Estonia

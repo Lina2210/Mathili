@@ -64,7 +64,7 @@
 - Buzz Aldrin
 - Valentina Tereshkova
 * What is William Shakespeare's longest play?
-- Hamlet
+- Romeo y Julieta
 - Othello
 - Macbeth
 + Hamlet 

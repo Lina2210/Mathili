@@ -1,4 +1,4 @@
-* ¿Qué come habitualmente el Reino Unido?
+* ¿Qué comida es habitual en el Reino Unido?
 - Gofres
 - Sopa
 - Tocino
@@ -13,7 +13,7 @@
 - 7 días
 - 2 años
 + 11 Días
-* ¿Cuántos Días Hubo Guerra Con Violencia Entre Palestina E Israel?
+* ¿Cuántos días hubo guerra con violencia entre Palestina e Israel?
 - 11 días
 - 2 meses
 + 3 Días
@@ -28,7 +28,7 @@
 + Por sus muertos
 - Por sus victorias
 - Por su dinero
-* Las ideas sobre el imperio en el Reino Unido han fluctuado a lo largo...
+* ¿Qué ideas sobre el imperio en el Reino Unido han fluctuado?
 - Victorias
 + Horarios
 - Monarquía
@@ -38,7 +38,7 @@
 - 8 territorios
 - 10 territorios
 - 12 territorios
-* ¿Qué País ha obtenido Más premios Nobel?
+* ¿Qué país ha obtenido más premios Nobel?
 - Jamaica
 - Nueva Zelanda
 - Filipinas

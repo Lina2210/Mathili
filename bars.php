@@ -14,7 +14,7 @@
             left: 10%;
             transform: translate(-50%, 0);
             width: 10%;
-            height: 35%;
+            height: 30%;
             border: 1px solid #ccc;
             background-color: transparent;
             z-index: 1000;
