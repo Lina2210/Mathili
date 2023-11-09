@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "</div>";
 } else{
     session_start();
+
     $level=$_SESSION['level'];
     if(isset($_POST['question'])){
         $question = $_POST['question'];
@@ -50,29 +51,30 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $messagePublish= "PUBLISH";
     }
     echo "<script>";
-        echo "let loser = true;";
-        echo "window.addEventListener('load', loseSound)";
-        echo "</script>";
-    echo "<div class='loseMessage'>";
-        echo "<h1>$messageLose</h1>";
-        echo "<img src='public/triste-deprimido-fallido-papel-perforado.jpg'>";
-    echo "</div>";
-    echo "<div class='loseButtons'>";
-    echo "<form action='index.php' method='POST'>";
-        echo "<input type='hidden' name='language' value=$language>";
-        echo "<button>$messageHome</button>";
-    echo "</form>";
-        echo "<form action='publish.php' method='POST'>";
+    echo "let loser = true;";
+    echo "window.addEventListener('load', loseSound)";
+    echo "</script>";
+        echo "<div class='loseMessage'>";
+            echo "<h1>$messageLose</h1>";
+            echo "<img src='public/triste-deprimido-fallido-papel-perforado.jpg'>";
+        echo "</div>";
+        echo "<div class='loseButtons'>";
+        echo "<form action='index.php' method='POST'>";
             echo "<input type='hidden' name='language' value=$language>";
-            echo "<button>$messagePublish</button>";
+            echo "<button>$messageHome</button>";
         echo "</form>";
-    echo "</div>";
+            echo "<form action='publish.php' method='POST'>";
+                echo "<input type='hidden' name='language' value=$language>";
+                echo "<button>$messagePublish</button>";
+            echo "</form>";
+        echo "</div>";
 }
     
 ?>
 <audio id="soundLose">
         <source src="Sounds/080047_lose_funny_retro_video-game-80925.mp3"     type="audio/mp3">
     </audio>
+
 
 </body>
 </html>

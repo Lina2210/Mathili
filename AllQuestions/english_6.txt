@@ -1,45 +1,80 @@
-* What African territory did England conquer in the 19th century?
+* Which African territory was conquered in the 19th century by England?
 + Uganda
-- Spain
-- France
+- Tanzania
+- Kenya
 - Melilla
-* Where is the big ben located?
+* Where is Big Ben located?
 - Paris
 + London
 - Andorra
 - Germany
-* Who said this sentence "Life is like riding a bicycle. To keep your balance, you must keep moving.")?
+* Life is like riding a bicycle. To keep your balance, you have to keep moving". Who said this phrase?
 + Albert Einstein
 - Forrest Gump
 - Will Smith
 - Barack Obama
-* Where is typical to eat fish and chips 
-+ UK
-- Scotland 
+* Where is it typical to eat fish and chips?
++ United Kingdom
+- Scotland
 - France
 - Ireland
-* When was the year with most visitors in the British Museum?
+* In which year did the British Museum have the most visitors?
 - 2017
 + 2015
 - 2020
-- 2016
-* Who said this sentence "Oh Romeo, Romeo! Wherefore art you Romeo? Deny your father and refuse your name; or, if you will rot I swear you my love and I'll not longer be a Capulet."?
-+ Shakespeare
-- Zorrilla
-- Quevedo
-- Cervantes
-* What year did Elizabeth become Queen?
+- 2026
+* In which year did Elizabeth come to the throne?
 - 1959
 + 1952
 - 1954
 - 1960
 * Who was Ada Lovelace?
-- Politic
-- Sciencist
-+ Mathematician
+- Politician
+- Scientist
++ Mathematics
 - Chemistry
-* Where is Buckingham Palace located?
+* Where is Buckingham Palace?
 - France
 + England
 - Italy
-- South-Africa
+- Ireland
+* O Romeo, Romeo, Romeo, where art thou Romeo? Reject your father and reject your name; or, if you will rot, I swear my love to you, and so I will not be a Capulet". Who wrote this?
++ Shakespeare
+- Zorrilla
+- Quevedo
+- Cervantes
+* In what year was the Declaration of Independence of the United States signed?
++ 1776
+- 1789
+- 1804
+- 1820
+* What is the atomic number of uranium?
++ 92
+- 88
+- 78
+- 106
+* In what year did the French Revolution take place?
+- 1700
+- 1776
++ 1789
+- 1820
+* What is the largest desert in the world?
+- Sahara
++ Antarctica
+- Atacama
+- Gobi
+* What is the golden ratio?
+- 3.14
++ 1.618
+- 2.718
+- 0.618
+* In what year was the Eiffel Tower inaugurated in Paris?
++ 1889
+- 1895
+- 1901
+- 1875
+* In what year did the Cultural Revolution take place in China?
++ 1966
+- 1975
+- 1982
+- 1958

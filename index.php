@@ -9,13 +9,13 @@
 
 </head>
 <body>
-    
         <?php
         if(isset($_POST['language'])){
             $language= $_POST['language'];
         }else{
             $language= "spanish";
         }
+
         session_destroy();
         session_start();
         $_SESSION['language'] = $language;
@@ -29,6 +29,11 @@
                 echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
             echo "</form>";
             echo "</div>";
+            echo "<noscript>";
+            echo "<div id='mensaje-js'>";
+            echo "<p>¡JavaScript está deshabilitado en su navegador! Habilite JavaScript para jugar al Juego.</p>";
+            echo "</div>";
+            echo "</noscript>";
             echo "<h1 class='titIndex'>QUIEN QUIERE SER MILLONARIO?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -47,12 +52,13 @@
             echo "</div>";
             echo "</div>";
             echo "<div class='buttonsIndex'>";
-            echo "<form action='game.php' method='POST'>";
+            echo "<form id='buttonGame' action='game.php' method='POST' style=\"display: none;\">";
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
-            echo "<form action='ranking.php' method='POST'>";
-            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
+            echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
+            echo "<a href='login.php'>Zona Admin</a>";
             echo "</div>";
         }
         elseif($language=="catalan"){
@@ -64,6 +70,11 @@
                 echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
             echo "</form>";
             echo "</div>";
+            echo "<noscript>";
+            echo "<div id='mensaje-js'>";
+            echo "<p>JavaScript està deshabilitat al vostre navegador! Habiliteu JavaScript per jugar al Joc.</p>";
+            echo "</div>";
+            echo "</noscript>";
             echo "<h1 class='titIndex'>QUI VOL SER MILLONARI?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -82,12 +93,13 @@
             echo "</div>";
             echo "</div>";
             echo "<div class='buttonsIndex'>";
-            echo "<form action='game.php' method='POST'>";
+            echo "<form id='buttonGame' action='game.php' method='POST' style=\"display: none;\">";
             echo "<a href='game.php'>JUGAR</a>";
             echo "</form>";
-            echo "<form action='ranking.php' method='POST'>";
-            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
+            echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
+            echo "<a href='login.php'>Zona Admin</a>";
             echo "</div>";
         }
         elseif($language=="english"){
@@ -99,6 +111,11 @@
                 echo  "<button id='catalan' name='language' value='catalan'><img src='public/catalanFlag.png'></button>";
             echo "</form>";
             echo "</div>";
+            echo "<noscript>";
+            echo "<div id='mensaje-js'>";
+            echo "<p>Javascript is disabled on your browser! Please enable JavaScript to play the Game.</p>";
+            echo "</div>";
+            echo "</noscript>";
             echo "<h1 class='titIndex'>WHO WANTS TO BE A MILLIONAIRE?</h1>";
             echo "<div class='brief'>";
             echo "<div class='instructions'>";
@@ -117,12 +134,13 @@
             echo "</div>";
             echo "</div>";
             echo "<div class='buttonsIndex'>";
-            echo "<form action='game.php' method='POST'>";
+            echo "<form id='buttonGame' action='game.php' method='POST' style=\"display: none;\">";
             echo "<a href='game.php'>PLAY</a>";
             echo "</form>";
-            echo "<form action='ranking.php' method='POST'>";
-            echo "<a href='ranking.php'>Hall of Fame</a>";
+            echo "<form id='buttonRank' action='ranking.php' method='POST' style=\"display: none;\">";
+            echo "<a href='ranking.php'>Ranking</a>";
             echo "</form>";
+            echo "<a href='login.php'>Admin Zone</a>";
             echo "</div>";
         }
  

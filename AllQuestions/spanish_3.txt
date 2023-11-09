@@ -1,21 +1,16 @@
-* ¿Más Mundiales?
+* ¿Qué País tiene Más Mundiales?
 - Jamaica
 - Francia
 - Alemania
 + Inglaterra
-* ¿Más guerras ganadas?
+* ¿Qué País tiene Más guerras ganadas?
 - Australia
 - Canadá
 + Inglaterra
 - Nueva Zelanda
-* ¿Más PIB Anual?
+* ¿Qué País tiene Más PIB Anual?
 + India
 - Canadá
-- Australia
-- Inglaterra
-* ¿Más población?
-+ India
-- Bangladesh
 - Australia
 - Inglaterra
 * ¿El país más caluroso?
@@ -23,68 +18,63 @@
 - Camerún
 + India
 - Nueva Zelanda
-* ¿El país más frío?
-- Inglaterra
-+ Canadá
-- Ghana
-- Gamba
-* ¿Más horas trabajando?
+* ¿Qué País tiene Más horas trabajando?
 + Inglaterra
 - Camerún
 - Ghana
 - Malasia
-* ¿Más Reservas Naturales?
+* ¿Qué País tiene Más Reservas Naturales?
 - Nauru
 - Ruanda
 + Nigeria
 - Inglaterra
-* ¿La mejor economía?
+* ¿Qué País tiene La mejor economía?
 - Australia
 - Canadá
 - Nueva Zelanda
 + Inglaterra
-* ¿Mejor sistema educativo?
-+ Singapur
-- Nueva Zelanda
-- Ghana
-- Inglaterra
-* ¿El más deportista?
+* ¿Qué País es el Más deportista?
 - Jamaica
 - Camerún
 - Ghana
 + Inglaterra
-* ¿Población del Reino Unido?
-- 1.216.000.000
-- 689.000.000
-- 1.356.000.000
-+ 67.081.000
-* ¿Más muertes?
+* ¿Qué País tiene Más muertes?
 - Nueva Zelanda
 - Camerún
 - Ghana
 + Inglaterra
-* ¿Mejor salud?
+* ¿Qué País tiene Mejor salud?
 + Singapur
 - Nueva Zelanda
 - Bahamas
 - Inglaterra
-* ¿Más premios de belleza?
+* ¿Qué País tiene Más premios de belleza?
 - Nueva Zelanda
 + India
 - Australia
 - Inglaterra
-* ¿Más premios Nobel?
-- Jamaica
-- Nueva Zelanda
-- Filipinas
-+ Inglaterra
-* ¿Más cultura?
+* ¿Qué País es Más cultura?
 - Kenia
 - Namibia
 + India
 - Inglaterra
-* ¿Más comida rápida?
+* ¿Qué País tiene Más comida rápida?
 - Canadá
 + India
 - Ghana
 - Inglaterra
+* ¿Qué jugador australiano tiene el salario más alto?
++ Mathew Ryan
+- Harry Soutar
+- Milos Degenek
+- Leo Messi
+* ¿En qué año comenzó la Segunda Guerra Mundial?
+- 1914
++ 1939
+- 1945
+- 1940
+* ¿Cuál es el país más pequeño del mundo?
+- Mónaco
+- Nauru
+- San Marino
++ Ciudad del Vaticano

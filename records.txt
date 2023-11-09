@@ -6,3 +6,11 @@
 6,Prueba2,18
 7,pruebasssss,19
 8,Lina,10
+9,Leandro,8
+10,Xavi,29
+11,rrererrerrer,67
+12,Martí,50
+13,Juan,0
+14,Ejemplo,50
+15,Juan,25
+16,Carlos,25

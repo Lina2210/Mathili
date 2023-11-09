@@ -1,5 +1,5 @@
-let countofGoods=0;
-let segundos = 30;
+var countofGoods=0;
+var segundos = 30;
 window.onload = function() {
     const currentURL = window.location.href;
     const currentPage = currentURL.substring(currentURL.lastIndexOf('/') + 1);
@@ -7,13 +7,16 @@ window.onload = function() {
 
     if (localStorage.getItem('fiftyClicked')=='true') {
         disableButton('fifty');
-    }//else{inicializeButton('fifty');}
+    }
     if (localStorage.getItem('publicClicked')=='true') {
         disableButton('public');
-    }//else{inicializeButton('public');}
+    }
     if (localStorage.getItem('extraClicked')=='true') {
         disableButton('extra');
-    }//else{inicializeButton('extra');}
+    }
+    if (localStorage.getItem('callClicked')=='true'){
+        disableButton('call');
+    }
         showFirstQuestion();
         iniciarCronometro();
         mostrarTiempo(); 
@@ -22,6 +25,7 @@ window.onload = function() {
 
     }
     if(currentPage=="index.php" || currentPage==""){
+        showIndexButtons();
         resetearCronometro();
         resetButtons();
     }
@@ -30,7 +34,10 @@ window.onload = function() {
         sendValue(tiempo);
     }*/
 };
-
+function showIndexButtons(){
+    document.getElementById('buttonRank').style.display='block';
+    document.getElementById('buttonGame').style.display='block';
+}
 function showFirstQuestion(){
     document.getElementById('question1').style.display = 'block';
     document.getElementById('answers1').style.display = 'grid';
@@ -39,12 +46,17 @@ function showFirstQuestion(){
 function good(numberOfQuestion){
     countofGoods=numberOfQuestion;
     document.getElementById('correct'+numberOfQuestion).style.display = 'block';
+    var elements = document.getElementsByClassName('grid-item answer-good');
+    elements[numberOfQuestion-1].style.backgroundColor = '#54bf58';
     let element = elementSound("soundAcert")
     playSound(element)
     document.getElementById('answers'+numberOfQuestion).style.pointerEvents = 'none';
     if(numberOfQuestion==3){
         detenerCuentaRegresiva();
         document.getElementById('buttons').style.display = 'block';
+        document.getElementById('buttons').scrollIntoView({behavior:'smooth'});
+        var wildcards = document.getElementsByClassName('wildcardsGame');
+        wildcards[0].style.pointerEvents='none';
     }else{
     showQuestion(numberOfQuestion+1);
     }
@@ -65,20 +77,18 @@ function elementSound(id){
     let element = document.getElementById(id);
     return element;
 }
-
 function playSound(element){
     if (element) {
         element.play();
     }
 }
+
 function loseSound(){
     let element = elementSound("soundLose")
     if (loser){
         playSound(element)
     }
-    
 }
-
 
 function acertSound(){
     let element = elementSound("soundAcert")
@@ -97,7 +107,6 @@ function winSound(){
     if (victoria){
         playSound(element)
     }
-    
 }
 
 
@@ -118,10 +127,10 @@ function statisticsPublic(){
     playSound(element)
 }
 function resetButtons(){
-    console.log("okkkkk");
     localStorage.setItem('fiftyClicked', 'false');
     localStorage.setItem('publicClicked', 'false');
     localStorage.setItem('extraClicked', 'false');
+    localStorage.setItem('callClicked', 'false');
 
 }
 
@@ -196,7 +205,101 @@ function detenerCuentaRegresiva() {
     form.submit();
     
 }
+var numOfRings=0;
+function clickCall(language){
+    detenerCronometro();
+    detenerCuentaRegresiva();
+    boton = document.getElementById("call")
+    boton.style.pointerEvents='none';
+    boton.style.backgroundColor= "#fff";
+    localStorage.setItem('callClicked', 'true');
+    let numRandom = Math.floor(Math.random() * 10) + 1;
+    numOfRings = numRandom;
+    showPhone(language);
+    console.log(numRandom);
+    setTimeout(function() {
+        reproduceRing(numRandom);
+    }, 2000);
+    setTimeout(function() {
+        document.getElementById("formPhone").style.display = 'block';
+    }, 2000 +(5000*numRandom));
+    
+}
+function sendRings(language){
+    document.getElementById('startOfPhone').style.display = 'none';
+    var numInput = document.querySelector("#inputRing").value;
+    if (numInput == numOfRings) {
+        document.getElementById('correctRing').style.display = 'block';
+        good(countofGoods+1);
+    } else {
+        if(language=="catalan"){
+            document.getElementById("incorrectRingMessage").innerText="¡Incorrecte! La resposta correcta era: "+ numOfRings;
+        }
+        else if(language=="spanish"){
+            document.getElementById("incorrectRingMessage").innerText="¡Incorrecto! La respuesta correcta era: "+ numOfRings;
 
+        }
+        else if(language=="english"){
+            document.getElementById("incorrectRingMessage").innerText="Wrong! The correct answer was: "+ numOfRings;
+        }
+        document.getElementById('wrongRing').style.display = 'block';
+    }
+
+}
+function closePhone(){
+document.getElementById('callPage').style.display = 'none';
+iniciarCronometro();
+iniciarCuentaRegresiva();
+}
+function reproduceRing(numVeces){
+    let contador = 0;
+    
+    function playNextRing() {
+        console.log("contador: ",contador);
+        console.log("veces: ", numVeces);
+        if (contador < numVeces) {
+            let element = elementSound("soundPhone");
+            doAnimation();
+            playSound(element);
+            contador++;
+            setTimeout(playNextRing, 5500); 
+        }
+    }
+    
+    playNextRing();
+}
+function showPhone(language){
+    if(language=="spanish"){
+        document.getElementById("headPhone").innerText="¿Cuantas veces suena el teléfono?";
+    }
+    else if(language=="english"){
+        document.getElementById("headPhone").innerText="How many times does the phone ring?";
+    }
+    else if(language=="catalan"){
+        document.getElementById("headPhone").innerText="Cuantes vegades sona el telèfon?";
+    }
+    document.getElementById('callPage').style.display = 'block';
+}
+function doAnimation(){
+    let animacion = [
+        { transform: 'translate3d(-1px, 0, 0)' },
+        { transform: 'translate3d(2px, 0, 0)' },
+        { transform: 'translate3d(-4px, 0, 0)' },
+        { transform: 'translate3d(4px, 0, 0)' }
+    ];
+    
+    let elemento = document.getElementById("phonephoto"); // Asegúrate de tener un elemento con el id "miElemento"
+    
+    let animacionKeyframes = new KeyframeEffect(
+      elemento,
+      animacion,
+      { duration: 1000, iterations: 3, fill: "forwards" }
+    );
+    
+    let animacionGroup = new Animation(animacionKeyframes, document.timeline);
+    
+    animacionGroup.play();
+}
 function disableButton(buttonId) {
     const button = document.getElementById(buttonId);
     if (button) {
@@ -223,6 +326,8 @@ function inicializeButton(buttonId) {
             arrayAnswer.push(i);
         }
     }
+
+    console.log(arrayAnswer); // Muestra el contenido del array una vez terminado el bucle
 
     let deleteAnswer = arrayAnswer.slice(-3);
     let deleteIndex = Math.floor(Math.random() * deleteAnswer.length);
@@ -260,7 +365,7 @@ function addVowelToAnswer(){
         }
     }
 }
-addVowelToAnswer()/*no borrar*/
+
 function clickPublic(){
     localStorage.setItem('publicClicked', 'true');
     detenerCuentaRegresiva();
@@ -277,6 +382,7 @@ function clickPublic(){
 function getAnswerOk(arrayElements, arrayPositionElement){
     for(let i = 0; i<arrayPositionElement.length; i++){
         let respOk = arrayElements[i].id
+        console.log(respOk)
         if (respOk === "answerGood"){
             return arrayElements[i].innerText.charAt(0)
             
@@ -297,6 +403,7 @@ function arrayCurrentAnswer(element, emptyArray){
 
 function generateStatistics(a, b, c, d){
     let barraA= getElementClass("barra a")
+    console.log(barraA)
     let barraB= getElementClass("barra b")
     let barraC= getElementClass("barra c")
     let barraD= getElementClass("barra d")
@@ -312,7 +419,28 @@ function openModalWithDelay() {
         openModal();
     }, 5000);
 }
-
+function validateName() {
+    document.getElementById('formUserName').addEventListener('submit', function(event) {
+    var userName = document.getElementById('username').value;
+    var forbiddenWords = ["coño", "puta", "joder", "franco", "hitler", "polla", "pene", "vagina", "follar", "sexo", "calvo", "chupapollas", "hijo de puta", "hija de puta", "tetas", "teta"];
+    var minusName = userName.toLowerCase();
+    for (var i = 0; i < forbiddenWords.length; i++) {
+      if (minusName.includes(forbiddenWords[i])) {
+        if (language=="spanish") {
+            event.preventDefault();
+            alert("El Input contiene una palabra prohibida, escriba otro Nombre");
+        } else if (language=="catalan") {
+            event.preventDefault();
+            alert("L'Input conté una paraula prohibida, escriu un altre Nom");
+        } else if (language=="english") {
+            event.preventDefault();
+            alert("The Input contains a prohibited word, type another Name")
+        }
+        break;
+      }
+    }
+});
+}
 function openModal(){
     document.getElementById('modal').style.display = 'block';
     let element = elementSound("soundPublic")
@@ -337,7 +465,7 @@ function easterEgg(){
         detenerCronometro();
     }
 }
-//modificacion sprint3 inicio
+
 function public() {
     const answers = getElementClass("grid-item");
     let answersArrayEmpty = [];
@@ -423,5 +551,3 @@ function showMessage(event){
     mensNoImg[0].style.display = "block";
 
 }
-
-//modificacion sprint3 fin

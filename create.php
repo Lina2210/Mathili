@@ -9,6 +9,7 @@
 <body class="create">
     
     <?php
+    session_start();
         if(isset($_SESSION['language'])){
             $language= $_SESSION['language'];
         }else{
@@ -45,6 +46,7 @@
             $index = "Inicio";
 
         }else if($language == "english"){
+            $question = "Question: ";
             $difficulty = "Difficulty Level: ";
             $languageQuestion = "Language: " ;
             $correctAnswer= "Correct Answer: ";
@@ -55,7 +57,7 @@
             $mensAddExit = "The image was successfully uploaded to:";
             $mensErrorAdd = "Error moving the file. Check the permissions and the directory path.";
             $mensNoImg = 'No image has been uploaded.';
-            $index = "Start";
+            $index = "Home";
         }
         echo '
         <h1> '. $title . ' </h1>
@@ -75,7 +77,7 @@
                     <select id="language" name="language" required>
                         <option value="catalan">Catala</option>
                         <option value="english">English</option>
-                        <option value="español">Español</option>
+                        <option value="spanish">Español</option>
                     </select>
                 </div>
 
@@ -123,11 +125,12 @@
             $respDifficulty = $_POST['difficulty'];
             $respLanguageQuest = $_POST['language'];
             $respQuestion = $_POST['question'];
+            $introtoQuestion = $respQuestion.",,";
             $respCorrectAnsw = "+" . $_POST['correctAnswer']; // Marcar la respuesta correcta con un '+'
             $respIncorrectAnsw = [
-                "-" . $_POST['incorrectAnswer1'],
-                "-" . $_POST['incorrectAnswer2'],
-                "-" . $_POST['incorrectAnswer3']
+                "- " . $_POST['incorrectAnswer1'],
+                "- " . $_POST['incorrectAnswer2'],
+                "- " . $_POST['incorrectAnswer3']
             ];
             
             // Agregar respuesta correcta a las incorrectas
@@ -153,19 +156,19 @@
                     array_pop($fileLines); // Eliminar la última línea vacía si existe
                 }
         
-                $newContent = "*" . $respQuestion . "\n" . $a . "\n" . $b . "\n" . $c . "\n" . $d;
+                $newContent = "* " . $respQuestion . "\n" . $a . "\n" . $b . "\n" . $c . "\n" . $d;
         
                 file_put_contents($fileName, implode("\n", $fileLines) . "\n" . $newContent . "\n", LOCK_EX);
             } else {
                 // Si hay un problema al abrir el archivo
-                echo "El archivo no existe";
+                echo "<div class='mensNoImg'>El archivo no existe</div>";
             }
         }
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         
-            $directorioImagenes = './public/fotospreguntas/' . $respDifficulty . '/';
-    
+            $directorioImagenes = './public/fotos preguntas/' . $respDifficulty . '/';
+            //$introtoQuestion= $introtoQuestion.substr($directorioImagenes, 2);
             if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
                 $fileType = $_FILES['image']['type'];
                 $fileName = $_FILES['image']['name'];
@@ -176,9 +179,10 @@
                     
                     $newFileName = $respQuestion . '.' . pathinfo($fileName, PATHINFO_EXTENSION);
                     $targetPath = $directorioImagenes . $newFileName;
-                                        
+                    $introtoQuestion= $introtoQuestion.substr($targetPath, 2);
                     if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
-                        echo '<div class="mensAddExit">' . $mensAddExit . $targetPath . '</div>';
+                        echo '<div class="mensAddExit">' . $mensAddExit . '</div>';
+                        writeToQuestionandPhoto($introtoQuestion);
                     } else {
                         echo '<div class="mensErrorAdd">' . $mensErrorAdd . '</div>';
                     }
@@ -189,6 +193,29 @@
                 echo '<div class="mensNoImg">' . $mensNoImg . '</div>';
             }
         }
+    function writeToQuestionandPhoto($stringofQuestionandphoto){
+        $arraay = explode(",,", $stringofQuestionandphoto);
+        if(count($arraay)==2){
+            $archivo = "questions&photos.txt"; // Reemplaza "tu_archivo.txt" con el nombre de tu archivo
+
+        // Abrir el archivo en modo de escritura
+        $manejador = fopen($archivo, "a");
+
+        if ($manejador) {
+            // Escribir la nueva línea
+            $stringWrite = $arraay[0].",,".str_replace("?", "%3F", $arraay[1]);
+            $nueva_linea = $stringWrite;
+            fwrite($manejador, $nueva_linea . "\n");
+
+            // Cerrar el archivo
+            fclose($manejador);
+
+        } else {
+            echo "<div class='mensNoImg'>Error</div>";
+        }
+        }
+
+    }
     ?>
     
     <script type="text/javascript" src="script.js"></script>
