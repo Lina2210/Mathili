@@ -14,3 +14,5 @@
 14,Ejemplo,50
 15,Juan,25
 16,Carlos,25
+17,Lina,28
+18,Lina,28

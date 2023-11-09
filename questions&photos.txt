@@ -40,7 +40,7 @@ Are the British punctual?,,public/fotos preguntas/5/Are the British punctual.web
 ¿De qué se trata la tradición del Rolling Cheese?,,public/fotos preguntas/5/What is the Rolling Cheese tradition about.png
 De què tracta la tradició del Rolling Cheese?,,public/fotos preguntas/5/What is the Rolling Cheese tradition about.png
 What is the Rolling Cheese tradition about?,,public/fotos preguntas/5/What is the Rolling Cheese tradition about.png
-¿Qué jugador australiano tiene el salario más alto?,,
+¿Qué jugador australiano tiene el salario más alto?,,public/fotos preguntas/5/Which Australian player has the highest salary.jpg
 Quin jugador australià té el salari més alt?,,public/fotos preguntas/5/Which Australian player has the highest salary.jpg
 Which Australian player has the highest salary?,,public/fotos preguntas/5/Which Australian player has the highest salary.jpg
 ¿Qué territorio africano fue conquistado en el siglo XIX por Inglaterra?,,public/fotos preguntas/6/What African territory did England conquer in the 19th century.jpeg
